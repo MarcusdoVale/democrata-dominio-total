@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Democrata — Domínio Total | Guia do Vendedor</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0f1115;color:#f2f2f2;line-height:1.5}
+header{padding:22px 16px;background:#1a1d24;border-bottom:3px solid #c9a227}
+h1{margin:0;font-size:24px}header p{margin:6px 0 0;color:#cfcfcf}
+nav{display:flex;gap:8px;padding:12px 16px;flex-wrap:wrap;background:#14171c;position:sticky;top:0;z-index:5}
+nav button{background:#242832;color:#fff;border:1px solid #444;border-radius:20px;padding:8px 14px;cursor:pointer}
+nav button.on{background:#c9a227;color:#111;border-color:#c9a227;font-weight:700}
+main{max-width:900px;margin:0 auto;padding:16px}
+input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#1c1f26;color:#fff;font-size:16px;margin:6px 0}
+.card{background:#1c1f26;border:1px solid #333;border-radius:12px;padding:14px;margin:10px 0}
+.card h3{margin:0 0 4px}.tag{display:inline-block;background:#c9a227;color:#111;border-radius:20px;padding:2px 10px;font-size:12px;font-weight:700;margin:2px 4px 2px 0}
+.muted{color:#bdbdbd}.fala{background:#242832;border-left:3px solid #c9a227;padding:10px;border-radius:8px;font-style:italic}
+button.big{background:#c9a227;color:#111;border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer;font-size:16px}
+details{background:#1c1f26;border:1px solid #333;border-radius:12px;padding:12px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;font-size:17px}
+.q{margin:14px 0}.q button{display:block;width:100%;text-align:left;margin:6px 0;background:#242832;color:#fff;border:1px solid #444;border-radius:10px;padding:12px;cursor:pointer}
+.q button.correct{background:#1e7d32}.q button.wrong{background:#8e1616}
+footer{padding:20px 16px;color:#999;font-size:13px;text-align:center}
+a{color:#e8c84a}
+</style>
+</head>
+<body>
+<header>
+<h1>Democrata — Domínio Total</h1>
+<p>Guia do vendedor • Pátio Central Shopping, Patos de Minas/MG • (34) 3821-3263 • seg–sáb 10h–22h, dom 12h–20h</p>
+<p class="muted">Fonte: democratacom.br/tecnologias + blog Verão 2026 — conferido em 13/11/2026. Preços não estão aqui: confira na etiqueta da loja.</p>
+</header>
+<nav>
+<button class="on" data-sec="buscar">🔎 Buscar</button>
+<button data-sec="tecnologias">⚙️ Tecnologias</button>
+<button data-sec="quiz">🧠 Quiz</button>
+<button data-sec="plano">📅 Plano 7 dias</button>
+</nav>
+<main>
+<section id="buscar">
+<input id="q" placeholder="Busque: Air, PULSE, Metropolitan, Pace, casamento, viagem..." oninput="filtrar()">
+<select id="cat" onchange="filtrar()"><option value="">Todas as categorias</option><option>Sapato social</option><option>Tênis</option><option>Mocassim/Loafer/Sider/Driver</option><option>Sapatênis</option><option>Sandália</option><option>Democrata Ela (feminino)</option><option>Acessórios</option></select>
+<div id="lista"></div>
+</section>
+<section id="tecnologias" style="display:none">
+<h2>As tecnologias — toque para ver a frase de venda</h2>
+<div id="tecs"></div>
+</section>
+<section id="quiz" style="display:none">
+<h2>Quiz — 10 perguntas, meta 10/10</h2>
+<p id="placar" class="muted">Acertos: 0/10</p>
+<div id="quizbox"></div>
+<button class="big" onclick="montarQuiz()">Recomeçar quiz</button>
+</section>
+<section id="plano" style="display:none">
+<h2>Plano de 7 dias — 15 min por dia</h2>
+<div class="card"><b>Dia 1 — Air + Smart Comfort:</b> decore a frase do Air Spot e as refs 448026 / 448027.</div>
+<div class="card"><b>Dia 2 — PULSE x Ultra Light x Full Light:</b> 1 frase de diferença para cada.</div>
+<div class="card"><b>Dia 3 — Calce Fácil, Extra Soft, Dual Soft, Light:</b> Extra Soft é tênis, Dual Soft é social.</div>
+<div class="card"><b>Dia 4 — Tipos de sapato:</b> Oxford x Derby x Loafer x Monk x Sider x Driver x Sapatênis.</div>
+<div class="card"><b>Dia 5 — Linhas e modelos-âncora:</b> 3 de cada categoria, sem olhar.</div>
+<div class="card"><b>Dia 6 — Atendimento:</b> treine em voz alta o roteiro de 6 passos e as objeções.</div>
+<div class="card"><b>Dia 7 — Prova final:</b> quiz até 10/10. Anote o que ainda confunde.</div>
+<p>Guias completos na pasta <b>guias/</b> do repositório. Dados em <b>data/colecao.json</b>.</p>
+</section>
+</main>
+<footer>Democrata — Domínio Total • Sistema de estudo do Marcus • Não é site oficial da marca. Quando chegar modelo novo na loja, acrescente em data/colecao.json.</footer>
+<script>
+const MODELOS=[
+{n:"Smart Comfort Air Spot — cadarço",c:"Sapato social",t:["Air","Stretch","Max Memory"],ref:"448026-003",para:"Quem fica muitas horas em pé e quer social com amortecimento. Forma grande.",fala:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho."},
+{n:"Smart Comfort Air Spot — elástico lateral",c:"Sapato social",t:["Air","Stretch","Max Memory","Calce Fácil"],ref:"448027-003",para:"Quem quer o Air Spot sem cadarço: calça rápido.",fala:"O mesmo conforto do 448026, sem cadarço. Ideal para quem tem pressa."},
+{n:"Metropolitan Prime",c:"Sapato social",t:["Couro legítimo"],ref:"244102-001",para:"Formal clássico, loafer versátil para trabalho e evento.",fala:"O clássico elegante da linha Metropolitan: bico alongado, acabamento fino."},
+{n:"Metropolitan Bay",c:"Sapato social",t:["Couro legítimo"],ref:"273101-006",para:"Derby versátil, do trabalho ao evento.",fala:"Derby de couro com solado microexpandido: leve e absorve impacto."},
+{n:"Garage Astro",c:"Sapato social",t:["Couro legítimo"],ref:"301104-001",para:"Casual jovem de couro.",fala:"Casual da linha Garage: despojado sem perder o couro legítimo."},
+{n:"Drake Pulse",c:"Tênis",t:["PULSE"],ref:"—",para:"Quem anda muito e quer retorno de energia.",fala:"Cápsula de TPU que devolve energia a cada passo."},
+{n:"Beat Pulse",c:"Tênis",t:["PULSE"],ref:"—",para:"Urbano intenso, robusto com PULSE.",fala:"Painel marcado + PULSE: presença e amortecimento."},
+{n:"Brad Ultra Light",c:"Tênis",t:["Ultra Light"],ref:"—",para:"Retrô-running, leveza total.",fala:"EVA levíssimo, espírito running vintage."},
+{n:"Joe Ultra Light",c:"Tênis",t:["Ultra Light","Knit"],ref:"—",para:"Segunda pele: knit que abraça o pé.",fala:"Knit respirável, veste como segunda pele."},
+{n:"Pace Calce Fácil",c:"Tênis",t:["Calce Fácil"],ref:"—",para:"Pressa, aeroporto, praticidade.",fala:"Calça sem a mão, calcanhar não amassa."},
+{n:"Flop / Clay / Dune / Tom",c:"Mocassim/Loafer/Sider/Driver",t:["Couro legítimo"],ref:"—",para:"Esporte fino, jantar, dirigir (Tom).",fala:"Clássicos repensados: do escritório ao jantar sem trocar o sapato."},
+{n:"Dock / Tulum",c:"Sandália",t:["Couro legítimo"],ref:"—",para:"Calor, verão, lazer.",fala:"Tira larga em couro, palmilha anatômica (Dock). Mule clean (Tulum)."},
+{n:"Sandals Verão 27",c:"Sandália",t:["Couro legítimo"],ref:"700203-001/002/003",para:"Calor, verão, conforto com sofisticação.",fala:"Tira cruzada em couro, palmilha anatômica."},
+{n:"Democrata Ela",c:"Democrata Ela (feminino)",t:["Couro legítimo"],ref:"—",para:"Mulher cosmopolita: trabalho ao lazer.",fala:"Tênis ballet core, mocassim boyish, Mary Jane, papete, bota cano alto."},
+{n:"Cinto Metropolitan / Garage",c:"Acessórios",t:["Couro legítimo"],ref:"—",para:"Completar o look, presente.",fala:"Preto com preto, marrom com marrom. Dupla face resolve os dois."}
+];
+const TECS=[
+{n:"Air",o:"Bolha de ar no calcanhar + palmilha Max Memory.",f:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",w:"Smart Comfort Air Spot"},
+{n:"PULSE",o:"Cápsulas de TPU que absorvem e devolvem energia.",f:"Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos.",w:"Drake, Beat, Draft"},
+{n:"Ultra Light",o:"Sola de EVA levíssima + palmilha de PU.",f:"Pega na mão: ele quase não pesa. No pé some.",w:"Brad, Joe, Move"},
+{n:"Full Light",o:"Estrutura ultraleve, sola flexível.",f:"É o mais leve da Democrata: feito para você esquecer que está calçado.",w:"Tênis Full Light"},
+{n:"Calce Fácil",o:"Calça sem a mão, calcanhar estável.",f:"Calça sem usar a mão e sem amassar atrás. Passou no raio-x, calçou e foi.",w:"Pace"},
+{n:"Extra Soft",o:"Palmilha bi-densidade + solado leve.",f:"Pisa e afunda macio — é o tênis do dia a dia corrido.",w:"Journey (tênis)"},
+{n:"Dual Soft",o:"Duas densidades: leve e macio.",f:"Social por fora, macio por dentro: aguenta o evento inteiro.",w:"Sapato social"},
+{n:"Light",o:"Solados 40% mais leves.",f:"40% mais leve que um social comum — no fim do dia você sente a diferença.",w:"Sapato de couro"},
+{n:"Smart Comfort",o:"LINHA, não tecnologia: Stretch + Air + Max Memory.",f:"É a linha de conforto da marca: tudo que a Democrata sabe de conforto está aqui.",w:"Air Spot, Madison"},
+{n:"Stretch",o:"Couro elástico que se ajusta ao pé.",f:"O couro cede na medida do seu pé — não precisa amaciar sofrendo.",w:"Air Spot"},
+{n:"Max Memory",o:"Palmilha com memória, não deforma.",f:"Ela volta ao lugar depois de cada uso — o conforto dura.",w:"Air Spot"},
+{n:"Knit",o:"MATERIAL (não tecnologia): malha que respira.",f:"É tecido que respira e abraça o pé — no calor faz diferença.",w:"Joe, Move, Journey, Bold"}
+];
+const QUIZ=[
+{q:"Cliente fica 10h em pé e quer sapato social. Qual você oferece primeiro?",o:["Metropolitan Prime","Smart Comfort Air Spot","Garage Astro","Brad Ultra Light"],a:1},
+{q:"Qual tecnologia devolve energia a cada passo?",o:["Ultra Light","Air","PULSE","Light"],a:2},
+{q:"Cliente viaja muito de avião. Qual tecnologia ajuda mais?",o:["Dual Soft","Calce Fácil","Extra Soft","Stretch"],a:1},
+{q:"Smart Comfort é…",o:["Uma tecnologia de palmilha","Uma linha da Democrata","Um tipo de couro","Um modelo de tênis"],a:1},
+{q:"Extra Soft é tênis e Dual Soft é…",o:["Tênis também","Sandália","Sapato social","Bota"],a:2},
+{q:"Knit é…",o:["Tecnologia de amortecimento","Material (malha que respira)","Nome de um tênis","Tipo de solado"],a:1},
+{q:"Qual é a ref do Air Spot de cadarço?",o:["244102-001","273101-006","448026-003","700203-001"],a:2},
+{q:"Qual linha é o tênis retrô-running leve?",o:["Drake Pulse","Brad Ultra Light","Journey Extra-Soft","Pace Calce Fácil"],a:1},
+{q:"Para casamento/formatura, o mais formal é…",o:["Derby","Loafer","Oxford","Sider"],a:2},
+{q:"Forma do Air Spot é…",o:["Pequena","Normal","Grande — avisar o cliente","Não tem forma"],a:2}
+];
+function filtrar(){const q=(document.getElementById('q').value||'').toLowerCase();const c=document.getElementById('cat').value;const l=MODELOS.filter(m=>(!c||m.c===c)&&(m.n+' '+m.c+' '+m.t.join(' ')+' '+m.para+' '+m.ref).toLowerCase().includes(q));document.getElementById('lista').innerHTML=l.map(m=>`<div class="card"><h3>${m.n}</h3><div>${m.t.map(t=>`<span class="tag">${t}</span>`).join('')}<span class="tag">${m.c}</span></div><p class="muted">Ref: ${m.ref} • 37–44 • ${m.para}</p><div class="fala">${m.fala}</div></div>`).join('')||'<p>Nada encontrado — tente outra palavra.</p>';}
+document.getElementById('tecs').innerHTML=TECS.map(t=>`<details><summary>${t.n}</summary><p>${t.o}</p><p><b>Onde:</b> ${t.w}</p><div class="fala">${t.f}</div></details>`).join('');
+let acertos=0,resp=0;
+function montarQuiz(){acertos=0;resp=0;document.getElementById('placar').textContent='Acertos: 0/10';document.getElementById('quizbox').innerHTML=QUIZ.map((qq,i)=>`<div class="q"><b>${i+1}. ${qq.q}</b>${qq.o.map((op,j)=>`<button onclick="responder(this,${i},${j})">${op}</button>`).join('')}</div>`).join('');}
+function responder(btn,i,j){const box=btn.parentElement;if(box.dataset.done)return;box.dataset.done=1;resp++;const ok=j===QUIZ[i].a;if(ok){acertos++;btn.classList.add('correct');}else{btn.classList.add('wrong');box.children[QUIZ[i].a+1].classList.add('correct');}document.getElementById('placar').textContent=`Acertos: ${acertos}/10`+(resp===10?(acertos===10?' — Perfeito! 👏':' — Revise o que errou nas Tecnologias.'):'');}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');['buscar','tecnologias','quiz','plano'].forEach(s=>document.getElementById(s).style.display=s===b.dataset.sec?'block':'none');});
+filtrar();montarQuiz();
+</script>
+</body>
+</html>
