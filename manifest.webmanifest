@@ -1,0 +1,14 @@
+{
+  "name": "Domínio Total — Guia do Vendedor",
+  "short_name": "Domínio Total",
+  "description": "Modelos, estilo, tecnologias, roteiro de venda e quiz.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f1ea",
+  "theme_color": "#8a5a2b",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -2,121 +2,875 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Democrata — Domínio Total | Guia do Vendedor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Domínio Total — Guia do Vendedor</title>
+<meta name="description" content="Guia de estudo do vendedor: modelos, tecnologias, roteiro de venda, quiz e plano de 7 dias.">
+<meta name="theme-color" content="#f6f1ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%238a5a2b'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23fff8ee' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Domínio Total">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0f1115;color:#f2f2f2;line-height:1.5}
-header{padding:22px 16px;background:#1a1d24;border-bottom:3px solid #c9a227}
-h1{margin:0;font-size:24px}header p{margin:6px 0 0;color:#cfcfcf}
-nav{display:flex;gap:8px;padding:12px 16px;flex-wrap:wrap;background:#14171c;position:sticky;top:0;z-index:5}
-nav button{background:#242832;color:#fff;border:1px solid #444;border-radius:20px;padding:8px 14px;cursor:pointer}
-nav button.on{background:#c9a227;color:#111;border-color:#c9a227;font-weight:700}
-main{max-width:900px;margin:0 auto;padding:16px}
-input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #444;background:#1c1f26;color:#fff;font-size:16px;margin:6px 0}
-.card{background:#1c1f26;border:1px solid #333;border-radius:12px;padding:14px;margin:10px 0}
-.card h3{margin:0 0 4px}.tag{display:inline-block;background:#c9a227;color:#111;border-radius:20px;padding:2px 10px;font-size:12px;font-weight:700;margin:2px 4px 2px 0}
-.muted{color:#bdbdbd}.fala{background:#242832;border-left:3px solid #c9a227;padding:10px;border-radius:8px;font-style:italic}
-button.big{background:#c9a227;color:#111;border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer;font-size:16px}
-details{background:#1c1f26;border:1px solid #333;border-radius:12px;padding:12px;margin:10px 0}
-summary{cursor:pointer;font-weight:700;font-size:17px}
-.q{margin:14px 0}.q button{display:block;width:100%;text-align:left;margin:6px 0;background:#242832;color:#fff;border:1px solid #444;border-radius:10px;padding:12px;cursor:pointer}
-.q button.correct{background:#1e7d32}.q button.wrong{background:#8e1616}
-footer{padding:20px 16px;color:#999;font-size:13px;text-align:center}
-a{color:#e8c84a}
+:root{
+  --bg:#f6f1ea; --surface:#fffdf9; --surface-2:#f1e9de; --ink:#1f1915; --ink-2:#4a3f37; --muted:#7a6c61;
+  --line:#e5dacb; --accent:#8a5a2b; --accent-ink:#fff8ee; --accent-soft:#f3e4d0; --gold:#b8872c;
+  --ok:#2f7a45; --ok-soft:#e3f1e6; --bad:#b03a2e; --bad-soft:#f8e3df;
+  --shadow:0 1px 2px rgba(60,40,20,.06),0 8px 24px -12px rgba(60,40,20,.18);
+  --r:16px; --serif:"Fraunces",Georgia,"Times New Roman",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14110f; --surface:#1d1916; --surface-2:#26201b; --ink:#f3ece4; --ink-2:#d6cabd; --muted:#a3958a;
+  --line:#332b25; --accent:#d39a5c; --accent-ink:#1a120b; --accent-soft:#3a2a1c; --gold:#e0b25a;
+  --ok:#6cc189; --ok-soft:#1d3325; --bad:#ec7b6e; --bad-soft:#3b1f1b; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+}}
+:root[data-theme="dark"]{
+  --bg:#14110f; --surface:#1d1916; --surface-2:#26201b; --ink:#f3ece4; --ink-2:#d6cabd; --muted:#a3958a;
+  --line:#332b25; --accent:#d39a5c; --accent-ink:#1a120b; --accent-soft:#3a2a1c; --gold:#e0b25a;
+  --ok:#6cc189; --ok-soft:#1d3325; --bad:#ec7b6e; --bad-soft:#3b1f1b; --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15;margin:0}
+p{margin:0}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+svg{display:block}
+.ico{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* Top bar */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1080px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;margin-right:auto}
+.mono{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 20px/1 var(--serif)}
+.brand b{display:block;font:600 17px/1.1 var(--serif)}
+.brand small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.tabs{display:none;gap:4px}
+.tab{display:flex;align-items:center;gap:7px;border:0;background:none;padding:8px 12px;border-radius:999px;color:var(--ink-2);font-weight:500;font-size:14.5px;cursor:pointer;text-decoration:none}
+.tab:hover{background:var(--surface-2)}
+.tab[aria-current="page"]{background:var(--ink);color:var(--bg)}
+.tab .ico{width:18px;height:18px}
+.theme{border:1px solid var(--line);background:var(--surface);width:38px;height:38px;border-radius:999px;display:grid;place-items:center;cursor:pointer;color:var(--ink-2)}
+
+/* Bottom bar (mobile) */
+.bottom{position:fixed;left:0;right:0;bottom:0;z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(6,1fr);padding:6px 2px calc(6px + env(safe-area-inset-bottom))}
+.bottom a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;border-radius:12px;text-decoration:none;color:var(--muted);font-size:10.5px;font-weight:600;letter-spacing:-.01em;min-width:0}
+.bottom a[aria-current="page"]{color:var(--accent)}
+.bottom a[aria-current="page"] .ico{stroke-width:2.2}
+@media (min-width:860px){.tabs{display:flex}.bottom{display:none}}
+
+/* Layout */
+main{max-width:1080px;margin:0 auto;padding:24px 16px calc(96px + env(safe-area-inset-bottom))}
+@media (min-width:860px){main{padding:36px 24px 64px}}
+section[data-view]{display:none;animation:in .25s ease}
+section[data-view].on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.head{margin-bottom:20px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.head h1{font-size:clamp(28px,5vw,40px);margin-top:6px}
+.head p{color:var(--muted);margin-top:8px;max-width:62ch}
+.block{margin-top:36px}
+.block>h2{font-size:22px;margin-bottom:4px}
+.block>.sub{color:var(--muted);font-size:14.5px;margin-bottom:14px}
+.grid{display:grid;gap:12px}
+@media (min-width:640px){.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.muted{color:var(--muted)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-radius:24px;padding:28px 22px;background:linear-gradient(135deg,#2a1d14 0%,#5b3a1e 55%,#8a5a2b 100%);color:#fbf3e8}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:1px solid rgba(255,230,190,.18);box-shadow:0 0 0 30px rgba(255,230,190,.04),0 0 0 70px rgba(255,230,190,.03)}
+.hero .eyebrow{color:#f0c98e}
+.hero h1{font-size:clamp(30px,6vw,48px);margin:10px 0 10px;max-width:16ch;color:#fff8ee}
+.hero p{color:#e8d6c0;max-width:52ch}
+.hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;position:relative;z-index:1}
+@media (min-width:860px){.hero{padding:44px 40px}}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:11px 18px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none}
+.btn-light{background:#fff8ee;color:#2a1d14}
+.btn-ghost{background:rgba(255,248,238,.12);color:#fff8ee;border:1px solid rgba(255,248,238,.25)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-outline{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn:active{transform:scale(.98)}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+@media (min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.stat b{display:block;font:600 30px/1 var(--serif)}
+.stat span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+
+/* Plan */
+.plan{display:grid;gap:10px}
+.day{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s}
+.day:hover{border-color:var(--accent)}
+.day input{position:absolute;opacity:0;pointer-events:none}
+.check{width:26px;height:26px;border-radius:8px;border:2px solid var(--line);flex:none;display:grid;place-items:center;margin-top:1px;transition:.15s}
+.check svg{width:16px;height:16px;stroke:var(--accent-ink);stroke-width:3;fill:none;opacity:0}
+.day.done{background:var(--accent-soft);border-color:transparent}
+.day.done .check{background:var(--accent);border-color:var(--accent)}
+.day.done .check svg{opacity:1}
+.day.done .day-t{text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--ink) 35%,transparent)}
+.day small{display:block;font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.day-t{font-weight:600;display:block}
+.day p{color:var(--muted);font-size:14.5px;margin-top:2px}
+.bar{height:8px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .35s ease}
+.progress-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.progress-row .bar{flex:1}
+.progress-row span{font-size:14px;font-weight:600;color:var(--ink-2);white-space:nowrap}
+
+.rules li{margin:0 0 10px;padding-left:4px}
+.rules{margin:0;padding-left:20px}
+.store{display:grid;gap:12px}
+.store .row{display:flex;gap:12px;align-items:flex-start}
+.store .row .ico{color:var(--accent);margin-top:2px}
+
+/* Search */
+.search{position:relative}
+.search .ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;font:inherit;font-size:16px;padding:14px 44px 14px 46px;border-radius:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink);box-shadow:var(--shadow);outline:none}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent)}
+.clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:var(--surface-2);width:30px;height:30px;border-radius:99px;cursor:pointer;display:none;place-items:center;color:var(--muted)}
+.clear.show{display:grid}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:none;margin:0 -16px;padding-left:16px;padding-right:16px}
+.chips::-webkit-scrollbar{display:none}
+@media (min-width:860px){.chips{flex-wrap:wrap;margin:0;padding-left:0;padding-right:0}}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500;cursor:pointer;color:var(--ink-2);white-space:nowrap}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.quick{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;font-size:13.5px;color:var(--muted)}
+.quick button{border:0;background:none;color:var(--accent);font-weight:600;cursor:pointer;padding:2px 4px;font-size:13.5px}
+.count{font-size:14px;color:var(--muted);margin:14px 0 10px}
+
+.model{display:flex;flex-direction:column;gap:12px}
+.model .cat{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.model h3{font-size:20px;margin-top:4px}
+.ref{font:500 12.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--surface-2);color:var(--ink-2);padding:5px 8px;border-radius:6px;white-space:nowrap}
+.mtop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{border:0;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;cursor:pointer}
+.tag:hover{filter:brightness(.97)}
+.for{font-size:14.5px;color:var(--ink-2)}
+.for b{color:var(--ink)}
+.quote{position:relative;margin:0;padding:12px 14px 12px 16px;background:var(--surface-2);border-radius:12px;font-family:var(--serif);font-size:16px;font-style:italic;color:var(--ink);line-height:1.45}
+.quote::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:3px;background:var(--gold)}
+.model .quote{margin-top:auto}
+.empty{text-align:center;padding:40px 16px;color:var(--muted)}
+
+/* Tech */
+.tech{display:flex;flex-direction:column;gap:10px}
+.tech .tt{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tech h3{font-size:21px}
+.kind{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 8px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.kind.warn{background:color-mix(in srgb,var(--gold) 20%,transparent);color:var(--gold)}
+.tech .what{color:var(--ink-2);font-size:15px}
+.tech .where{font-size:13.5px;color:var(--muted);margin-top:auto}
+.tech .where button{border:0;background:none;padding:0;color:var(--accent);font-weight:600;cursor:pointer;font-size:13.5px}
+.callout{display:flex;gap:14px;background:var(--accent-soft);border-radius:var(--r);padding:16px 18px}
+.callout .ico{color:var(--accent);margin-top:2px}
+.callout ul{margin:6px 0 0;padding-left:18px}
+.callout li{margin:4px 0}
+
+/* Venda */
+.steps{counter-reset:s;display:grid;gap:12px}
+@media (min-width:760px){.steps{grid-template-columns:repeat(2,1fr)}}
+.step{position:relative;padding-left:62px}
+.step::before{counter-increment:s;content:counter(s);position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:99px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 15px/1 var(--serif)}
+.step h3{font-size:18px;font-family:var(--sans);font-weight:600;letter-spacing:0}
+.step p{color:var(--ink-2);font-size:14.5px;margin-top:4px}
+.step .quote{font-size:15px;margin-top:10px}
+.pain .dor{font-weight:600;font-size:16px}
+.pain .arrow{display:flex;align-items:center;gap:8px;margin:8px 0 10px;font-size:14px;color:var(--accent);font-weight:600}
+details.obj{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;overflow:hidden}
+details.obj summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-family:var(--serif);font-size:18px;font-weight:600}
+details.obj summary::-webkit-details-marker{display:none}
+details.obj summary .ico{transition:transform .2s;color:var(--muted)}
+details.obj[open] summary .ico{transform:rotate(45deg)}
+details.obj .quote{margin:0 18px 18px}
+.never{background:var(--bad-soft);border-radius:var(--r);padding:18px}
+.never h3{color:var(--bad);font-family:var(--sans);font-size:16px;font-weight:700;display:flex;gap:8px;align-items:center}
+.never ul{margin:10px 0 0;padding-left:20px}
+.never li{margin:6px 0}
+.types .card h3{font-size:18px}
+.types .card p{color:var(--ink-2);font-size:14.5px;margin-top:4px}
+.types .card .use{font-size:13.5px;color:var(--accent);font-weight:600;margin-top:8px}
+.jump{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}
+.jump::-webkit-scrollbar{display:none}
+.jump a{flex:none;text-decoration:none}
+.anchor{scroll-margin-top:84px}
+
+/* Quiz */
+.quiz{max-width:720px}
+.qmeta{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.qcard{padding:24px}
+.qcard h2{font-size:clamp(21px,3.5vw,26px);line-height:1.25}
+.opts{display:grid;gap:10px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;font-size:16px;font-weight:500;transition:border-color .15s,background .15s}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt .k{width:28px;height:28px;border-radius:8px;background:var(--surface-2);display:grid;place-items:center;font-weight:700;font-size:13px;color:var(--muted);flex:none}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.right .k{background:var(--ok);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt.wrong .k{background:var(--bad);color:#fff}
+.opt.dim{opacity:.55}
+.why{margin-top:16px;padding:14px 16px;border-radius:12px;font-size:15px;display:none}
+.why.show{display:block;animation:in .2s ease}
+.why.ok{background:var(--ok-soft);color:var(--ink)}
+.why.no{background:var(--bad-soft);color:var(--ink)}
+.why b{display:block;margin-bottom:2px}
+.qnav{display:flex;justify-content:flex-end;margin-top:18px}
+.result{text-align:center;padding:36px 22px}
+.ring{width:150px;height:150px;margin:0 auto 18px;position:relative}
+.ring svg{width:150px;height:150px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12}
+.ring .bg{stroke:var(--surface-2)}
+.ring .fg{stroke:var(--accent);stroke-linecap:round;transition:stroke-dashoffset .8s ease}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:600 38px/1 var(--serif)}
+.result h2{font-size:26px}
+.result p{color:var(--muted);margin:8px auto 0;max-width:44ch}
+.result .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+.misses{text-align:left;margin-top:24px}
+.misses li{margin:8px 0;font-size:14.5px}
+
+/* Model extras */
+.anc{display:inline-block;margin-left:6px;padding:2px 7px;border-radius:5px;background:color-mix(in srgb,var(--gold) 22%,transparent);color:var(--gold);font-size:10.5px;letter-spacing:.06em;vertical-align:1px}
+.look{border-top:1px dashed var(--line);padding-top:12px}
+.look-h{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.look p{font-size:14.5px;color:var(--ink-2)}
+.sws{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.sw{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;color:var(--ink-2);background:var(--surface-2);padding:3px 10px 3px 4px;border-radius:999px}
+.sw i{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.mfoot{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.instore{border:1px dashed var(--line);background:none;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
+.instore[aria-pressed="true"]{border:1px solid var(--ok);background:var(--ok-soft);color:var(--ok)}
+.conf{font-size:12px}
+.model.has{border-color:color-mix(in srgb,var(--ok) 45%,var(--line))}
+.chip-store{border-style:dashed}
+
+/* Stylist */
+.stylist{padding:20px}
+@media (min-width:860px){.stylist{padding:28px}}
+.pick+.pick{margin-top:20px}
+.pick-h{display:flex;align-items:center;gap:10px;font-weight:600;font-size:16px}
+.num{width:24px;height:24px;border-radius:99px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-size:13px;font-weight:700}
+.chips.wrap{flex-wrap:wrap;margin:0;padding:12px 0 0;overflow:visible}
+.pants{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+@media (min-width:640px){.pants{grid-template-columns:repeat(5,1fr)}}
+@media (min-width:960px){.pants{grid-template-columns:repeat(9,1fr)}}
+.pant{display:flex;flex-direction:column;align-items:center;gap:6px;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 4px;cursor:pointer;font-size:12.5px;font-weight:600;color:var(--ink-2);text-align:center;line-height:1.2}
+.pant i{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.pant[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+#lookout:not(:empty){margin-top:24px}
+.lk{border-radius:18px;overflow:hidden;border:1px solid var(--line);animation:in .25s ease}
+.lk-top{padding:20px;background:linear-gradient(135deg,#2a1d14,#6a4423);color:#fbf3e8;display:flex;gap:16px;align-items:center}
+.lk-top .eyebrow{color:#f0c98e}
+.lk-top h3{font-size:22px;color:#fff8ee;margin-top:4px}
+.duo{display:flex;flex:none}
+.duo i{width:44px;height:44px;border-radius:50%;border:3px solid #3a2718}
+.duo i+i{margin-left:-12px}
+.lk-body{display:grid;gap:1px;background:var(--line)}
+@media (min-width:760px){.lk-body{grid-template-columns:repeat(2,1fr)}}
+.lk-cell{background:var(--surface);padding:16px 18px}
+.lk-cell h4{margin:0 0 6px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.lk-cell p{font-size:14.5px;color:var(--ink-2)}
+.lk-cell .sws{margin-top:4px}
+.lk-cell .avoid .sw{opacity:.75;text-decoration:line-through}
+.lk-models{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.lk-models button{border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink)}
+.lk-models button:hover{border-color:var(--accent)}
+.lk-say{background:var(--surface);padding:18px}
+.lk-say .quote{font-size:17px}
+.tone{display:flex;gap:14px;align-items:flex-start}
+.tone>i{width:52px;height:52px;border-radius:14px;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15)}
+.tone h3{font-size:19px}
+.tone p{font-size:14px;color:var(--ink-2);margin-top:3px}
+.tone .muted{font-size:13px;margin-top:6px}
+.rule .n{font:600 28px/1 var(--serif);color:var(--gold)}
+.rule h3{font-size:17px;font-family:var(--sans);font-weight:600;letter-spacing:0;margin-top:8px}
+.rule p{font-size:14.5px;color:var(--ink-2);margin-top:4px}
+
+footer{max-width:1080px;margin:0 auto;padding:0 16px calc(100px + env(safe-area-inset-bottom));color:var(--muted);font-size:13px;line-height:1.6}
+@media (min-width:860px){footer{padding:0 24px 40px}}
+footer .line{border-top:1px solid var(--line);padding-top:20px}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header>
-<h1>Democrata — Domínio Total</h1>
-<p>Guia do vendedor • Pátio Central Shopping, Patos de Minas/MG • (34) 3821-3263 • seg–sáb 10h–22h, dom 12h–20h</p>
-<p class="muted">Fonte: democratacom.br/tecnologias + blog Verão 2026 — conferido em 13/11/2026. Preços não estão aqui: confira na etiqueta da loja.</p>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-6h4v6"/></symbol>
+  <symbol id="i-shoe" viewBox="0 0 24 24"><path d="M3 16v-5.5c0-.8.7-1.5 1.5-1.5H7l2 2.5c1 1.2 2.4 1.9 4 2l5.2.4c1.6.1 2.8 1.4 2.8 3V18H3z"/><path d="M3 18h18"/><path d="M11 11.5l1.2-1.5M13.5 12.6l1.2-1.6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+  <symbol id="i-quiz" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-style" viewBox="0 0 24 24"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3"/><path d="M8 3c.5 1.7 2 3 4 3s3.5-1.3 4-3"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <span class="mono">D</span>
+      <span><b>Domínio Total</b><small>Guia do vendedor Democrata</small></span>
+    </a>
+    <nav class="tabs" aria-label="Seções">
+      <a class="tab" href="#inicio" data-nav="inicio"><svg class="ico"><use href="#i-home"/></svg>Início</a>
+      <a class="tab" href="#modelos" data-nav="modelos"><svg class="ico"><use href="#i-shoe"/></svg>Modelos</a>
+      <a class="tab" href="#estilo" data-nav="estilo"><svg class="ico"><use href="#i-style"/></svg>Estilo</a>
+      <a class="tab" href="#tecnologias" data-nav="tecnologias"><svg class="ico"><use href="#i-spark"/></svg>Tecnologias</a>
+      <a class="tab" href="#venda" data-nav="venda"><svg class="ico"><use href="#i-chat"/></svg>Venda</a>
+      <a class="tab" href="#quiz" data-nav="quiz"><svg class="ico"><use href="#i-quiz"/></svg>Quiz</a>
+    </nav>
+    <button class="theme" id="theme" aria-label="Alternar tema claro/escuro"><svg class="ico"><use href="#i-moon"/></svg></button>
+  </div>
 </header>
-<nav>
-<button class="on" data-sec="buscar">🔎 Buscar</button>
-<button data-sec="tecnologias">⚙️ Tecnologias</button>
-<button data-sec="quiz">🧠 Quiz</button>
-<button data-sec="plano">📅 Plano 7 dias</button>
-</nav>
+
 <main>
-<section id="buscar">
-<input id="q" placeholder="Busque: Air, PULSE, Metropolitan, Pace, casamento, viagem..." oninput="filtrar()">
-<select id="cat" onchange="filtrar()"><option value="">Todas as categorias</option><option>Sapato social</option><option>Tênis</option><option>Mocassim/Loafer/Sider/Driver</option><option>Sapatênis</option><option>Sandália</option><option>Democrata Ela (feminino)</option><option>Acessórios</option></select>
-<div id="lista"></div>
+
+<!-- INÍCIO -->
+<section data-view="inicio">
+  <div class="hero">
+    <div class="eyebrow">Coleção Verão 27 · Pátio Central Shopping</div>
+    <h1>Domine a coleção. Venda com segurança.</h1>
+    <p>Modelos, tecnologias e frases de venda num lugar só. Estude 15 minutos por dia e feche o quiz em 10/10.</p>
+    <div class="actions">
+      <a class="btn btn-light" href="#quiz"><svg class="ico"><use href="#i-quiz"/></svg>Fazer o quiz</a>
+      <a class="btn btn-ghost" href="#estilo"><svg class="ico"><use href="#i-style"/></svg>Montar look</a>
+      <a class="btn btn-ghost" href="#modelos"><svg class="ico"><use href="#i-search"/></svg>Buscar modelo</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="st-models">15</b><span>modelos no catálogo</span></div>
+    <div class="stat"><b id="st-techs">12</b><span>tecnologias e materiais</span></div>
+    <div class="stat"><b id="st-best">—</b><span>seu recorde no quiz</span></div>
+    <div class="stat"><b id="st-plan">0/7</b><span>dias do plano feitos</span></div>
+  </div>
+
+  <div class="block">
+    <h2>Plano de 7 dias</h2>
+    <p class="sub">15 minutos por dia, um tema por vez. Marque quando terminar — fica salvo neste aparelho.</p>
+    <div class="progress-row"><div class="bar"><i id="plan-bar" style="width:0"></i></div><span id="plan-txt">0 de 7</span></div>
+    <div class="plan" id="plan"></div>
+  </div>
+
+  <div class="block grid g2">
+    <div class="card">
+      <div class="eyebrow">Regras de ouro</div>
+      <h2 style="font-size:22px;margin:6px 0 14px">Não esqueça nunca</h2>
+      <ol class="rules">
+        <li><b>Preço muda, tecnologia não.</b> Preço é sempre na etiqueta da loja.</li>
+        <li><b>Prove os dois pés.</b> Um pé é sempre maior que o outro.</li>
+        <li><b>Air Spot tem forma grande.</b> Se folgar, prove um número menor.</li>
+        <li><b>Indique por ocasião, não por modelo.</b> Pergunte antes de mostrar.</li>
+        <li><b>Feche com o cinto.</b> Preto com preto, marrom com marrom.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <div class="eyebrow">A loja</div>
+      <h2 style="font-size:22px;margin:6px 0 14px">Democrata · Pátio Central</h2>
+      <div class="store">
+        <div class="row"><svg class="ico"><use href="#i-pin"/></svg><span>Praça Alexina Cândida Conceição, 05, Centro<br><span class="muted">Patos de Minas/MG</span></span></div>
+        <div class="row"><svg class="ico"><use href="#i-phone"/></svg><a href="tel:+553438213263">(34) 3821-3263</a></div>
+        <div class="row"><svg class="ico"><use href="#i-clock"/></svg><span>Seg a sáb, 10h–22h<br><span class="muted">Domingo, 12h–20h</span></span></div>
+      </div>
+    </div>
+  </div>
 </section>
-<section id="tecnologias" style="display:none">
-<h2>As tecnologias — toque para ver a frase de venda</h2>
-<div id="tecs"></div>
+
+<!-- MODELOS -->
+<section data-view="modelos">
+  <div class="head">
+    <div class="eyebrow">Modelos</div>
+    <h1>Ache o sapato certo para o cliente</h1>
+    <p>Busque por nome, referência, tecnologia ou ocasião. Toque numa tecnologia para filtrar.</p>
+  </div>
+  <div class="search">
+    <svg class="ico"><use href="#i-search"/></svg>
+    <input id="q" type="search" placeholder="Air Spot, PULSE, 448026, viagem…" autocomplete="off" aria-label="Buscar modelos">
+    <button class="clear" id="clear" aria-label="Limpar busca"><svg class="ico" style="width:16px;height:16px"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="quick" id="quick">Tente:</div>
+  <div class="chips" id="cats" role="group" aria-label="Categorias"></div>
+  <p class="count" id="count"></p>
+  <div class="grid g3" id="lista"></div>
 </section>
-<section id="quiz" style="display:none">
-<h2>Quiz — 10 perguntas, meta 10/10</h2>
-<p id="placar" class="muted">Acertos: 0/10</p>
-<div id="quizbox"></div>
-<button class="big" onclick="montarQuiz()">Recomeçar quiz</button>
+
+<!-- ESTILO -->
+<section data-view="estilo">
+  <div class="head">
+    <div class="eyebrow">Consultoria de estilo</div>
+    <h1>Monte o look do cliente</h1>
+    <p>Escolha a ocasião e a cor da calça. Você recebe o sapato, o tom do couro, o cinto, a meia e a frase pronta. Pode virar o celular e mostrar para o cliente.</p>
+  </div>
+
+  <div class="stylist card">
+    <div class="pick">
+      <div class="pick-h"><span class="num">1</span>Qual a ocasião?</div>
+      <div class="chips wrap" id="occ" role="group" aria-label="Ocasião"></div>
+    </div>
+    <div class="pick">
+      <div class="pick-h"><span class="num">2</span>Qual a cor da calça?</div>
+      <div class="pants" id="pants" role="group" aria-label="Cor da calça"></div>
+    </div>
+    <div id="lookout"></div>
+  </div>
+
+  <div class="block">
+    <h2>Os tons do couro</h2>
+    <p class="sub">Saiba nomear o tom — o cliente percebe quando você fala com precisão.</p>
+    <div class="grid g3" id="tons"></div>
+  </div>
+
+  <div class="block">
+    <h2>6 regras que nunca falham</h2>
+    <p class="sub">Para responder com segurança quando o cliente perguntar “combina?”.</p>
+    <div class="grid g3" id="regras"></div>
+  </div>
+
+  <div class="block">
+    <h2>Como sugerir sem parecer vendedor</h2>
+    <p class="sub">Use o estilo como serviço. É isso que faz o seu atendimento ser lembrado.</p>
+    <div class="grid g2" id="sugerir"></div>
+  </div>
 </section>
-<section id="plano" style="display:none">
-<h2>Plano de 7 dias — 15 min por dia</h2>
-<div class="card"><b>Dia 1 — Air + Smart Comfort:</b> decore a frase do Air Spot e as refs 448026 / 448027.</div>
-<div class="card"><b>Dia 2 — PULSE x Ultra Light x Full Light:</b> 1 frase de diferença para cada.</div>
-<div class="card"><b>Dia 3 — Calce Fácil, Extra Soft, Dual Soft, Light:</b> Extra Soft é tênis, Dual Soft é social.</div>
-<div class="card"><b>Dia 4 — Tipos de sapato:</b> Oxford x Derby x Loafer x Monk x Sider x Driver x Sapatênis.</div>
-<div class="card"><b>Dia 5 — Linhas e modelos-âncora:</b> 3 de cada categoria, sem olhar.</div>
-<div class="card"><b>Dia 6 — Atendimento:</b> treine em voz alta o roteiro de 6 passos e as objeções.</div>
-<div class="card"><b>Dia 7 — Prova final:</b> quiz até 10/10. Anote o que ainda confunde.</div>
-<p>Guias completos na pasta <b>guias/</b> do repositório. Dados em <b>data/colecao.json</b>.</p>
+
+<!-- TECNOLOGIAS -->
+<section data-view="tecnologias">
+  <div class="head">
+    <div class="eyebrow">Tecnologias</div>
+    <h1>O que é, onde está e como falar</h1>
+    <p>Decore a frase de venda de cada uma. É ela que você usa no balcão.</p>
+  </div>
+  <div class="callout">
+    <svg class="ico"><use href="#i-bulb"/></svg>
+    <div>
+      <b>As confusões que você não pode errar</b>
+      <ul>
+        <li><b>Extra Soft</b> é tênis. <b>Dual Soft</b> é sapato social.</li>
+        <li><b>Smart Comfort</b> é uma <i>linha</i>, não uma tecnologia.</li>
+        <li><b>Knit</b> é <i>material</i> (malha), não tecnologia.</li>
+        <li><b>PULSE</b> devolve energia, mas não é tênis de corrida.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid g3" id="tecs" style="margin-top:16px"></div>
 </section>
+
+<!-- VENDA -->
+<section data-view="venda">
+  <div class="head">
+    <div class="eyebrow">Atendimento</div>
+    <h1>Do “bom dia” ao fechamento</h1>
+    <p>O roteiro, as frases por dor do cliente, as objeções e os tipos de sapato.</p>
+  </div>
+  <div class="jump">
+    <a class="chip" href="#roteiro">Roteiro</a>
+    <a class="chip" href="#dores">Frases por dor</a>
+    <a class="chip" href="#objecoes">Objeções</a>
+    <a class="chip" href="#nunca">Nunca prometer</a>
+    <a class="chip" href="#tipos">Tipos de sapato</a>
+    <a class="chip" href="#cuidados">Medida e cuidado</a>
+  </div>
+
+  <div class="block anchor" id="roteiro">
+    <h2>O roteiro em 6 passos</h2>
+    <p class="sub">Ouça primeiro, mostre depois.</p>
+    <div class="steps" id="steps"></div>
+  </div>
+
+  <div class="block anchor" id="dores">
+    <h2>Frases prontas por dor do cliente</h2>
+    <p class="sub">O cliente fala a dor, você responde com o modelo e a frase.</p>
+    <div class="grid g2" id="pains"></div>
+  </div>
+
+  <div class="block anchor" id="objecoes">
+    <h2>Objeções</h2>
+    <p class="sub">Toque para ver a resposta. Tente responder antes de abrir.</p>
+    <div id="objs"></div>
+  </div>
+
+  <div class="block anchor" id="nunca">
+    <div class="never">
+      <h3><svg class="ico"><use href="#i-alert"/></svg>O que NUNCA prometer</h3>
+      <ul>
+        <li>PULSE não é tênis de corrida.</li>
+        <li>Air não cura dor no joelho, joanete ou problema de coluna.</li>
+        <li>Couro legítimo risca — hidrata e recupera, mas não é indestrutível.</li>
+        <li>Não garanta que “não vai apertar nunca”: cada pé é um pé, a prova decide.</li>
+        <li>Garantia é para defeito de fabricação — não prometa prazo que você não sabe.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block anchor types" id="tipos">
+    <h2>Tipos de sapato</h2>
+    <p class="sub">Como reconhecer e quando indicar.</p>
+    <div class="grid g3" id="tipos-g"></div>
+  </div>
+
+  <div class="block anchor" id="cuidados">
+    <h2>Medida e cuidado</h2>
+    <p class="sub">Para responder sem hesitar.</p>
+    <div class="grid g3">
+      <div class="card"><div class="eyebrow">Medida</div><p style="margin-top:8px">Numeração masculina <b>37–44</b>. Sempre meça e prove os <b>dois pés</b>.</p></div>
+      <div class="card"><div class="eyebrow">Couro</div><p style="margin-top:8px">Pano úmido e hidratar. <b>Não</b> deixar de molho, <b>não</b> secar no sol.</p></div>
+      <div class="card"><div class="eyebrow">Tênis knit</div><p style="margin-top:8px">Lavar <b>à mão</b>. Nada de máquina de lavar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section data-view="quiz">
+  <div class="quiz">
+    <div class="head">
+      <div class="eyebrow">Quiz</div>
+      <h1>10 perguntas. Meta: 10/10.</h1>
+      <p>Cada resposta mostra o porquê. As perguntas mudam de ordem a cada rodada.</p>
+    </div>
+    <div id="quizbox"></div>
+  </div>
+</section>
+
 </main>
-<footer>Democrata — Domínio Total • Sistema de estudo do Marcus • Não é site oficial da marca. Quando chegar modelo novo na loja, acrescente em data/colecao.json.</footer>
+
+<footer>
+  <div class="line">
+    <b>Domínio Total</b> — sistema de estudo pessoal do Marcus. Não é site oficial da marca.<br>
+    Fonte: <a href="https://www.democrata.com.br/tecnologias" target="_blank" rel="noopener">democrata.com.br/tecnologias</a> e blog Verão 2026, conferido em 13/11/2026. Preços não estão aqui: confira na etiqueta.
+  </div>
+</footer>
+
+<nav class="bottom" aria-label="Seções">
+  <a href="#inicio" data-nav="inicio"><svg class="ico"><use href="#i-home"/></svg>Início</a>
+  <a href="#modelos" data-nav="modelos"><svg class="ico"><use href="#i-shoe"/></svg>Modelos</a>
+  <a href="#estilo" data-nav="estilo"><svg class="ico"><use href="#i-style"/></svg>Estilo</a>
+  <a href="#tecnologias" data-nav="tecnologias"><svg class="ico"><use href="#i-spark"/></svg>Tecnologias</a>
+  <a href="#venda" data-nav="venda"><svg class="ico"><use href="#i-chat"/></svg>Venda</a>
+  <a href="#quiz" data-nav="quiz"><svg class="ico"><use href="#i-quiz"/></svg>Quiz</a>
+</nav>
+
 <script>
+/* ---------- DADOS ---------- */
+/* a:1 = modelo-âncora (ref conferida). Os demais: linha do catálogo — confirme ref, cor e estoque na loja. */
 const MODELOS=[
-{n:"Smart Comfort Air Spot — cadarço",c:"Sapato social",t:["Air","Stretch","Max Memory"],ref:"448026-003",para:"Quem fica muitas horas em pé e quer social com amortecimento. Forma grande.",fala:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho."},
-{n:"Smart Comfort Air Spot — elástico lateral",c:"Sapato social",t:["Air","Stretch","Max Memory","Calce Fácil"],ref:"448027-003",para:"Quem quer o Air Spot sem cadarço: calça rápido.",fala:"O mesmo conforto do 448026, sem cadarço. Ideal para quem tem pressa."},
-{n:"Metropolitan Prime",c:"Sapato social",t:["Couro legítimo"],ref:"244102-001",para:"Formal clássico, loafer versátil para trabalho e evento.",fala:"O clássico elegante da linha Metropolitan: bico alongado, acabamento fino."},
-{n:"Metropolitan Bay",c:"Sapato social",t:["Couro legítimo"],ref:"273101-006",para:"Derby versátil, do trabalho ao evento.",fala:"Derby de couro com solado microexpandido: leve e absorve impacto."},
-{n:"Garage Astro",c:"Sapato social",t:["Couro legítimo"],ref:"301104-001",para:"Casual jovem de couro.",fala:"Casual da linha Garage: despojado sem perder o couro legítimo."},
-{n:"Drake Pulse",c:"Tênis",t:["PULSE"],ref:"—",para:"Quem anda muito e quer retorno de energia.",fala:"Cápsula de TPU que devolve energia a cada passo."},
-{n:"Beat Pulse",c:"Tênis",t:["PULSE"],ref:"—",para:"Urbano intenso, robusto com PULSE.",fala:"Painel marcado + PULSE: presença e amortecimento."},
-{n:"Brad Ultra Light",c:"Tênis",t:["Ultra Light"],ref:"—",para:"Retrô-running, leveza total.",fala:"EVA levíssimo, espírito running vintage."},
-{n:"Joe Ultra Light",c:"Tênis",t:["Ultra Light","Knit"],ref:"—",para:"Segunda pele: knit que abraça o pé.",fala:"Knit respirável, veste como segunda pele."},
-{n:"Pace Calce Fácil",c:"Tênis",t:["Calce Fácil"],ref:"—",para:"Pressa, aeroporto, praticidade.",fala:"Calça sem a mão, calcanhar não amassa."},
-{n:"Flop / Clay / Dune / Tom",c:"Mocassim/Loafer/Sider/Driver",t:["Couro legítimo"],ref:"—",para:"Esporte fino, jantar, dirigir (Tom).",fala:"Clássicos repensados: do escritório ao jantar sem trocar o sapato."},
-{n:"Dock / Tulum",c:"Sandália",t:["Couro legítimo"],ref:"—",para:"Calor, verão, lazer.",fala:"Tira larga em couro, palmilha anatômica (Dock). Mule clean (Tulum)."},
-{n:"Sandals Verão 27",c:"Sandália",t:["Couro legítimo"],ref:"700203-001/002/003",para:"Calor, verão, conforto com sofisticação.",fala:"Tira cruzada em couro, palmilha anatômica."},
-{n:"Democrata Ela",c:"Democrata Ela (feminino)",t:["Couro legítimo"],ref:"—",para:"Mulher cosmopolita: trabalho ao lazer.",fala:"Tênis ballet core, mocassim boyish, Mary Jane, papete, bota cano alto."},
-{n:"Cinto Metropolitan / Garage",c:"Acessórios",t:["Couro legítimo"],ref:"—",para:"Completar o look, presente.",fala:"Preto com preto, marrom com marrom. Dupla face resolve os dois."}
+{a:1,n:"Smart Comfort Air Spot — cadarço",c:"Sapato social",t:["Air","Stretch","Max Memory"],ref:"448026-003",cores:["preto","marrom"],para:"Quem fica muitas horas em pé e quer social com amortecimento. Forma grande.",look:"Calça social cinza ou marinho + camisa clara. Preto à noite e em evento; marrom no dia a dia.",fala:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",k:"em pé dor conforto presente pai trabalho escritório formal casamento oxford derby"},
+{a:1,n:"Smart Comfort Air Spot — elástico lateral",c:"Sapato social",t:["Air","Stretch","Max Memory","Calce Fácil"],ref:"448027-003",cores:["preto","marrom"],para:"Quem quer o Air Spot sem cadarço: calça rápido.",look:"Calça social ou chino + camisa ou polo. Marinho com marrom é acerto garantido.",fala:"O mesmo conforto do 448026, sem cadarço. Ideal para quem tem pressa.",k:"em pé pressa sem cadarço praticidade trabalho idoso viagem"},
+{a:1,n:"Metropolitan Prime",c:"Sapato social",t:["Couro legítimo"],ref:"244102-001",cores:["preto","cafe"],para:"Formal clássico, loafer versátil para trabalho e evento.",look:"Terno marinho ou chumbo + camisa branca. Preto para noite e casamento; café para esporte fino.",fala:"O clássico elegante da linha Metropolitan: bico alongado, acabamento fino.",k:"formal casamento formatura evento terno elegante loafer"},
+{a:1,n:"Metropolitan Bay",c:"Sapato social",t:["Couro legítimo"],ref:"273101-006",cores:["marrom","preto"],para:"Derby versátil, do trabalho ao evento.",look:"Chino bege ou marinho com o marrom; terno cinza com o preto. Fica ótimo com blazer + jeans escuro.",fala:"Derby de couro com solado microexpandido: leve e absorve impacto.",k:"derby trabalho evento um só para tudo versátil esporte fino"},
+{n:"Metropolitan — Type, Vega, Oliver, Jeff",c:"Sapato social",t:["Couro legítimo"],para:"Outros modelos da linha clássica: alfaiataria e social do dia a dia.",look:"Alfaiataria: terno ou calça social + camisa. Preto no formal, marrom/café no trabalho.",fala:"É a linha clássica da Democrata: couro legítimo e acabamento fino.",k:"formal trabalho terno social clássico"},
+{n:"Hi-Soft 32 — Madison, Taylor, James",c:"Sapato social",t:["Couro legítimo"],para:"Conforto com nome próprio: social para o dia inteiro.",look:"Calça social ou chino + camisa. Para o cliente que trabalha de social todo dia.",fala:"É social pensado para o conforto do dia inteiro.",k:"conforto trabalho social em pé"},
+{n:"Easy",c:"Sapato social",t:["Couro legítimo"],para:"O social fresco, para dias quentes.",look:"Alfaiataria clara (bege, cinza claro) + camisa de manga. Tons marrons.",fala:"Social mais fresco, para quem trabalha de sapato no calor.",k:"calor social leve verão trabalho"},
+{a:1,n:"Garage Astro",c:"Casual de couro",t:["Couro legítimo"],ref:"301104-001",cores:["marrom"],para:"Casual jovem de couro.",look:"Jeans escuro + camisa de botão ou camiseta lisa + jaqueta. Cinto marrom.",fala:"Casual da linha Garage: despojado sem perder o couro legítimo.",k:"casual jovem fim de semana jeans"},
+{n:"Denim",c:"Sapatênis",t:["Couro legítimo"],para:"O sapatênis que a marca popularizou: casual arrumado.",look:"Jeans ou chino + polo ou camisa. Fica entre o sapato e o tênis.",fala:"Meio sapato, meio tênis: arrumado sem ficar formal.",k:"sapatenis casual esporte fino jeans polo"},
+{n:"Flop",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Mocassim: esporte fino, jantar, escritório informal.",look:"Chino bege ou marinho + polo ou camisa de linho. Meia invisível.",fala:"Do escritório ao jantar sem trocar o sapato.",k:"mocassim esporte fino jantar"},
+{n:"Clay",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Sider (náutico): casual, verão, fim de semana.",look:"Bermuda ou chino claro + camisa de linho. Sem meia aparente.",fala:"Náutico leve, feito para o fim de semana.",k:"sider nautico verão praia fim de semana calor"},
+{n:"Dune",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Loafer: esporte fino e jantar.",look:"Calça social ou chino + camisa + blazer. Jantar e evento diurno.",fala:"Loafer elegante: calça rápido e veste bem com alfaiataria.",k:"loafer esporte fino jantar evento"},
+{n:"Tom",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Driver: para quem dirige muito.",look:"Jeans ou chino + polo. Casual de fim de semana.",fala:"Solado que sobe no calcanhar: feito para dirigir com conforto.",k:"driver dirigir carro motorista casual"},
+{a:1,n:"Drake Pulse",c:"Tênis",t:["PULSE"],para:"Quem anda muito e quer retorno de energia.",look:"Jeans, jogger ou chino + camiseta ou polo. Casual urbano.",fala:"Cápsula de TPU que devolve energia a cada passo.",k:"anda muito dia a dia um só para tudo energia"},
+{a:1,n:"Beat Pulse",c:"Tênis",t:["PULSE"],para:"Urbano intenso, robusto com PULSE.",look:"Jeans escuro + jaqueta ou moletom. Visual urbano.",fala:"Painel marcado + PULSE: presença e amortecimento.",k:"urbano anda muito"},
+{n:"Draft Pulse",c:"Tênis",t:["PULSE"],para:"Mais uma opção da família PULSE para quem anda muito.",look:"Jeans ou jogger + camiseta. Dia a dia.",fala:"Família PULSE: energia de volta em cada passo.",k:"anda muito energia dia a dia"},
+{a:1,n:"Brad Ultra Light",c:"Tênis",t:["Ultra Light"],para:"Retrô-running, leveza total.",look:"Bermuda chino, jeans claro + camiseta. Pegada retrô.",fala:"EVA levíssimo, espírito running vintage.",k:"leve retrô viagem"},
+{a:1,n:"Joe Ultra Light",c:"Tênis",t:["Ultra Light","Knit"],para:"Segunda pele: knit que abraça o pé.",look:"Bermuda ou calça leve de linho + camiseta. Perfeito no calor.",fala:"Knit respirável, veste como segunda pele.",k:"leve calor respira verão"},
+{n:"Move Ultra-Light",c:"Tênis",t:["Ultra Light","Knit"],para:"Leve e respirável para o dia todo.",look:"Jogger ou jeans + camiseta. Conforto casual.",fala:"Leve e respira: dá para ficar o dia inteiro.",k:"leve calor respira dia a dia"},
+{a:1,n:"Pace Calce Fácil",c:"Tênis",t:["Calce Fácil"],para:"Pressa, aeroporto, praticidade.",look:"Jogger, moletom ou jeans. O tênis da viagem.",fala:"Calça sem a mão, calcanhar não amassa.",k:"viagem aeroporto avião pressa sem cadarço idoso"},
+{n:"Journey Extra-Soft",c:"Tênis",t:["Extra Soft","Knit"],para:"O macio do dia a dia corrido.",look:"Jeans ou jogger + camiseta. Rotina corrida.",fala:"Pisa e afunda macio — é o tênis do dia a dia corrido.",k:"macio dia a dia conforto"},
+{n:"Tênis Full Light",c:"Tênis",t:["Full Light"],para:"Quem quer o mais leve da marca.",look:"Qualquer casual: jeans, jogger, bermuda.",fala:"É o mais leve da Democrata: feito para você esquecer que está calçado.",k:"leve levíssimo dia a dia"},
+{n:"Vibe / Bold / Groove",c:"Tênis",t:["Casual urbano"],para:"Casual urbano de perfil limpo (Bold em knit).",look:"Jeans + camiseta lisa ou camisa aberta. Tênis limpo combina com tudo.",fala:"Perfil limpo: combina com qualquer roupa do dia a dia.",k:"casual urbano jovem street"},
+{n:"Dock",c:"Sandália / Mule",t:["Couro legítimo"],para:"Calor, verão, lazer.",look:"Bermuda ou calça de linho + camiseta ou camisa aberta.",fala:"Tira larga em couro e palmilha anatômica.",k:"calor verão praia lazer sandália"},
+{n:"Tulum",c:"Sandália / Mule",t:["Couro legítimo"],para:"Mule de solado claro, visual clean.",look:"Linho claro, bermuda, tons de areia e branco.",fala:"Mule clean: calça rápido e deixa o look leve.",k:"calor verão mule clean"},
+{a:1,n:"Sandals Verão 27",c:"Sandália / Mule",t:["Couro legítimo"],ref:"700203-001/002/003",para:"Calor, verão, conforto com sofisticação.",look:"Bermuda de alfaiataria ou linho + camisa de manga curta.",fala:"Tira cruzada em couro, palmilha anatômica.",k:"calor verão praia"},
+{n:"Bota Democrata",c:"Bota / Chinelo",t:["Couro legítimo"],para:"Inverno, frio, visual robusto.",look:"Jeans escuro + camisa de flanela ou suéter + jaqueta.",fala:"Couro legítimo para o frio, com cara de robusta.",k:"inverno frio bota"},
+{n:"Chinelo Democrata",c:"Bota / Chinelo",t:["Casual"],para:"Lazer, casa, praia.",look:"Bermuda e camiseta.",fala:"Para o descanso, com a qualidade da marca.",k:"chinelo praia casa lazer presente"},
+{a:1,n:"Democrata Ela",c:"Feminino",t:["Couro legítimo"],para:"Mulher cosmopolita: do trabalho ao lazer.",look:"Ballet core com jeans reto; mocassim boyish com alfaiataria; Mary Jane com saia midi.",fala:"Tênis ballet core, mocassim boyish, Mary Jane, papete, bota cano alto.",k:"feminino mulher presente esposa"},
+{a:1,n:"Cinto Metropolitan / Garage",c:"Acessórios",t:["Couro legítimo"],cores:["preto","marrom"],para:"Completar o look, presente.",look:"Sempre da mesma cor e tom do sapato. Fivela discreta no social.",fala:"Preto com preto, marrom com marrom. Dupla face resolve os dois.",k:"presente look combinar cinto"}
 ];
+const CORES={preto:["Preto","#151210"],cafe:["Café","#3b2416"],marrom:["Marrom","#6b3f22"],conhaque:["Conhaque","#9a5a2a"],caramelo:["Caramelo","#c0843f"],bordo:["Bordô","#5e1f24"],branco:["Branco/off-white","#f1ece2"],cinza:["Cinza","#8d8a86"]};
 const TECS=[
-{n:"Air",o:"Bolha de ar no calcanhar + palmilha Max Memory.",f:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",w:"Smart Comfort Air Spot"},
-{n:"PULSE",o:"Cápsulas de TPU que absorvem e devolvem energia.",f:"Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos.",w:"Drake, Beat, Draft"},
-{n:"Ultra Light",o:"Sola de EVA levíssima + palmilha de PU.",f:"Pega na mão: ele quase não pesa. No pé some.",w:"Brad, Joe, Move"},
+{n:"Air",o:"Bolha de ar no calcanhar + palmilha Max Memory.",f:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",w:"Smart Comfort Air Spot",q:"Air"},
+{n:"PULSE",o:"Cápsulas de TPU que absorvem e devolvem energia.",f:"Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos.",w:"Drake, Beat, Draft",q:"PULSE"},
+{n:"Ultra Light",o:"Sola de EVA levíssima + palmilha de PU.",f:"Pega na mão: ele quase não pesa. No pé some.",w:"Brad, Joe, Move",q:"Ultra Light"},
 {n:"Full Light",o:"Estrutura ultraleve, sola flexível.",f:"É o mais leve da Democrata: feito para você esquecer que está calçado.",w:"Tênis Full Light"},
-{n:"Calce Fácil",o:"Calça sem a mão, calcanhar estável.",f:"Calça sem usar a mão e sem amassar atrás. Passou no raio-x, calçou e foi.",w:"Pace"},
-{n:"Extra Soft",o:"Palmilha bi-densidade + solado leve.",f:"Pisa e afunda macio — é o tênis do dia a dia corrido.",w:"Journey (tênis)"},
-{n:"Dual Soft",o:"Duas densidades: leve e macio.",f:"Social por fora, macio por dentro: aguenta o evento inteiro.",w:"Sapato social"},
+{n:"Calce Fácil",o:"Calça sem a mão, calcanhar estável.",f:"Calça sem usar a mão e sem amassar atrás. Passou no raio-x, calçou e foi.",w:"Pace",q:"Calce Fácil"},
+{n:"Extra Soft",o:"Palmilha bi-densidade + solado leve. É tênis.",f:"Pisa e afunda macio — é o tênis do dia a dia corrido.",w:"Journey (tênis)"},
+{n:"Dual Soft",o:"Duas densidades: leve e macio. É social.",f:"Social por fora, macio por dentro: aguenta o evento inteiro.",w:"Sapato social"},
 {n:"Light",o:"Solados 40% mais leves.",f:"40% mais leve que um social comum — no fim do dia você sente a diferença.",w:"Sapato de couro"},
-{n:"Smart Comfort",o:"LINHA, não tecnologia: Stretch + Air + Max Memory.",f:"É a linha de conforto da marca: tudo que a Democrata sabe de conforto está aqui.",w:"Air Spot, Madison"},
-{n:"Stretch",o:"Couro elástico que se ajusta ao pé.",f:"O couro cede na medida do seu pé — não precisa amaciar sofrendo.",w:"Air Spot"},
-{n:"Max Memory",o:"Palmilha com memória, não deforma.",f:"Ela volta ao lugar depois de cada uso — o conforto dura.",w:"Air Spot"},
-{n:"Knit",o:"MATERIAL (não tecnologia): malha que respira.",f:"É tecido que respira e abraça o pé — no calor faz diferença.",w:"Joe, Move, Journey, Bold"}
+{n:"Smart Comfort",kind:"Linha",o:"Linha da marca que reúne Stretch + Air + Max Memory.",f:"É a linha de conforto da marca: tudo que a Democrata sabe de conforto está aqui.",w:"Air Spot, Madison",q:"Smart Comfort"},
+{n:"Stretch",o:"Couro elástico que se ajusta ao pé.",f:"O couro cede na medida do seu pé — não precisa amaciar sofrendo.",w:"Air Spot",q:"Stretch"},
+{n:"Max Memory",o:"Palmilha com memória, não deforma.",f:"Ela volta ao lugar depois de cada uso — o conforto dura.",w:"Air Spot",q:"Max Memory"},
+{n:"Knit",kind:"Material",o:"Malha que respira e abraça o pé.",f:"É tecido que respira e abraça o pé — no calor faz diferença.",w:"Joe, Move, Journey, Bold",q:"Knit"}
 ];
 const QUIZ=[
-{q:"Cliente fica 10h em pé e quer sapato social. Qual você oferece primeiro?",o:["Metropolitan Prime","Smart Comfort Air Spot","Garage Astro","Brad Ultra Light"],a:1},
-{q:"Qual tecnologia devolve energia a cada passo?",o:["Ultra Light","Air","PULSE","Light"],a:2},
-{q:"Cliente viaja muito de avião. Qual tecnologia ajuda mais?",o:["Dual Soft","Calce Fácil","Extra Soft","Stretch"],a:1},
-{q:"Smart Comfort é…",o:["Uma tecnologia de palmilha","Uma linha da Democrata","Um tipo de couro","Um modelo de tênis"],a:1},
-{q:"Extra Soft é tênis e Dual Soft é…",o:["Tênis também","Sandália","Sapato social","Bota"],a:2},
-{q:"Knit é…",o:["Tecnologia de amortecimento","Material (malha que respira)","Nome de um tênis","Tipo de solado"],a:1},
-{q:"Qual é a ref do Air Spot de cadarço?",o:["244102-001","273101-006","448026-003","700203-001"],a:2},
-{q:"Qual linha é o tênis retrô-running leve?",o:["Drake Pulse","Brad Ultra Light","Journey Extra-Soft","Pace Calce Fácil"],a:1},
-{q:"Para casamento/formatura, o mais formal é…",o:["Derby","Loafer","Oxford","Sider"],a:2},
-{q:"Forma do Air Spot é…",o:["Pequena","Normal","Grande — avisar o cliente","Não tem forma"],a:2}
+{q:"Cliente fica 10h em pé e quer sapato social. Qual você oferece primeiro?",o:["Metropolitan Prime","Smart Comfort Air Spot","Garage Astro","Brad Ultra Light"],a:1,e:"Air Spot tem bolha de ar no calcanhar + palmilha Max Memory: é o social feito para muitas horas em pé."},
+{q:"Qual tecnologia devolve energia a cada passo?",o:["Ultra Light","Air","PULSE","Light"],a:2,e:"PULSE usa cápsulas de TPU que absorvem e devolvem parte da energia da pisada."},
+{q:"Cliente viaja muito de avião. Qual tecnologia ajuda mais?",o:["Dual Soft","Calce Fácil","Extra Soft","Stretch"],a:1,e:"Calce Fácil calça sem a mão e sem amassar o calcanhar — perfeito no raio-x do aeroporto (Pace)."},
+{q:"Smart Comfort é…",o:["Uma tecnologia de palmilha","Uma linha da Democrata","Um tipo de couro","Um modelo de tênis"],a:1,e:"Smart Comfort é LINHA: junta Stretch + Air + Max Memory."},
+{q:"Extra Soft é tênis e Dual Soft é…",o:["Tênis também","Sandália","Sapato social","Bota"],a:2,e:"Dual Soft é do sapato social: macio por dentro, social por fora."},
+{q:"Knit é…",o:["Tecnologia de amortecimento","Material (malha que respira)","Nome de um tênis","Tipo de solado"],a:1,e:"Knit é material, não tecnologia: uma malha respirável (Joe, Move, Journey, Bold)."},
+{q:"Qual é a ref do Air Spot de cadarço?",o:["244102-001","273101-006","448026-003","700203-001"],a:2,e:"448026-003 é o de cadarço. O 448027-003 é o de elástico lateral."},
+{q:"Qual linha é o tênis retrô-running leve?",o:["Drake Pulse","Brad Ultra Light","Journey Extra-Soft","Pace Calce Fácil"],a:1,e:"Brad Ultra Light: EVA levíssimo com espírito running vintage."},
+{q:"Para casamento/formatura, o mais formal é…",o:["Derby","Loafer","Oxford","Sider"],a:2,e:"Oxford tem cadarço fechado e bico fino — é o mais formal de todos."},
+{q:"A forma do Air Spot é…",o:["Pequena","Normal","Grande — avisar o cliente","Não tem forma"],a:2,e:"Forma grande: se ficar folgado, prove um número menor."}
 ];
-function filtrar(){const q=(document.getElementById('q').value||'').toLowerCase();const c=document.getElementById('cat').value;const l=MODELOS.filter(m=>(!c||m.c===c)&&(m.n+' '+m.c+' '+m.t.join(' ')+' '+m.para+' '+m.ref).toLowerCase().includes(q));document.getElementById('lista').innerHTML=l.map(m=>`<div class="card"><h3>${m.n}</h3><div>${m.t.map(t=>`<span class="tag">${t}</span>`).join('')}<span class="tag">${m.c}</span></div><p class="muted">Ref: ${m.ref} • 37–44 • ${m.para}</p><div class="fala">${m.fala}</div></div>`).join('')||'<p>Nada encontrado — tente outra palavra.</p>';}
-document.getElementById('tecs').innerHTML=TECS.map(t=>`<details><summary>${t.n}</summary><p>${t.o}</p><p><b>Onde:</b> ${t.w}</p><div class="fala">${t.f}</div></details>`).join('');
-let acertos=0,resp=0;
-function montarQuiz(){acertos=0;resp=0;document.getElementById('placar').textContent='Acertos: 0/10';document.getElementById('quizbox').innerHTML=QUIZ.map((qq,i)=>`<div class="q"><b>${i+1}. ${qq.q}</b>${qq.o.map((op,j)=>`<button onclick="responder(this,${i},${j})">${op}</button>`).join('')}</div>`).join('');}
-function responder(btn,i,j){const box=btn.parentElement;if(box.dataset.done)return;box.dataset.done=1;resp++;const ok=j===QUIZ[i].a;if(ok){acertos++;btn.classList.add('correct');}else{btn.classList.add('wrong');box.children[QUIZ[i].a+1].classList.add('correct');}document.getElementById('placar').textContent=`Acertos: ${acertos}/10`+(resp===10?(acertos===10?' — Perfeito! 👏':' — Revise o que errou nas Tecnologias.'):'');}
-document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');['buscar','tecnologias','quiz','plano'].forEach(s=>document.getElementById(s).style.display=s===b.dataset.sec?'block':'none');});
-filtrar();montarQuiz();
+const PLANO=[
+["Air + Smart Comfort","Decore a frase do Air Spot e as refs 448026 / 448027."],
+["PULSE × Ultra Light × Full Light","Uma frase de diferença para cada."],
+["Calce Fácil, Extra Soft, Dual Soft, Light","Extra Soft é tênis, Dual Soft é social."],
+["Tipos de sapato","Oxford × Derby × Loafer × Monk × Sider × Driver × Sapatênis."],
+["Linhas e modelos-âncora","3 de cada categoria, sem olhar."],
+["Atendimento","Treine em voz alta o roteiro de 6 passos e as objeções."],
+["Prova final","Quiz até 10/10. Anote o que ainda confunde."]
+];
+const PASSOS=[
+["Receba e ouça","Não empurre modelo antes de ouvir.","Bom dia! Pode ficar à vontade — me conta, é para qual ocasião?"],
+["Pergunte 3 coisas","Onde vai usar? Quantas horas em pé por dia? Dirige muito? Viaja?"],
+["Indique por ocasião","Formal → Metropolitan / Air Spot. Viagem → Pace. Anda muito → PULSE ou Ultra Light. Calor → Dock / Tulum."],
+["Faça provar os dois pés","Um pé é maior que o outro. Air Spot tem forma grande — se folgar, prove um número menor."],
+["Mostre a tecnologia no pé","Deixe ele sentir, não só ouvir.","Sente essa bolha no calcanhar? Anda até ali e volta."],
+["Feche com o conjunto","Cinto da mesma cor do sapato.","O cinto marrom fecha o look com esse sapato — quer levar junto?"]
+];
+const DORES=[
+["“Meu pé dói no fim do dia”","Air Spot","Bolha de ar + palmilha que não deforma."],
+["“Viajo muito”","Pace Calce Fácil","Calça sem a mão, passa no raio-x sem estresse."],
+["“Quero um só para tudo”","Metropolitan Bay ou Drake Pulse","Do trabalho ao jantar sem trocar."],
+["“Só uso social, mas quero conforto”","Dual Soft / Light","Social por fora, macio por dentro."],
+["“É presente para o pai/marido”","Air Spot","Pergunte numeração e ocasião. O Air Spot é o acerto mais seguro."]
+];
+const OBJ=[
+["“Tá caro.”","Couro legítimo dura anos. Divide por dia de uso: sai mais barato que trocar sapato barato duas vezes."],
+["“Couro é quente.”","O knit respira e o couro da Democrata é macio — prova o Joe ou o Brad, você sente."],
+["“Aperta no começo.”","Esse tem Stretch: o couro cede na medida do seu pé. Prova andando na loja."],
+["“Vou pensar.”","Sem problema. Qual ficou na sua cabeça: o conforto ou o modelo? Me diz que eu deixo separado o número."]
+];
+const TIPOS=[
+["Oxford","Social","Cadarço fechado, bico fino. O mais formal.","Casamento, formatura, terno"],
+["Derby","Social","Cadarço aberto, mais versátil que o Oxford.","Trabalho, social do dia a dia"],
+["Monk strap","Social","Fecha com fivela, sem cadarço.","Personalidade sem ser tão formal"],
+["Loafer / Mocassim","Social","Sem cadarço, calça rápido.","Esporte fino, jantar, trabalho informal"],
+["Sapatênis","Casual","Couro com solado de tênis.","Casual arrumado, esporte fino"],
+["Sider","Casual","Tipo mocassim náutico, solado leve.","Verão, fim de semana"],
+["Driver (Tom)","Casual","Solado flexível que sobe no calcanhar.","Quem dirige muito"],
+["Slip-on","Tênis","Tênis sem cadarço.","Praticidade, viagem"]
+];
+
+/* ---------- UTIL ---------- */
+const $=s=>document.querySelector(s);
+const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ---------- ROTAS ---------- */
+const VIEWS=['inicio','modelos','estilo','tecnologias','venda','quiz'];
+const ANCHORS=['roteiro','dores','objecoes','nunca','tipos','cuidados'];
+function route(){
+  let h=location.hash.slice(1)||'inicio';
+  let view=h, anchor=null;
+  if(ANCHORS.includes(h)){view='venda';anchor=h}
+  if(!VIEWS.includes(view))view='inicio';
+  document.querySelectorAll('section[data-view]').forEach(s=>s.classList.toggle('on',s.dataset.view===view));
+  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  if(anchor){requestAnimationFrame(()=>document.getElementById(anchor).scrollIntoView({behavior:'smooth'}))}
+  else window.scrollTo(0,0);
+  if(view==='inicio')renderHome();
+}
+window.addEventListener('hashchange',route);
+
+/* ---------- TEMA ---------- */
+function applyTheme(t){if(t)document.documentElement.dataset.theme=t;else delete document.documentElement.dataset.theme;
+  const dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  $('#theme use').setAttribute('href',dark?'#i-sun':'#i-moon')}
+applyTheme(store.get('theme',null));
+$('#theme').onclick=()=>{const cur=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');const n=cur==='dark'?'light':'dark';store.set('theme',n);applyTheme(n)};
+
+/* ---------- INÍCIO ---------- */
+function renderHome(){
+  const done=store.get('plano',[]);
+  $('#plan').innerHTML=PLANO.map((d,i)=>`<label class="day${done.includes(i)?' done':''}"><input type="checkbox" data-d="${i}"${done.includes(i)?' checked':''}><span class="check"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><small>Dia ${i+1}</small><span class="day-t">${d[0]}</span><p>${d[1]}</p></span></label>`).join('');
+  const n=done.length;
+  $('#plan-bar').style.width=(n/7*100)+'%';$('#plan-txt').textContent=`${n} de 7`;$('#st-plan').textContent=`${n}/7`;
+  const best=store.get('best',null);$('#st-best').textContent=best===null?'—':`${best}/10`;
+  $('#st-models').textContent=MODELOS.length;$('#st-techs').textContent=TECS.length;
+}
+$('#plan').addEventListener('change',e=>{const i=+e.target.dataset.d;let d=store.get('plano',[]);d=e.target.checked?[...new Set([...d,i])]:d.filter(x=>x!==i);store.set('plano',d);renderHome()});
+
+/* ---------- MODELOS ---------- */
+let cat='';
+const LOJA='__loja__';
+const CATS=['Todos',LOJA,...new Set(MODELOS.map(m=>m.c))];
+$('#cats').innerHTML=CATS.map(c=>`<button class="chip${c===LOJA?' chip-store':''}" data-c="${c==='Todos'?'':c}" aria-pressed="${c==='Todos'}">${c===LOJA?'✓ Tem na loja':c}</button>`).join('');
+$('#cats').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;cat=b.dataset.c;document.querySelectorAll('#cats .chip').forEach(x=>x.setAttribute('aria-pressed',x===b));filtrar()};
+const naLoja=()=>store.get('loja',[]);
+const sw=k=>`<span class="sw"><i style="background:${CORES[k][1]}"></i>${CORES[k][0]}</span>`;
+['casamento','viagem','em pé','calor','presente'].forEach(w=>{const b=document.createElement('button');b.textContent=w;b.onclick=()=>buscar(w);$('#quick').appendChild(b)});
+$('#q').addEventListener('input',filtrar);
+$('#clear').onclick=()=>{$('#q').value='';filtrar();$('#q').focus()};
+function buscar(t){$('#q').value=t;cat='';document.querySelectorAll('#cats .chip').forEach((x,i)=>x.setAttribute('aria-pressed',i===0));filtrar();if(location.hash!=='#modelos')location.hash='modelos'}
+function filtrar(){
+  const raw=$('#q').value.trim();const q=norm(raw);
+  $('#clear').classList.toggle('show',!!raw);
+  const lj=naLoja();
+  const l=MODELOS.filter(m=>(!cat||(cat===LOJA?lj.includes(m.n):m.c===cat))&&norm([m.n,m.c,m.t.join(' '),m.para,m.ref||'',m.k,m.look].join(' ')).includes(q));
+  $('#count').textContent=`${l.length} ${l.length===1?'modelo':'modelos'}${raw?` para “${raw}”`:''}${cat===LOJA?' marcados como “tem na loja”':''}`;
+  $('#lista').innerHTML=l.map(m=>{const has=lj.includes(m.n);return `<article class="card model${has?' has':''}">
+    <div class="mtop"><div><div class="cat">${m.c}${m.a?' <span class="anc">Âncora</span>':''}</div><h3>${m.n}</h3></div>${m.ref?`<span class="ref">${m.ref}</span>`:''}</div>
+    <div class="tags">${m.t.map(t=>`<button class="tag" data-t="${t}">${t}</button>`).join('')}</div>
+    <p class="for"><b>Para quem:</b> ${m.para} <span class="muted">· Nº 37–44</span></p>
+    <div class="look"><div class="look-h">Look que combina</div><p>${m.look}</p>${m.cores?`<div class="sws">${m.cores.map(sw).join('')}</div>`:''}</div>
+    <blockquote class="quote">“${m.fala}”</blockquote>
+    <div class="mfoot"><button class="instore" data-s="${m.n}" aria-pressed="${has}">${has?'✓ Tem na loja':'+ Marcar: tem na loja'}</button>${m.a?'':'<span class="muted conf">Confirme ref e cor na loja</span>'}</div>
+  </article>`}).join('')||`<div class="empty" style="grid-column:1/-1"><b>Nada encontrado.</b><br>${cat===LOJA?'Você ainda não marcou nenhum modelo como “tem na loja”. Toque em “+ Marcar” nos cards.':'Tente outra palavra ou limpe o filtro.'}</div>`;
+}
+$('#lista').onclick=e=>{const t=e.target.closest('.tag');if(t)return buscar(t.dataset.t);
+  const s=e.target.closest('.instore');if(s){let l=naLoja();const n=s.dataset.s;l=l.includes(n)?l.filter(x=>x!==n):[...l,n];store.set('loja',l);filtrar()}};
+
+/* ---------- TECNOLOGIAS ---------- */
+$('#tecs').innerHTML=TECS.map(t=>`<article class="card tech">
+  <div class="tt"><h3>${t.n}</h3><span class="kind${t.kind?' warn':''}">${t.kind||'Tecnologia'}</span></div>
+  <p class="what">${t.o}</p>
+  <blockquote class="quote">“${t.f}”</blockquote>
+  <p class="where">Onde: ${t.q?`<button data-q="${t.q}">${t.w} →</button>`:t.w}</p>
+</article>`).join('');
+$('#tecs').onclick=e=>{const b=e.target.closest('[data-q]');if(b)buscar(b.dataset.q)};
+
+/* ---------- VENDA ---------- */
+$('#steps').innerHTML=PASSOS.map(p=>`<div class="card step"><h3>${p[0]}</h3><p>${p[1]}</p>${p[2]?`<blockquote class="quote">“${p[2]}”</blockquote>`:''}</div>`).join('');
+$('#pains').innerHTML=DORES.map(d=>`<div class="card pain"><div class="dor">${d[0]}</div><div class="arrow"><svg class="ico" style="width:16px;height:16px"><use href="#i-arrow"/></svg>${d[1]}</div><blockquote class="quote">“${d[2]}”</blockquote></div>`).join('');
+$('#objs').innerHTML=OBJ.map(o=>`<details class="obj"><summary>${o[0]}<svg class="ico"><use href="#i-plus"/></svg></summary><blockquote class="quote">“${o[1]}”</blockquote></details>`).join('');
+$('#tipos-g').innerHTML=TIPOS.map(t=>`<div class="card"><div class="eyebrow">${t[1]}</div><h3 style="margin-top:4px">${t[0]}</h3><p>${t[2]}</p><div class="use">→ ${t[3]}</div></div>`).join('');
+
+/* ---------- ESTILO ---------- */
+const OCAS=[
+{id:"formal",n:"Casamento / formatura",nivel:"formal",tipo:"Oxford ou loafer fino, bico alongado, sola fina.",m:["Metropolitan Prime","Smart Comfort Air Spot — cadarço","Metropolitan — Type, Vega, Oliver, Jeff"],roupa:"Terno marinho, chumbo ou preto + camisa branca ou azul-clara + gravata.",dica:"À noite, preto é a escolha mais segura. Sapato bem engraxado.",f:"Para casamento, o de bico alongado é o mais elegante — e se a festa for longa, o Air Spot aguenta a noite inteira."},
+{id:"trabalho",n:"Trabalho social",nivel:"formal",tipo:"Derby ou loafer — versáteis para a semana inteira.",m:["Metropolitan Bay","Smart Comfort Air Spot — cadarço","Smart Comfort Air Spot — elástico lateral","Hi-Soft 32 — Madison, Taylor, James"],roupa:"Calça social + camisa lisa ou listra fina. Blazer opcional.",dica:"Fica muito em pé? Air Spot. Quer leveza? Peça social com Light ou Dual Soft.",f:"Para o dia a dia no trabalho, o Derby é o mais versátil: vai com terno e com calça social sozinha."},
+{id:"esporte",n:"Esporte fino / jantar",nivel:"medio",tipo:"Loafer, mocassim, monk ou sapatênis de couro.",m:["Dune","Flop","Metropolitan Prime","Denim"],roupa:"Camisa de botão, polo de malha boa ou camisa de linho. Blazer sem gravata.",dica:"Loafer com meia invisível deixa o look moderno.",f:"Esporte fino pede loafer: arrumado sem parecer que vai a casamento."},
+{id:"casual",n:"Casual / fim de semana",nivel:"casual",tipo:"Casual de couro, sapatênis ou tênis limpo.",m:["Garage Astro","Denim","Vibe / Bold / Groove","Drake Pulse"],roupa:"Camiseta lisa, polo ou camisa aberta. Jaqueta se esfriar.",dica:"Tênis branco ou off-white combina com quase tudo no casual.",f:"No fim de semana, um casual de couro deixa o jeans com cara de arrumado sem esforço."},
+{id:"viagem",n:"Viagem / aeroporto",nivel:"casual",tipo:"Slip-on ou Calce Fácil — sem cadarço.",m:["Pace Calce Fácil","Smart Comfort Air Spot — elástico lateral","Joe Ultra Light"],roupa:"Jogger ou jeans, camiseta, moletom ou jaqueta leve.",dica:"Sem cadarço = raio-x rápido.",f:"Para viajar, o Pace: tira e calça sem a mão no raio-x, e o calcanhar não amassa."},
+{id:"calor",n:"Calor / verão",nivel:"casual",tipo:"Sider, sandália, mule ou tênis knit.",m:["Clay","Dock","Tulum","Sandals Verão 27","Joe Ultra Light"],roupa:"Linho, algodão leve, camisa de manga curta, bermuda de alfaiataria.",dica:"Tons claros (caramelo, conhaque) deixam o look leve.",f:"No calor, couro claro e tênis knit respiram — o pé agradece."}
+];
+const CALCAS=[
+{id:"preto",n:"Preta",c:"#1a1a1c",formal:["preto"],casual:["preto","branco"],evite:["caramelo","conhaque"],meia:"Preta."},
+{id:"chumbo",n:"Cinza chumbo",c:"#3f4247",formal:["preto","bordo"],casual:["cafe","preto","branco"],evite:["caramelo"],meia:"Cinza escuro ou preta."},
+{id:"cinza",n:"Cinza claro",c:"#a9abae",formal:["preto","cafe"],casual:["marrom","conhaque","branco"],evite:[],meia:"Cinza."},
+{id:"marinho",n:"Azul-marinho",c:"#1f2a44",formal:["cafe","preto"],casual:["marrom","conhaque","caramelo","branco"],evite:[],meia:"Azul-marinho."},
+{id:"bege",n:"Bege / cáqui",c:"#c8b48f",formal:["cafe","marrom"],casual:["conhaque","caramelo","branco"],evite:["preto"],meia:"Bege ou marrom — ou invisível no casual."},
+{id:"jeansE",n:"Jeans escuro",c:"#28344d",formal:["cafe","marrom","preto"],casual:["marrom","conhaque","branco","preto"],evite:[],meia:"Invisível ou azul-marinho."},
+{id:"jeansC",n:"Jeans claro",c:"#7d98b8",formal:["marrom"],casual:["caramelo","conhaque","branco","cinza"],evite:["preto"],meia:"Invisível."},
+{id:"branca",n:"Branca / off-white",c:"#efe9dd",formal:["conhaque","marrom"],casual:["caramelo","conhaque","branco"],evite:["preto"],meia:"Invisível."},
+{id:"oliva",n:"Verde oliva",c:"#5d6140",formal:["cafe","marrom"],casual:["conhaque","marrom","branco"],evite:[],meia:"Oliva, marrom ou invisível."}
+];
+const TONS=[
+["preto","O mais formal de todos.","Noite, casamento, terno.","Preto, chumbo, cinza, marinho."],
+["cafe","Marrom bem escuro: quase tão formal quanto o preto, mais moderno.","Trabalho, evento de dia.","Marinho, cinza, bege, oliva."],
+["marrom","O coringa: vai do trabalho ao fim de semana.","Dia a dia, esporte fino.","Marinho, bege, cinza claro, jeans."],
+["conhaque","Marrom avermelhado que dá personalidade.","Esporte fino, casual arrumado.","Marinho, jeans, bege, branco."],
+["caramelo","Claro e de verão.","Casual, calor, praia.","Branco, jeans claro, bege, linho."],
+["bordo","Ousado e elegante, para quem quer se destacar.","Social com personalidade.","Cinza chumbo, marinho."],
+["branco","O tênis limpo do casual.","Casual, viagem, fim de semana.","Quase tudo no casual."]
+];
+const REGRAS=[
+["Cinto = sapato","Mesma cor e mesmo tom. Fosco com fosco, brilho com brilho."],
+["Sapato mais escuro","No social, o sapato fica igual ou mais escuro que a calça."],
+["Meia certa","Social: meia da cor da calça. Loafer, sider e tênis baixo: meia invisível."],
+["Bico e sola","Quanto mais fino o bico e a sola, mais formal o sapato."],
+["Noite x dia","Noite e evento pedem preto. De dia, os marrons brilham."],
+["Na dúvida","Marinho com marrom. Cinza com preto. Não tem erro."]
+];
+const SUGERIR=[
+["Pergunte a roupa","Me conta a cor da roupa que você vai usar? Assim eu acerto o tom do sapato."],
+["Ofereça comparação","Com esse marinho, o café fica mais elegante que o preto. Quer comparar os dois no pé?"],
+["Feche o conjunto","Já que é marrom, o cinto no mesmo tom fecha o visual — quer ver?"],
+["Um só para tudo","Se quiser um que combine com quase tudo, o marrom médio é o coringa."]
+];
+let occ='trabalho',calca='marinho';
+$('#occ').innerHTML=OCAS.map(o=>`<button class="chip" data-o="${o.id}" aria-pressed="${o.id===occ}">${o.n}</button>`).join('');
+$('#pants').innerHTML=CALCAS.map(p=>`<button class="pant" data-p="${p.id}" aria-pressed="${p.id===calca}"><i style="background:${p.c}"></i>${p.n}</button>`).join('');
+$('#occ').onclick=e=>{const b=e.target.closest('[data-o]');if(!b)return;occ=b.dataset.o;document.querySelectorAll('#occ .chip').forEach(x=>x.setAttribute('aria-pressed',x===b));renderLook()};
+$('#pants').onclick=e=>{const b=e.target.closest('[data-p]');if(!b)return;calca=b.dataset.p;document.querySelectorAll('#pants .pant').forEach(x=>x.setAttribute('aria-pressed',x===b));renderLook()};
+function renderLook(){
+  const O=OCAS.find(o=>o.id===occ),P=CALCAS.find(p=>p.id===calca);
+  let best=O.nivel==='formal'?P.formal:O.nivel==='medio'?[...new Set([...P.formal,...P.casual])].filter(c=>c!=='branco'):P.casual;
+  const main=best[0],belt=main==='branco'?(P.casual.find(c=>c!=='branco')||'marrom'):main;
+  const meia=['esporte','casual','viagem','calor'].includes(O.id)&&O.id!=='esporte'?'Invisível, ou a cor da calça se o tênis for de cano alto.':O.id==='esporte'?'Invisível com loafer; ou '+P.meia.toLowerCase():P.meia;
+  $('#lookout').innerHTML=`<div class="lk">
+    <div class="lk-top"><div class="duo"><i style="background:${P.c}"></i><i style="background:${CORES[main][1]}"></i></div>
+      <div><div class="eyebrow">${O.n} · calça ${P.n.toLowerCase()}</div><h3>Sapato ${CORES[main][0].toLowerCase()}${best.length>1?` ou ${CORES[best[1]][0].toLowerCase()}`:''}</h3></div></div>
+    <div class="lk-body">
+      <div class="lk-cell"><h4>Tom do sapato</h4><div class="sws">${best.map(sw).join('')}</div>${P.evite.length?`<p style="margin-top:8px"><b>Evite:</b></p><div class="sws avoid">${P.evite.map(sw).join('')}</div>`:''}</div>
+      <div class="lk-cell"><h4>Tipo de sapato</h4><p>${O.tipo}</p></div>
+      <div class="lk-cell"><h4>Modelos Democrata</h4><div class="lk-models">${O.m.map(n=>`<button data-m="${n}">${n}</button>`).join('')}</div></div>
+      <div class="lk-cell"><h4>Roupa</h4><p>${O.roupa}</p></div>
+      <div class="lk-cell"><h4>Cinto</h4><div class="sws">${sw(belt)}</div><p style="margin-top:6px">Mesmo tom do sapato${main==='branco'?' (com tênis branco, puxe o cinto para o tom do couro da roupa)':''}.</p></div>
+      <div class="lk-cell"><h4>Meia</h4><p>${meia}</p></div>
+    </div>
+    <div class="lk-say"><h4 class="look-h" style="margin:0 0 8px">Diga ao cliente</h4><blockquote class="quote">“${O.f}”</blockquote><p class="muted" style="font-size:13.5px;margin-top:10px">💡 ${O.dica}</p></div>
+  </div>`;
+}
+$('#lookout').onclick=e=>{const b=e.target.closest('[data-m]');if(b)buscar(b.dataset.m)};
+$('#tons').innerHTML=TONS.map(t=>`<div class="card tone"><i style="background:${CORES[t[0]][1]}"></i><div><h3>${CORES[t[0]][0]}</h3><p>${t[1]}</p><p class="muted"><b>Quando:</b> ${t[2]}<br><b>Com calça:</b> ${t[3]}</p></div></div>`).join('');
+$('#regras').innerHTML=REGRAS.map((r,i)=>`<div class="card rule"><div class="n">0${i+1}</div><h3>${r[0]}</h3><p>${r[1]}</p></div>`).join('');
+$('#sugerir').innerHTML=SUGERIR.map(s=>`<div class="card"><div class="eyebrow">${s[0]}</div><blockquote class="quote" style="margin-top:10px">“${s[1]}”</blockquote></div>`).join('');
+renderLook();
+
+/* ---------- QUIZ ---------- */
+let ordem=[],idx=0,acertos=0,erros=[];
+function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function novoQuiz(){ordem=shuffle(QUIZ.map((_,i)=>i));idx=0;acertos=0;erros=[];pergunta()}
+function pergunta(){
+  const Q=QUIZ[ordem[idx]];
+  $('#quizbox').innerHTML=`
+  <div class="qmeta"><span>Pergunta ${idx+1} de ${QUIZ.length}</span><span>${acertos} ${acertos===1?'acerto':'acertos'}</span></div>
+  <div class="bar" style="margin-bottom:16px"><i style="width:${idx/QUIZ.length*100}%"></i></div>
+  <div class="card qcard">
+    <h2>${Q.q}</h2>
+    <div class="opts">${Q.o.map((o,j)=>`<button class="opt" data-j="${j}"><span class="k">${'ABCD'[j]}</span>${o}</button>`).join('')}</div>
+    <div class="why" id="why"></div>
+    <div class="qnav"><button class="btn btn-primary" id="next" style="display:none">${idx===QUIZ.length-1?'Ver resultado':'Próxima'}<svg class="ico"><use href="#i-arrow"/></svg></button></div>
+  </div>`;
+  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>responder(+b.dataset.j));
+  $('#next').onclick=()=>{idx++;idx<QUIZ.length?pergunta():resultado()};
+}
+function responder(j){
+  const Q=QUIZ[ordem[idx]],ok=j===Q.a;
+  document.querySelectorAll('.opt').forEach((b,k)=>{b.disabled=true;if(k===Q.a)b.classList.add('right');else if(k===j)b.classList.add('wrong');else b.classList.add('dim')});
+  if(ok)acertos++;else erros.push(Q);
+  const w=$('#why');w.className='why show '+(ok?'ok':'no');w.innerHTML=`<b>${ok?'Isso!':'Não foi dessa vez.'}</b>${Q.e}`;
+  $('.qmeta span:last-child').textContent=`${acertos} ${acertos===1?'acerto':'acertos'}`;
+  const n=$('#next');n.style.display='inline-flex';n.focus({preventScroll:true});
+}
+function resultado(){
+  const best=store.get('best',null);if(best===null||acertos>best)store.set('best',acertos);
+  const C=2*Math.PI*62,perf=acertos===QUIZ.length;
+  $('#quizbox').innerHTML=`<div class="card result">
+    <div class="ring"><svg viewBox="0 0 150 150"><circle class="bg" cx="75" cy="75" r="62"/><circle class="fg" cx="75" cy="75" r="62" stroke-dasharray="${C}" stroke-dashoffset="${C}"/></svg><b>${acertos}/${QUIZ.length}</b></div>
+    <h2>${perf?'Perfeito. Domínio total.':acertos>=7?'Quase lá!':'Bora revisar.'}</h2>
+    <p>${perf?'Você acertou tudo. Repita amanhã para fixar.':'Revise o que errou abaixo e tente de novo até fechar 10/10.'}</p>
+    ${erros.length?`<ul class="misses">${erros.map(q=>`<li><b>${q.q}</b><br><span class="muted">Resposta: ${q.o[q.a]} — ${q.e}</span></li>`).join('')}</ul>`:''}
+    <div class="actions"><button class="btn btn-primary" id="again">Fazer de novo</button><a class="btn btn-outline" href="#tecnologias">Revisar tecnologias</a></div>
+  </div>`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{$('.ring .fg').style.strokeDashoffset=C*(1-acertos/QUIZ.length)}));
+  $('#again').onclick=novoQuiz;
+}
+
+/* ---------- START ---------- */
+filtrar();novoQuiz();route();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
 </html>

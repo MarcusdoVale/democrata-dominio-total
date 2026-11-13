@@ -37,4 +37,4 @@
 ## Loja — dados para não errar
 Democrata — Pátio Central Shopping, Praça Alexina Cândida Conceição, 05, Centro, Patos de Minas/MG.
 Tel: (34) 3821-3263. Horário: seg–sáb 10h–22h, dom 12h–20h.
-Site: democratacom.br — tecnologias: democratacom.br/tecnologias
+Site: democrata.com.br — tecnologias: democrata.com.br/tecnologias
