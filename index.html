@@ -806,7 +806,7 @@ function filtrar(){
   const raw=$('#q').value.trim();const q=norm(raw);
   $('#clear').classList.toggle('show',!!raw);
   const lj=naLoja();
-  const l=MODELOS.filter(m=>(!cat||(cat===LOJA?lj.includes(m.n):m.c===cat))&&norm([m.n,m.c,m.t.join(' '),m.para,m.ref||'',m.k,m.look].join(' ')).includes(q));
+  const l=MODELOS.filter(m=>(!cat||(cat===LOJA?lj.includes(m.n):m.c===cat))&&norm([m.n,m.c,m.t.join(' '),m.para,m.ref||'',m.k,m.look,(m.cores||[]).map(c=>CORES[c][0]).join(' ')].join(' ')).includes(q));
   $('#count').textContent=`${l.length} ${l.length===1?'modelo':'modelos'}${raw?` para “${raw}”`:''}${cat===LOJA?' marcados como “tem na loja”':''}`;
   $('#lista').innerHTML=l.map(m=>{const has=lj.includes(m.n);return `<article class="card model${has?' has':''}">
     <div class="mtop"><div><div class="cat">${m.c}${m.a?' <span class="anc">✓ Ref oficial</span>':''}</div><h3>${m.n}</h3></div>${m.ref?`<span class="ref">${m.ref.split(' · ').join('<br>')}</span>`:''}</div>
