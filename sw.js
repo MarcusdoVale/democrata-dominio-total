@@ -1,5 +1,5 @@
 // Com internet: sempre a versão mais nova. Sem internet: a última versão salva no aparelho.
-const CACHE = 'dominio-total-v4';
+const CACHE = 'dominio-total-v5';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener('activate', e => {

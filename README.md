@@ -8,13 +8,13 @@ Sistema de estudo e apoio de venda da loja Democrata do Pátio Central Shopping,
 - **Android (Chrome):** abra o link → menu ⋮ → **Adicionar à tela inicial / Instalar app**.
 - **iPhone (Safari):** abra o link → botão Compartilhar → **Adicionar à Tela de Início**.
 
-Depois de aberto uma vez com internet, o site funciona **offline**, o que ajuda se o sinal do shopping cair.
+Depois de aberto uma vez com internet (de preferência no Wi-Fi: ele baixa as fotos, cerca de 2 MB), o site funciona **offline**, com fotos, o que ajuda se o sinal do shopping cair.
 
 ## O que tem no site
 | Aba | Para quê |
 |---|---|
 | **Balcão** | O cliente quer… → 3–4 modelos com ref, cores e frase em um toque. Perguntas certas e venda adicional. Plano de 7 dias e dados da loja |
-| **Modelos** | 55 produtos com ref oficial (13/11/2026), cores da etiqueta, look que combina e frase de venda. Marque o que **tem na loja** e filtre |
+| **Modelos** | 55 produtos com **foto oficial** e ref (13/11/2026). Toque nas miniaturas para ver cada cor. Cores da etiqueta, look que combina e frase de venda. Marque o que **tem na loja** e filtre |
 | **Estilo** | *Monte o look*: ocasião + cor da calça → sapato, tom, cinto, meia, roupa e frase pronta |
 | **Tecnologias** | Air, PULSE, Hi-Soft 32, Full Light, Ultra Light… o que é, onde está e como falar |
 | **Venda** | Roteiro de 6 passos, frases por dor, objeções, o que nunca prometer, tipos de sapato |
