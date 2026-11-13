@@ -13,12 +13,12 @@ Depois de aberto uma vez com internet, o site funciona **offline**, o que ajuda 
 ## O que tem no site
 | Aba | Para quê |
 |---|---|
-| **Início** | Recorde no quiz, plano de 7 dias (com check), regras de ouro e dados da loja |
-| **Modelos** | 30 modelos com cores, look que combina e frase de venda. Marque o que **tem na loja** e filtre |
+| **Balcão** | O cliente quer… → 3–4 modelos com ref, cores e frase em um toque. Perguntas certas e venda adicional. Plano de 7 dias e dados da loja |
+| **Modelos** | 55 produtos com ref oficial (13/11/2026), cores da etiqueta, look que combina e frase de venda. Marque o que **tem na loja** e filtre |
 | **Estilo** | *Monte o look*: ocasião + cor da calça → sapato, tom, cinto, meia, roupa e frase pronta |
-| **Tecnologias** | Air, PULSE, Ultra Light… o que é, onde está e como falar |
+| **Tecnologias** | Air, PULSE, Hi-Soft 32, Full Light, Ultra Light… o que é, onde está e como falar |
 | **Venda** | Roteiro de 6 passos, frases por dor, objeções, o que nunca prometer, tipos de sapato |
-| **Quiz** | 10 perguntas com explicação. Meta: 10/10 |
+| **Quiz** | 12 perguntas com explicação. Meta: acertar todas |
 
 O que você marca (plano, "tem na loja", recorde) fica salvo **no aparelho** em que você marcou.
 

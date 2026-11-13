@@ -3,18 +3,18 @@
 Fonte: página oficial [democrata.com.br/tecnologias](https://www.democrata.com.br/tecnologias) — conferida em 13/11/2026.
 Regra: decore a **frase de venda** de cada uma, não o texto técnico.
 
-## As 8 que caem na loja todo dia
+## As 9 que caem na loja todo dia
 
 ### 1. Air — o amortecedor do social
 Bolha de ar no calcanhar + palmilha Max Memory.
 **Fala:** "É como um amortecedor no calcanhar: cada passo bate menos no seu joelho. Experimenta andar com ele na loja."
-**Onde:** Smart Comfort Air Spot (448026 cadarço / 448027 elástico).
+**Onde:** Smart Comfort Air Spot (448026 cadarço / 448027 elástico) e Air Magnum (593101).
 **Atenção:** forma GRANDE — avise o cliente.
 
 ### 2. PULSE — energia de volta
 Cápsulas de TPU que absorvem o impacto e devolvem energia.
 **Fala:** "Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos."
-**Onde:** tênis Drake, Beat, Draft.
+**Onde:** tênis Drake, Beat, Draft — e também no **mocassim Flop** e no **sapato/bota Clark**.
 
 ### 3. Ultra Light — quase não pesa
 Sola de EVA + palmilha de PU.
@@ -44,9 +44,15 @@ Duas densidades: leve + macio.
 ### 8. Light — social 40% mais leve
 Solados 40% mais leves (segundo a marca).
 **Fala:** "40% mais leve que um social comum — no fim do dia você sente a diferença."
-**Onde:** sapato de couro.
+**Onde:** linha Roy (segundo o site oficial).
 
-## As 3 que confundem — não erre
+### 9. Hi-Soft 32 — maciez na palmilha
+Palmilha em PU com a tecnologia Hi-Soft 32: maciez e conforto a cada passo.
+**Fala:** "É maciez na palmilha: você sente o conforto já no primeiro passo."
+**Onde:** Madison, Pointer, James, Dune, Duke (social), tênis Mark, sapatênis Grow.
+**Atenção:** é TECNOLOGIA, não nome de linha.
+
+## As que confundem — não erre
 
 | Confusão | Certo |
 |---|---|

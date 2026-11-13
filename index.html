@@ -77,9 +77,10 @@ section[data-view].on{display:block}
 .block{margin-top:36px}
 .block>h2{font-size:22px;margin-bottom:4px}
 .block>.sub{color:var(--muted);font-size:14.5px;margin-bottom:14px}
-.grid{display:grid;gap:12px}
-@media (min-width:640px){.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
-@media (min-width:960px){.g3{grid-template-columns:repeat(3,1fr)}}
+.grid{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.grid>*{min-width:0}
+@media (min-width:640px){.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:960px){.g3{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
 .muted{color:var(--muted)}
 
@@ -152,6 +153,7 @@ section[data-view].on{display:block}
 .model h3{font-size:20px;margin-top:4px}
 .ref{font:500 12.5px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--surface-2);color:var(--ink-2);padding:5px 8px;border-radius:6px;white-space:nowrap}
 .mtop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.mtop .ref,.pr-top .ref{white-space:normal;text-align:right;line-height:1.6;max-width:46%;flex:none}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{border:0;background:var(--accent-soft);color:var(--accent);font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;cursor:pointer}
 .tag:hover{filter:brightness(.97)}
@@ -295,6 +297,32 @@ details.obj .quote{margin:0 18px 18px}
 .rule h3{font-size:17px;font-family:var(--sans);font-weight:600;letter-spacing:0;margin-top:8px}
 .rule p{font-size:14.5px;color:var(--ink-2);margin-top:4px}
 
+/* Balcão */
+.counter h1{margin-bottom:6px}
+.needs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:18px;position:relative;z-index:1}
+@media (min-width:640px){.needs{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:960px){.needs{grid-template-columns:repeat(4,1fr)}}
+.need{border:1px solid rgba(255,248,238,.22);background:rgba(255,248,238,.1);color:#fff8ee;border-radius:14px;padding:12px 12px;text-align:left;font-weight:600;font-size:14.5px;line-height:1.25;cursor:pointer;min-height:54px}
+.need small{display:block;font-weight:500;font-size:12px;color:#e8d6c0;margin-top:3px}
+.need[aria-pressed="true"]{background:#fff8ee;color:#2a1d14;border-color:#fff8ee}
+.need[aria-pressed="true"] small{color:#7a5a3c}
+#needout{scroll-margin-top:76px}#needout:not(:empty){margin-top:16px}
+.res{animation:in .25s ease}
+.res-h{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between;margin:4px 0 12px}
+.res-h h2{font-size:24px}
+.res-h .tag{cursor:default}
+.prow{display:grid;gap:10px}
+.pr{display:grid;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
+.pr-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.pr h3{font-size:18px}
+.pr .quote{font-size:15px;padding:10px 12px 10px 14px}
+.pr-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.pr-foot button{border:0;background:none;color:var(--accent);font-weight:600;font-size:13.5px;cursor:pointer;padding:0}
+.tipbox{margin-top:12px;background:var(--accent-soft);border-radius:12px;padding:12px 14px;font-size:14.5px}
+.ask{display:flex;gap:12px;align-items:flex-start}
+.ask .n{width:30px;height:30px;border-radius:99px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:600 16px/1 var(--serif);flex:none}
+.ask p{color:var(--muted);font-size:14px;margin-top:2px}
+
 footer{max-width:1080px;margin:0 auto;padding:0 16px calc(100px + env(safe-area-inset-bottom));color:var(--muted);font-size:13px;line-height:1.6}
 @media (min-width:860px){footer{padding:0 24px 40px}}
 footer .line{border-top:1px solid var(--line);padding-top:20px}
@@ -326,12 +354,12 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
 
 <header class="top">
   <div class="top-in">
-    <a class="brand" href="#inicio" aria-label="Início">
+    <a class="brand" href="#inicio" aria-label="Balcão">
       <span class="mono">D</span>
       <span><b>Domínio Total</b><small>Guia do vendedor Democrata</small></span>
     </a>
     <nav class="tabs" aria-label="Seções">
-      <a class="tab" href="#inicio" data-nav="inicio"><svg class="ico"><use href="#i-home"/></svg>Início</a>
+      <a class="tab" href="#inicio" data-nav="inicio"><svg class="ico"><use href="#i-home"/></svg>Balcão</a>
       <a class="tab" href="#modelos" data-nav="modelos"><svg class="ico"><use href="#i-shoe"/></svg>Modelos</a>
       <a class="tab" href="#estilo" data-nav="estilo"><svg class="ico"><use href="#i-style"/></svg>Estilo</a>
       <a class="tab" href="#tecnologias" data-nav="tecnologias"><svg class="ico"><use href="#i-spark"/></svg>Tecnologias</a>
@@ -346,19 +374,36 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
 
 <!-- INÍCIO -->
 <section data-view="inicio">
-  <div class="hero">
-    <div class="eyebrow">Coleção Verão 27 · Pátio Central Shopping</div>
-    <h1>Domine a coleção. Venda com segurança.</h1>
-    <p>Modelos, tecnologias e frases de venda num lugar só. Estude 15 minutos por dia e feche o quiz em 10/10.</p>
-    <div class="actions">
-      <a class="btn btn-light" href="#quiz"><svg class="ico"><use href="#i-quiz"/></svg>Fazer o quiz</a>
-      <a class="btn btn-ghost" href="#estilo"><svg class="ico"><use href="#i-style"/></svg>Montar look</a>
-      <a class="btn btn-ghost" href="#modelos"><svg class="ico"><use href="#i-search"/></svg>Buscar modelo</a>
+  <div class="hero counter">
+    <div class="eyebrow">Modo balcão · Pátio Central Shopping</div>
+    <h1>O cliente quer…</h1>
+    <p>Toque no que ele pediu. Em um segundo você tem os modelos, a referência, as cores e a frase.</p>
+    <div class="needs" id="needs" role="group" aria-label="O que o cliente quer"></div>
+  </div>
+  <div id="needout"></div>
+
+  <div class="block">
+    <h2>Antes de mostrar, pergunte</h2>
+    <p class="sub">Três perguntas e você acerta o sapato de primeira.</p>
+    <div class="grid g3">
+      <div class="card ask"><span class="n">1</span><div><b>Para qual ocasião?</b><p>Trabalho, evento, dia a dia, viagem…</p></div></div>
+      <div class="card ask"><span class="n">2</span><div><b>Quantas horas em pé ou andando?</b><p>Em pé → Air. Andando → PULSE. Leveza → Full/Ultra Light.</p></div></div>
+      <div class="card ask"><span class="n">3</span><div><b>Qual a cor da roupa?</b><p>Use a aba <a href="#estilo">Estilo</a> para acertar o tom.</p></div></div>
     </div>
   </div>
 
-  <div class="stats">
-    <div class="stat"><b id="st-models">15</b><span>modelos no catálogo</span></div>
+  <div class="block">
+    <h2>Sempre ofereça junto</h2>
+    <p class="sub">A venda adicional que o cliente agradece.</p>
+    <div class="grid g3">
+      <div class="card ask"><span class="n">+</span><div><b>Cinto do mesmo tom</b><p>“O cinto no mesmo tom fecha o visual.”</p></div></div>
+      <div class="card ask"><span class="n">+</span><div><b>Produto de conservação</b><p>“Para o couro durar anos.” Ex.: Brilho Expresso.</p></div></div>
+      <div class="card ask"><span class="n">+</span><div><b>Meia ou palmilha</b><p>“A meia certa faz diferença no conforto e no visual.”</p></div></div>
+    </div>
+  </div>
+
+  <div class="stats" style="margin-top:36px">
+    <div class="stat"><b id="st-models">15</b><span>produtos no catálogo</span></div>
     <div class="stat"><b id="st-techs">12</b><span>tecnologias e materiais</span></div>
     <div class="stat"><b id="st-best">—</b><span>seu recorde no quiz</span></div>
     <div class="stat"><b id="st-plan">0/7</b><span>dias do plano feitos</span></div>
@@ -435,7 +480,7 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
 
   <div class="block">
     <h2>Os tons do couro</h2>
-    <p class="sub">Saiba nomear o tom — o cliente percebe quando você fala com precisão.</p>
+    <p class="sub">Os nomes que aparecem na etiqueta e no site. Fale o nome certo — o cliente percebe a precisão.</p>
     <div class="grid g3" id="tons"></div>
   </div>
 
@@ -467,7 +512,8 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
         <li><b>Extra Soft</b> é tênis. <b>Dual Soft</b> é sapato social.</li>
         <li><b>Smart Comfort</b> é uma <i>linha</i>, não uma tecnologia.</li>
         <li><b>Knit</b> é <i>material</i> (malha), não tecnologia.</li>
-        <li><b>PULSE</b> devolve energia, mas não é tênis de corrida.</li>
+        <li><b>PULSE</b> devolve energia, mas não é tênis de corrida — e não é só tênis: tem no mocassim Flop e no Clark.</li>
+        <li><b>Hi-Soft 32</b> é <i>tecnologia</i> de palmilha, não nome de linha.</li>
       </ul>
     </div>
   </div>
@@ -543,7 +589,7 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
   <div class="quiz">
     <div class="head">
       <div class="eyebrow">Quiz</div>
-      <h1>10 perguntas. Meta: 10/10.</h1>
+      <h1>12 perguntas. Meta: acertar todas.</h1>
       <p>Cada resposta mostra o porquê. As perguntas mudam de ordem a cada rodada.</p>
     </div>
     <div id="quizbox"></div>
@@ -555,12 +601,12 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
 <footer>
   <div class="line">
     <b>Domínio Total</b> — sistema de estudo pessoal do Marcus. Não é site oficial da marca.<br>
-    Fonte: <a href="https://www.democrata.com.br/tecnologias" target="_blank" rel="noopener">democrata.com.br/tecnologias</a> e blog Verão 2026, conferido em 13/11/2026. Preços não estão aqui: confira na etiqueta.
+    Fonte: <a href="https://www.democrata.com.br/tecnologias" target="_blank" rel="noopener">democrata.com.br/tecnologias</a> e catálogo oficial do site, conferidos em 13/11/2026. Estoque da loja física pode ser diferente do site. Preços não estão aqui: confira na etiqueta.
   </div>
 </footer>
 
 <nav class="bottom" aria-label="Seções">
-  <a href="#inicio" data-nav="inicio"><svg class="ico"><use href="#i-home"/></svg>Início</a>
+  <a href="#inicio" data-nav="inicio"><svg class="ico"><use href="#i-home"/></svg>Balcão</a>
   <a href="#modelos" data-nav="modelos"><svg class="ico"><use href="#i-shoe"/></svg>Modelos</a>
   <a href="#estilo" data-nav="estilo"><svg class="ico"><use href="#i-style"/></svg>Estilo</a>
   <a href="#tecnologias" data-nav="tecnologias"><svg class="ico"><use href="#i-spark"/></svg>Tecnologias</a>
@@ -570,79 +616,113 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
 
 <script>
 /* ---------- DADOS ---------- */
-/* a:1 = modelo-âncora (ref conferida). Os demais: linha do catálogo — confirme ref, cor e estoque na loja. */
+/* Conferido no site oficial democrata.com.br em 13/11/2026. a:1 = ref oficial confirmada. top:1 = carro-chefe. */
 const MODELOS=[
-{a:1,n:"Smart Comfort Air Spot — cadarço",c:"Sapato social",t:["Air","Stretch","Max Memory"],ref:"448026-003",cores:["preto","marrom"],para:"Quem fica muitas horas em pé e quer social com amortecimento. Forma grande.",look:"Calça social cinza ou marinho + camisa clara. Preto à noite e em evento; marrom no dia a dia.",fala:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",k:"em pé dor conforto presente pai trabalho escritório formal casamento oxford derby"},
-{a:1,n:"Smart Comfort Air Spot — elástico lateral",c:"Sapato social",t:["Air","Stretch","Max Memory","Calce Fácil"],ref:"448027-003",cores:["preto","marrom"],para:"Quem quer o Air Spot sem cadarço: calça rápido.",look:"Calça social ou chino + camisa ou polo. Marinho com marrom é acerto garantido.",fala:"O mesmo conforto do 448026, sem cadarço. Ideal para quem tem pressa.",k:"em pé pressa sem cadarço praticidade trabalho idoso viagem"},
-{a:1,n:"Metropolitan Prime",c:"Sapato social",t:["Couro legítimo"],ref:"244102-001",cores:["preto","cafe"],para:"Formal clássico, loafer versátil para trabalho e evento.",look:"Terno marinho ou chumbo + camisa branca. Preto para noite e casamento; café para esporte fino.",fala:"O clássico elegante da linha Metropolitan: bico alongado, acabamento fino.",k:"formal casamento formatura evento terno elegante loafer"},
-{a:1,n:"Metropolitan Bay",c:"Sapato social",t:["Couro legítimo"],ref:"273101-006",cores:["marrom","preto"],para:"Derby versátil, do trabalho ao evento.",look:"Chino bege ou marinho com o marrom; terno cinza com o preto. Fica ótimo com blazer + jeans escuro.",fala:"Derby de couro com solado microexpandido: leve e absorve impacto.",k:"derby trabalho evento um só para tudo versátil esporte fino"},
-{n:"Metropolitan — Type, Vega, Oliver, Jeff",c:"Sapato social",t:["Couro legítimo"],para:"Outros modelos da linha clássica: alfaiataria e social do dia a dia.",look:"Alfaiataria: terno ou calça social + camisa. Preto no formal, marrom/café no trabalho.",fala:"É a linha clássica da Democrata: couro legítimo e acabamento fino.",k:"formal trabalho terno social clássico"},
-{n:"Hi-Soft 32 — Madison, Taylor, James",c:"Sapato social",t:["Couro legítimo"],para:"Conforto com nome próprio: social para o dia inteiro.",look:"Calça social ou chino + camisa. Para o cliente que trabalha de social todo dia.",fala:"É social pensado para o conforto do dia inteiro.",k:"conforto trabalho social em pé"},
-{n:"Easy",c:"Sapato social",t:["Couro legítimo"],para:"O social fresco, para dias quentes.",look:"Alfaiataria clara (bege, cinza claro) + camisa de manga. Tons marrons.",fala:"Social mais fresco, para quem trabalha de sapato no calor.",k:"calor social leve verão trabalho"},
-{a:1,n:"Garage Astro",c:"Casual de couro",t:["Couro legítimo"],ref:"301104-001",cores:["marrom"],para:"Casual jovem de couro.",look:"Jeans escuro + camisa de botão ou camiseta lisa + jaqueta. Cinto marrom.",fala:"Casual da linha Garage: despojado sem perder o couro legítimo.",k:"casual jovem fim de semana jeans"},
-{n:"Denim",c:"Sapatênis",t:["Couro legítimo"],para:"O sapatênis que a marca popularizou: casual arrumado.",look:"Jeans ou chino + polo ou camisa. Fica entre o sapato e o tênis.",fala:"Meio sapato, meio tênis: arrumado sem ficar formal.",k:"sapatenis casual esporte fino jeans polo"},
-{n:"Flop",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Mocassim: esporte fino, jantar, escritório informal.",look:"Chino bege ou marinho + polo ou camisa de linho. Meia invisível.",fala:"Do escritório ao jantar sem trocar o sapato.",k:"mocassim esporte fino jantar"},
-{n:"Clay",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Sider (náutico): casual, verão, fim de semana.",look:"Bermuda ou chino claro + camisa de linho. Sem meia aparente.",fala:"Náutico leve, feito para o fim de semana.",k:"sider nautico verão praia fim de semana calor"},
-{n:"Dune",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Loafer: esporte fino e jantar.",look:"Calça social ou chino + camisa + blazer. Jantar e evento diurno.",fala:"Loafer elegante: calça rápido e veste bem com alfaiataria.",k:"loafer esporte fino jantar evento"},
-{n:"Tom",c:"Mocassim / Loafer",t:["Couro legítimo"],para:"Driver: para quem dirige muito.",look:"Jeans ou chino + polo. Casual de fim de semana.",fala:"Solado que sobe no calcanhar: feito para dirigir com conforto.",k:"driver dirigir carro motorista casual"},
-{a:1,n:"Drake Pulse",c:"Tênis",t:["PULSE"],para:"Quem anda muito e quer retorno de energia.",look:"Jeans, jogger ou chino + camiseta ou polo. Casual urbano.",fala:"Cápsula de TPU que devolve energia a cada passo.",k:"anda muito dia a dia um só para tudo energia"},
-{a:1,n:"Beat Pulse",c:"Tênis",t:["PULSE"],para:"Urbano intenso, robusto com PULSE.",look:"Jeans escuro + jaqueta ou moletom. Visual urbano.",fala:"Painel marcado + PULSE: presença e amortecimento.",k:"urbano anda muito"},
-{n:"Draft Pulse",c:"Tênis",t:["PULSE"],para:"Mais uma opção da família PULSE para quem anda muito.",look:"Jeans ou jogger + camiseta. Dia a dia.",fala:"Família PULSE: energia de volta em cada passo.",k:"anda muito energia dia a dia"},
-{a:1,n:"Brad Ultra Light",c:"Tênis",t:["Ultra Light"],para:"Retrô-running, leveza total.",look:"Bermuda chino, jeans claro + camiseta. Pegada retrô.",fala:"EVA levíssimo, espírito running vintage.",k:"leve retrô viagem"},
-{a:1,n:"Joe Ultra Light",c:"Tênis",t:["Ultra Light","Knit"],para:"Segunda pele: knit que abraça o pé.",look:"Bermuda ou calça leve de linho + camiseta. Perfeito no calor.",fala:"Knit respirável, veste como segunda pele.",k:"leve calor respira verão"},
-{n:"Move Ultra-Light",c:"Tênis",t:["Ultra Light","Knit"],para:"Leve e respirável para o dia todo.",look:"Jogger ou jeans + camiseta. Conforto casual.",fala:"Leve e respira: dá para ficar o dia inteiro.",k:"leve calor respira dia a dia"},
-{a:1,n:"Pace Calce Fácil",c:"Tênis",t:["Calce Fácil"],para:"Pressa, aeroporto, praticidade.",look:"Jogger, moletom ou jeans. O tênis da viagem.",fala:"Calça sem a mão, calcanhar não amassa.",k:"viagem aeroporto avião pressa sem cadarço idoso"},
-{n:"Journey Extra-Soft",c:"Tênis",t:["Extra Soft","Knit"],para:"O macio do dia a dia corrido.",look:"Jeans ou jogger + camiseta. Rotina corrida.",fala:"Pisa e afunda macio — é o tênis do dia a dia corrido.",k:"macio dia a dia conforto"},
-{n:"Tênis Full Light",c:"Tênis",t:["Full Light"],para:"Quem quer o mais leve da marca.",look:"Qualquer casual: jeans, jogger, bermuda.",fala:"É o mais leve da Democrata: feito para você esquecer que está calçado.",k:"leve levíssimo dia a dia"},
-{n:"Vibe / Bold / Groove",c:"Tênis",t:["Casual urbano"],para:"Casual urbano de perfil limpo (Bold em knit).",look:"Jeans + camiseta lisa ou camisa aberta. Tênis limpo combina com tudo.",fala:"Perfil limpo: combina com qualquer roupa do dia a dia.",k:"casual urbano jovem street"},
-{n:"Dock",c:"Sandália / Mule",t:["Couro legítimo"],para:"Calor, verão, lazer.",look:"Bermuda ou calça de linho + camiseta ou camisa aberta.",fala:"Tira larga em couro e palmilha anatômica.",k:"calor verão praia lazer sandália"},
-{n:"Tulum",c:"Sandália / Mule",t:["Couro legítimo"],para:"Mule de solado claro, visual clean.",look:"Linho claro, bermuda, tons de areia e branco.",fala:"Mule clean: calça rápido e deixa o look leve.",k:"calor verão mule clean"},
-{a:1,n:"Sandals Verão 27",c:"Sandália / Mule",t:["Couro legítimo"],ref:"700203-001/002/003",para:"Calor, verão, conforto com sofisticação.",look:"Bermuda de alfaiataria ou linho + camisa de manga curta.",fala:"Tira cruzada em couro, palmilha anatômica.",k:"calor verão praia"},
-{n:"Bota Democrata",c:"Bota / Chinelo",t:["Couro legítimo"],para:"Inverno, frio, visual robusto.",look:"Jeans escuro + camisa de flanela ou suéter + jaqueta.",fala:"Couro legítimo para o frio, com cara de robusta.",k:"inverno frio bota"},
-{n:"Chinelo Democrata",c:"Bota / Chinelo",t:["Casual"],para:"Lazer, casa, praia.",look:"Bermuda e camiseta.",fala:"Para o descanso, com a qualidade da marca.",k:"chinelo praia casa lazer presente"},
-{a:1,n:"Democrata Ela",c:"Feminino",t:["Couro legítimo"],para:"Mulher cosmopolita: do trabalho ao lazer.",look:"Ballet core com jeans reto; mocassim boyish com alfaiataria; Mary Jane com saia midi.",fala:"Tênis ballet core, mocassim boyish, Mary Jane, papete, bota cano alto.",k:"feminino mulher presente esposa"},
-{a:1,n:"Cinto Metropolitan / Garage",c:"Acessórios",t:["Couro legítimo"],cores:["preto","marrom"],para:"Completar o look, presente.",look:"Sempre da mesma cor e tom do sapato. Fivela discreta no social.",fala:"Preto com preto, marrom com marrom. Dupla face resolve os dois.",k:"presente look combinar cinto"}
+/* ---- SAPATO SOCIAL ---- */
+{a:1,top:1,n:"Air Spot — cadarço",c:"Sapato social",t:["Air","Stretch","Max Memory","Smart Comfort"],ref:"448026-003",cores:["preto"],para:"Quem fica muitas horas em pé e quer social com amortecimento. Forma grande: avise o cliente.",look:"Calça social cinza ou marinho + camisa clara. Evento, trabalho, terno.",fala:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",k:"smart comfort em pé dor conforto presente pai trabalho formal casamento"},
+{a:1,top:1,n:"Air Spot — elástico",c:"Sapato social",t:["Air","Stretch","Max Memory","Smart Comfort"],ref:"448027-003 · 448027-004",cores:["preto","marrom"],para:"O Air Spot sem cadarço: calça rápido. Forma grande.",look:"Calça social ou chino + camisa ou polo. Marinho com o marrom é acerto garantido.",fala:"O mesmo conforto do Air Spot, sem cadarço. Ideal para quem tem pressa.",k:"smart comfort em pé pressa sem cadarço praticidade idoso viagem"},
+{a:1,top:1,n:"Air Magnum",c:"Sapato social",t:["Air"],ref:"593101-001 · 593101-002",cores:["preto","marrom"],para:"Social de visual robusto e moderno, com a tecnologia Air.",look:"Calça de alfaiataria ou chino escuro + camisa. Fica moderno com blazer.",fala:"Tem a bolha de ar no calcanhar, com um visual mais robusto e atual.",k:"air em pé conforto moderno trabalho"},
+{a:1,top:1,n:"Metropolitan Prime",c:"Sapato social",t:["Couro legítimo"],ref:"244101-001",cores:["preto"],para:"Social clássico de cadarço, em couro legítimo.",look:"Terno marinho, chumbo ou preto + camisa branca. Casamento, formatura, noite.",fala:"O clássico da linha Metropolitan: design, conforto e couro legítimo.",k:"formal casamento formatura evento terno elegante cadarço"},
+{a:1,n:"Metropolitan Treviso",c:"Sapato social",t:["Couro legítimo","Sola de couro"],ref:"495201-001 · 495201-006",cores:["preto","marrom"],para:"O mais formal: forro e solado em couro.",look:"Terno escuro + camisa branca + gravata. Casamento e cerimônia.",fala:"Solado de couro e forro de couro: é o acabamento mais nobre da linha.",k:"formal casamento formatura terno noite sola couro"},
+{a:1,top:1,n:"Metropolitan Bay",c:"Sapato social",t:["Calce Fácil"],ref:"273101-006 · 273101-001",cores:["tabaco","preto","navy","mogno"],para:"Versátil, do trabalho ao evento. Bico arredondado, forro soft, palmilha macia.",look:"Chino bege ou marinho com o tabaco; terno cinza com o preto. Vai bem com blazer + jeans escuro.",fala:"Bico arredondado e forro macio: vai do escritório ao evento sem trocar.",k:"derby trabalho evento um só para tudo versátil esporte fino"},
+{a:1,n:"Pointer Hi-Soft 32",c:"Sapato social",t:["Hi-Soft 32","Smart Comfort"],ref:"250104-001 · 250104-002",cores:["preto","cafe"],para:"Sofisticação com conforto de palmilha Hi-Soft 32.",look:"Terno ou calça social escura + camisa. Café com marinho fica muito elegante.",fala:"Elegante por fora e macio por dentro: a palmilha Hi-Soft 32 se sente no primeiro passo.",k:"formal trabalho conforto elegante smart comfort"},
+{a:1,n:"Madison Hi-Soft 32",c:"Sapato social",t:["Hi-Soft 32","Smart Comfort"],ref:"255106-002",cores:["tabaco"],para:"Smart Comfort de cadarço, detalhes em micropontos e sola de borracha com salto.",look:"Chino ou calça social + camisa. Tabaco com marinho ou cinza.",fala:"Da linha Smart Comfort: conforto pensado para o dia inteiro.",k:"conforto trabalho social smart comfort"},
+{a:1,n:"James Hi-Soft 32",c:"Sapato social",t:["Hi-Soft 32"],ref:"298101-002",cores:["mogno","preto"],para:"Social moderno: sola micro expandido com laterais brancas. Também tem versão bota.",look:"Chino, jeans escuro ou alfaiataria + camisa. Moderno sem ser formal.",fala:"Sola com lateral branca: social com cara moderna, leve no pé.",k:"moderno jovem trabalho esporte fino bota"},
+{a:1,n:"Dune Hi-Soft 32",c:"Sapato social",t:["Hi-Soft 32","Calce Fácil"],ref:"298201-001 · 298201-002 · 298203-003",cores:["preto","marrom","navy"],para:"Clássico do dia a dia: sola micro expandido leve + Hi-Soft 32.",look:"Calça social ou chino + camisa. O azul é ótimo com cinza e bege.",fala:"Design clássico, sola leve e palmilha macia: social para usar todo dia.",k:"trabalho dia a dia conforto social"},
+{a:1,n:"Duke Hi-Soft 32",c:"Sapato social",t:["Hi-Soft 32"],ref:"650101-001 · 650101-002",cores:["preto","marrom"],para:"Derby de couro, cadarço, solado de borracha estável.",look:"Calça social ou chino + camisa. Do trabalho à ocasião especial.",fala:"Derby clássico com a maciez do Hi-Soft 32 — elegante e confortável.",k:"derby trabalho social conforto"},
+{a:1,n:"Collin Ultra Light",c:"Sapato social",t:["Ultra Light"],ref:"595101-001",cores:["preto"],para:"Social moderno e leve, fechamento em elástico.",look:"Calça social preta ou chumbo + camisa. Para quem quer leveza no social.",fala:"Social com a leveza do Ultra Light — e calça sem cadarço.",k:"leve social sem cadarço trabalho"},
+{a:1,n:"Clark Pulse",c:"Sapato social",t:["PULSE"],ref:"604202-001 · 604201-002",cores:["preto","mogno"],para:"Social com solado PULSE. Também tem versão bota (604204).",look:"Alfaiataria ou chino + camisa. Para quem anda muito de social.",fala:"Um social com PULSE: devolve energia a cada passo, mesmo de sapato.",k:"pulse anda muito social bota trabalho"},
+{a:1,n:"Metropolitan Vega",c:"Sapato social",t:["Couro legítimo"],ref:"055203-001 · 055204-002",cores:["preto","tan"],para:"Elegância atemporal: biqueira marcante com relevo.",look:"Terno ou calça social + camisa. O tan com marinho dá personalidade.",fala:"A biqueira com relevo é o detalhe que diferencia: clássico com assinatura.",k:"formal elegante clássico trabalho"},
+{a:1,n:"Metropolitan Type",c:"Sapato social",t:["Couro legítimo"],ref:"272102-002 · 272101-004 · 272101-005",cores:["conhaque","navy","bege"],para:"Moderno e urbano: recortes no couro, puxador no calcanhar, cadarço.",look:"Chino ou jeans escuro + camisa ou polo. Esporte fino moderno.",fala:"Social com pegada urbana: dá para usar com jeans sem ficar formal demais.",k:"esporte fino moderno jeans urbano"},
+{a:1,n:"Metropolitan Oliver",c:"Sapato social",t:["Couro legítimo"],ref:"273202-001 · 273202-002",cores:["preto","mogno"],para:"Cadarço, recortes no couro, sola de EVA leve.",look:"Calça social + camisa. Mogno com cinza ou marinho.",fala:"Recortes clássicos e sola de EVA: bonito e leve.",k:"social trabalho leve"},
+{a:1,n:"Metropolitan Clooney",c:"Sapato social",t:["Couro legítimo"],ref:"495101-001 · 495102-002",cores:["preto","tan"],para:"Forro em couro, palmilha macia, sola de borracha.",look:"Terno ou calça social + camisa.",fala:"Forrado em couro: acabamento de sapato de alto padrão.",k:"social formal trabalho"},
+{a:1,n:"Durant",c:"Sapato social",t:["Couro legítimo"],ref:"596101-002 · 596102-001 · 596101-009",cores:["marrom","preto","navy"],para:"Couro liso, linhas limpas: vai do casual ao formal.",look:"Chino ou alfaiataria + camisa. Muito versátil.",fala:"Liso e limpo: combina com quase tudo do guarda-roupa.",k:"versátil um só para tudo trabalho casual"},
+{a:1,n:"Sapato Tulum",c:"Sapato social",t:["Couro legítimo"],ref:"647101-002 · 647101-005",cores:["marrom","cinza"],para:"Clean e atemporal, linha Easy. Também existe a versão mule.",look:"Chino claro + camisa de linho ou polo.",fala:"Design básico e atemporal: fácil de combinar.",k:"easy clean casual esporte fino"},
+/* ---- TÊNIS ---- */
+{a:1,top:1,n:"Tênis Drake Pulse",c:"Tênis",t:["PULSE"],ref:"600103-001 · 600103-003 · 600101-007",cores:["preto","marrom","branco"],para:"Couro + PULSE + solado ETPU: quem anda muito.",look:"Jeans, jogger ou chino + camiseta ou polo.",fala:"Absorve o impacto e devolve energia a cada passo.",k:"pulse anda muito dia a dia um só para tudo energia"},
+{a:1,n:"Tênis Draft Pulse",c:"Tênis",t:["PULSE"],ref:"635101-001 · 635102-002",cores:["preto","cinza"],para:"Casual sofisticado em couro: trabalho e lazer.",look:"Chino ou jeans + camisa ou polo. Serve até no trabalho casual.",fala:"PULSE com cara de sapato: vai do trabalho ao fim de semana.",k:"pulse trabalho casual anda muito"},
+{a:1,n:"Tênis Beat Pulse",c:"Tênis",t:["PULSE"],ref:"623105-001 · 623102-003",cores:["cinza","navy"],para:"Couro leve com detalhes perfurados; também em knit.",look:"Jeans + camiseta ou jaqueta. Urbano.",fala:"Leve e confortável, com a energia do PULSE.",k:"pulse urbano anda muito knit"},
+{a:1,top:1,n:"Tênis Groove Full Light",c:"Tênis",t:["Full Light"],ref:"240701-001 · 240701-004 · 240701-006",cores:["preto","branco","bege"],para:"Couro pelica macio, perfurado: o mais leve da marca.",look:"Qualquer casual: jeans, jogger, bermuda.",fala:"É o mais leve da Democrata: feito para você esquecer que está calçado.",k:"full light leve levíssimo dia a dia"},
+{a:1,n:"Tênis Brad Ultra Light",c:"Tênis",t:["Ultra Light"],ref:"527101-002 · 527101-003",cores:["marrom","bege"],para:"Couro, cadarço, sola de EVA: retrô-running leve.",look:"Bermuda chino, jeans claro + camiseta.",fala:"Sola de EVA: leve, macio e flexível.",k:"leve retrô viagem"},
+{a:1,top:1,n:"Tênis Joe Ultra Light",c:"Tênis",t:["Ultra Light"],ref:"526101-001 · 526101-006",cores:["preto","branco"],para:"Couro com cadarço de elástico, palmilha PU, sola EVA.",look:"Bermuda, jeans ou linho + camiseta.",fala:"Calça fácil com o cadarço elástico e quase não pesa.",k:"leve calor viagem sem amarrar"},
+{a:1,top:1,n:"Tênis Pace Calce Fácil",c:"Tênis",t:["Calce Fácil"],ref:"653101-001 · 653101-005",cores:["preto","creme"],para:"Calça sem as mãos, cadarço elástico.",look:"Jogger, moletom ou jeans. O tênis da viagem.",fala:"Calça sem a mão: passou no raio-x, calçou e foi.",k:"viagem aeroporto avião pressa sem cadarço idoso"},
+{a:1,n:"Tênis Bold Knit",c:"Tênis",t:["Knit"],ref:"122124-001 · 122126-001",cores:["preto","navy"],para:"Cabedal em knit: respira e ajusta ao pé.",look:"Bermuda ou jogger + camiseta. Calor.",fala:"Malha que respira e abraça o pé — no calor faz diferença.",k:"knit calor respira leve"},
+{a:1,n:"Tênis Wide",c:"Tênis",t:["Couro legítimo"],ref:"240801-003 · 240801-004",cores:["cinza","branco"],para:"Couro com camurça, elástico, sola micro expandido. Também em knit.",look:"Jeans + camiseta ou polo.",fala:"Couro e camurça com fechamento em elástico: prático e bonito.",k:"casual prático sem amarrar"},
+{a:1,n:"Tênis Mark Hi-Soft 32",c:"Tênis",t:["Hi-Soft 32"],ref:"662101-001 · 662101-002",cores:["preto","marrom"],para:"Couro robusto e refinado, com palmilha Hi-Soft 32.",look:"Jeans escuro + camisa ou jaqueta.",fala:"Robusto por fora, macio por dentro.",k:"casual robusto conforto"},
+{a:1,n:"Tênis Harper",c:"Tênis",t:["Couro legítimo"],ref:"240051-001 · 240051-004",cores:["preto","bege"],para:"Couro com perfurados respiráveis e cadarço de elástico.",look:"Jeans ou chino + camiseta.",fala:"Calça fácil e respira: o casual prático.",k:"casual prático sem amarrar"},
+{a:1,n:"Tênis Clay",c:"Tênis",t:["Couro legítimo"],ref:"290302-001 · 290302-002",cores:["preto","marrom"],para:"Couro, design básico, fechamento em elástico.",look:"Jeans ou chino + camiseta ou polo.",fala:"Básico e atual: combina com tudo do dia a dia.",k:"casual básico prático sem amarrar"},
+{a:1,n:"Tênis Bill",c:"Tênis",t:["Couro legítimo"],ref:"240902-001 · 240903-001",cores:["preto","marrom"],para:"Couro liso, acabamento refinado: tênis com cara de sapato.",look:"Chino ou jeans escuro + camisa. Casual arrumado.",fala:"Liso e bem acabado: um tênis que dá para usar arrumado.",k:"casual arrumado esporte fino"},
+{n:"Tênis Journey Extra Soft",c:"Tênis",t:["Extra Soft","Knit"],para:"Couro + knit, elástico. Sem estoque no site em 13/11 — veja se a loja tem.",look:"Jeans ou jogger + camiseta.",fala:"Pisa e afunda macio — é o tênis do dia a dia corrido.",k:"macio dia a dia conforto"},
+/* ---- SAPATÊNIS ---- */
+{a:1,n:"Sapatênis Loop",c:"Sapatênis",t:["Couro legítimo"],ref:"151202-002 · 151202-001",cores:["conhaque","preto"],para:"Elástico nas laterais, palmilha PU macia.",look:"Jeans ou chino + polo ou camisa.",fala:"Elástico na lateral: calça fácil e fica arrumado.",k:"sapatenis casual esporte fino sem cadarço"},
+{a:1,n:"Sapatênis Luke",c:"Sapatênis",t:["Couro legítimo"],ref:"136201-006 · 136201-003",cores:["tan","navy"],para:"Robusto, solado caixa alta durável, cadarço elástico.",look:"Jeans + camiseta ou camisa xadrez.",fala:"Solado alto e durável: aguenta o dia a dia pesado.",k:"sapatenis robusto casual"},
+{a:1,n:"Sapatênis Grow Hi-Soft 32",c:"Sapatênis",t:["Hi-Soft 32"],ref:"203201-001 · 203201-003",cores:["preto","tan"],para:"Colarinho acolchoado, sola micro expandido + Hi-Soft 32.",look:"Jeans ou chino + polo.",fala:"Acolchoado e macio: conforto de tênis com cara de sapato.",k:"sapatenis conforto casual"},
+{a:1,n:"Sapatênis Easy Leave",c:"Sapatênis",t:["Couro legítimo"],ref:"245202-001 · 245201-003 · 245201-002",cores:["preto","conhaque","navy"],para:"Casual moderno, fechamento em elástico.",look:"Chino ou jeans + camisa ou polo.",fala:"Casual moderno, sem cadarço.",k:"sapatenis casual sem cadarço easy"},
+{a:1,n:"Sapatênis Mike",c:"Sapatênis",t:["Couro legítimo"],ref:"240601-003 · 240601-001",cores:["conhaque","preto"],para:"Sapatênis Denim para o casual do dia a dia.",look:"Jeans + camiseta ou polo.",fala:"Meio sapato, meio tênis: arrumado sem ficar formal.",k:"sapatenis casual"},
+/* ---- MOCASSIM ---- */
+{a:1,top:1,n:"Mocassim Flop Pulse",c:"Mocassim",t:["PULSE","Calce Fácil"],ref:"610101-001 · 610102-005",cores:["preto","bege"],para:"Mocassim Easy com solado TPU PULSE. Também em mule (610103).",look:"Chino bege ou marinho + polo ou linho. Meia invisível.",fala:"Um mocassim com PULSE: elegante e devolve energia a cada passo.",k:"mocassim esporte fino jantar pulse easy mule"},
+{a:1,n:"Mocassim Nash",c:"Mocassim",t:["Couro legítimo"],ref:"252301-002 · 252301-001",cores:["marrom","preto"],para:"Básico versátil, do casual ao social. Sola micro expandido leve.",look:"Chino ou alfaiataria + camisa. Esporte fino.",fala:"Atemporal: vai do casual ao social.",k:"mocassim esporte fino jantar versátil"},
+{a:1,n:"Mocassim Tom",c:"Mocassim",t:["Couro legítimo"],ref:"651101-001 · 651101-002",cores:["preto","marrom"],para:"Clean, cabedal liso, minimalista.",look:"Chino + camisa ou polo. Jantar e esporte fino.",fala:"Liso e minimalista: elegante sem esforço.",k:"mocassim esporte fino jantar clean"},
+{a:1,n:"Mocassim Ted",c:"Mocassim",t:["Couro legítimo"],ref:"135201-003 · 135201-002",cores:["conhaque","navy"],para:"Mocassim Denim casual.",look:"Bermuda ou chino claro + camisa de linho.",fala:"Casual com charme, ótimo para o fim de semana.",k:"mocassim casual verão"},
+/* ---- BOTA ---- */
+{a:1,n:"Bota Astro (Garage)",c:"Bota",t:["Couro legítimo"],ref:"301102-002 · 301102-001",cores:["mouro","preto"],para:"Couro hunter, design robusto.",look:"Jeans escuro + flanela ou suéter + jaqueta.",fala:"Robusta e versátil, em couro hunter.",k:"bota inverno frio garage"},
+{a:1,n:"Bota Grid",c:"Bota",t:["Couro legítimo"],ref:"240001-001 · 240001-003",cores:["preto","marrom"],para:"Palmilha em gel de PU, sola TR, cadarço. Existe sapatênis Grid Calce Fácil (240002).",look:"Jeans + camiseta e jaqueta.",fala:"Atitude de bota urbana com palmilha em gel.",k:"bota inverno urbana"},
+{a:1,n:"Bota Jeff",c:"Bota",t:["Couro legítimo"],ref:"604104-002 · 604104-001",cores:["preto","marrom"],para:"Metropolitan, sola micro expandido tratorada.",look:"Jeans ou chino + suéter.",fala:"Bota com solado moderno, leve no pé.",k:"bota inverno metropolitan"},
+{a:1,n:"Bota Doha",c:"Bota",t:["Couro legítimo"],ref:"597103-002 · 597103-001",cores:["marrom","preto"],para:"Construída para durar, palmilha anatômica PU.",look:"Jeans escuro + camisa ou jaqueta de couro.",fala:"Feita para durar, com palmilha anatômica.",k:"bota inverno"},
+{a:1,n:"Bota Dust (Garage)",c:"Bota",t:["Couro legítimo"],ref:"626103-003",cores:["marrom"],para:"Fechamento em elástico, sola com costura aparente.",look:"Jeans + camisa.",fala:"Bota que calça fácil, com elástico.",k:"bota inverno sem cadarço garage"},
+/* ---- SANDÁLIA / CHINELO ---- */
+{a:1,top:1,n:"Sandália Dock",c:"Sandália / Chinelo",t:["Couro legítimo"],ref:"554101-001 · 554101-002 · 554101-003",cores:["preto","marrom","bege"],para:"Tiras em X com fivela: firmeza e visual moderno.",look:"Bermuda ou linho + camiseta ou camisa aberta.",fala:"Tiras em X que seguram firme o pé — elegante no calor.",k:"calor verão praia lazer sandália easy"},
+{a:1,n:"Sandália Weekend",c:"Sandália / Chinelo",t:["Couro legítimo"],ref:"514101-002 · 514101-004",cores:["cafe","bege"],para:"Tiras cruzadas anatômicas em couro.",look:"Bermuda de alfaiataria + camisa de manga curta.",fala:"Tiras que se cruzam no formato do pé.",k:"calor verão sandália"},
+{a:1,n:"Sandália Lazy",c:"Sandália / Chinelo",t:["Couro legítimo"],ref:"693104-001 · 693104-002",cores:["preto","mouro"],para:"Tiras paralelas de couro, robusta e refinada.",look:"Bermuda + camiseta.",fala:"Sofisticada para o descanso.",k:"calor verão sandália"},
+{a:1,n:"Mule Tulum",c:"Sandália / Chinelo",t:["Couro legítimo"],ref:"647102-002",cores:["bege"],para:"Mule clean, calça rápido.",look:"Linho claro, bermuda, tons de areia.",fala:"Mule clean: calça rápido e deixa o look leve.",k:"calor verão mule clean"},
+{a:1,n:"Chinelo Livo",c:"Sandália / Chinelo",t:["Couro legítimo"],ref:"700203-001 · 700203-002 · 700203-003",cores:["preto","marrom","bege"],para:"Chinelo de couro: lazer e presente.",look:"Bermuda e camiseta.",fala:"Chinelo de couro: o descanso com qualidade Democrata.",k:"chinelo praia casa lazer presente"},
+/* ---- FEMININO / ACESSÓRIOS ---- */
+{a:1,n:"Democrata feminino",c:"Feminino",t:["Couro legítimo"],ref:"Cora 630101 · Esther 685102",para:"Mocassim Cora, Drake Pulse feminino, sandália Esther, sapatilha Olga, bota Loretta.",look:"Mocassim com alfaiataria; Drake com jeans; sandália Esther com vestido ou linho.",fala:"Couro legítimo e a mesma tecnologia, com forma feita para o pé da mulher.",k:"feminino mulher presente esposa cora esther olga loretta drake"},
+{a:1,n:"Cintos",c:"Acessórios",t:["Couro legítimo"],cores:["preto","marrom"],para:"Fechar o look e presente.",look:"Sempre da mesma cor e tom do sapato. Fivela discreta no social.",fala:"Preto com preto, marrom com marrom. Dupla face resolve os dois.",k:"presente look combinar cinto"},
+{a:1,n:"Cuidado e extras",c:"Acessórios",t:["Venda adicional"],ref:"Brilho Expresso PBE02005N",para:"Produtos de conservação, meias, palmilhas, carteiras.",look:"Ofereça junto com todo sapato de couro.",fala:"Para o couro durar anos, vale levar o produto de conservação junto.",k:"brilho conservação meia palmilha carteira presente"}
 ];
-const CORES={preto:["Preto","#151210"],cafe:["Café","#3b2416"],marrom:["Marrom","#6b3f22"],conhaque:["Conhaque","#9a5a2a"],caramelo:["Caramelo","#c0843f"],bordo:["Bordô","#5e1f24"],branco:["Branco/off-white","#f1ece2"],cinza:["Cinza","#8d8a86"]};
+const CORES={preto:["Preto","#151210"],cafe:["Café","#3b2416"],mouro:["Mouro","#3a2419"],mogno:["Mogno","#5a2619"],tabaco:["Tabaco","#6e4325"],marrom:["Marrom","#6b3f22"],tan:["Tan","#a2652f"],conhaque:["Conhaque","#8f4f22"],caramelo:["Caramelo","#c0843f"],bege:["Bege/areia","#cdb795"],creme:["Creme","#e7dbc2"],branco:["Branco/off white","#f1ece2"],cinza:["Cinza","#8d8a86"],navy:["Navy","#22304d"],bordo:["Bordô","#5e1f24"]};
 const TECS=[
-{n:"Air",o:"Bolha de ar no calcanhar + palmilha Max Memory.",f:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",w:"Smart Comfort Air Spot",q:"Air"},
-{n:"PULSE",o:"Cápsulas de TPU que absorvem e devolvem energia.",f:"Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos.",w:"Drake, Beat, Draft",q:"PULSE"},
-{n:"Ultra Light",o:"Sola de EVA levíssima + palmilha de PU.",f:"Pega na mão: ele quase não pesa. No pé some.",w:"Brad, Joe, Move",q:"Ultra Light"},
-{n:"Full Light",o:"Estrutura ultraleve, sola flexível.",f:"É o mais leve da Democrata: feito para você esquecer que está calçado.",w:"Tênis Full Light"},
-{n:"Calce Fácil",o:"Calça sem a mão, calcanhar estável.",f:"Calça sem usar a mão e sem amassar atrás. Passou no raio-x, calçou e foi.",w:"Pace",q:"Calce Fácil"},
-{n:"Extra Soft",o:"Palmilha bi-densidade + solado leve. É tênis.",f:"Pisa e afunda macio — é o tênis do dia a dia corrido.",w:"Journey (tênis)"},
-{n:"Dual Soft",o:"Duas densidades: leve e macio. É social.",f:"Social por fora, macio por dentro: aguenta o evento inteiro.",w:"Sapato social"},
-{n:"Light",o:"Solados 40% mais leves.",f:"40% mais leve que um social comum — no fim do dia você sente a diferença.",w:"Sapato de couro"},
-{n:"Smart Comfort",kind:"Linha",o:"Linha da marca que reúne Stretch + Air + Max Memory.",f:"É a linha de conforto da marca: tudo que a Democrata sabe de conforto está aqui.",w:"Air Spot, Madison",q:"Smart Comfort"},
-{n:"Stretch",o:"Couro elástico que se ajusta ao pé.",f:"O couro cede na medida do seu pé — não precisa amaciar sofrendo.",w:"Air Spot",q:"Stretch"},
-{n:"Max Memory",o:"Palmilha com memória, não deforma.",f:"Ela volta ao lugar depois de cada uso — o conforto dura.",w:"Air Spot",q:"Max Memory"},
-{n:"Knit",kind:"Material",o:"Malha que respira e abraça o pé.",f:"É tecido que respira e abraça o pé — no calor faz diferença.",w:"Joe, Move, Journey, Bold",q:"Knit"}
+{n:"Air",o:"Bolha de ar no calcanhar que absorve o impacto e protege as articulações + palmilha Max Memory, que não deforma.",f:"É como um amortecedor no calcanhar: cada passo bate menos no seu joelho.",w:"Air Spot, Air Magnum",q:"Air"},
+{n:"PULSE",o:"Cápsulas de TPU que absorvem a energia do impacto e devolvem em impulso. Alivia a pressão nos pés e articulações.",f:"Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos.",w:"Tênis Drake, Draft, Beat · Mocassim Flop · Sapato e bota Clark",q:"PULSE"},
+{n:"Hi-Soft 32",o:"Palmilha em PU com a tecnologia Hi-Soft 32: maciez e conforto a cada passo.",f:"É maciez na palmilha: você sente o conforto já no primeiro passo.",w:"Madison, Pointer, James, Dune, Duke · Tênis Mark · Sapatênis Grow",q:"Hi-Soft 32"},
+{n:"Ultra Light",o:"Sola de EVA + palmilha de PU: leve, macio, flexível e versátil.",f:"Pega na mão: ele quase não pesa. No pé some.",w:"Tênis Brad, Joe · Sapato social Collin",q:"Ultra Light"},
+{n:"Full Light",o:"Estrutura ultraleve com sola flexível que acompanha o movimento natural.",f:"É o mais leve da Democrata: feito para você esquecer que está calçado.",w:"Tênis Groove Full Light",q:"Full Light"},
+{n:"Extra Soft",o:"Palmilha super macia bi-densidade + solado leve. É tênis.",f:"Pisa e afunda macio — é o tênis do dia a dia corrido.",w:"Tênis Journey",q:"Extra Soft"},
+{n:"Dual Soft",o:"Duas densidades: leve e macio. É sapato social.",f:"Social por fora, macio por dentro: aguenta o evento inteiro.",w:"Sapatos sociais Dual Soft (confira na loja)"},
+{n:"Light",o:"Solados 40% mais leves no sapato de couro.",f:"40% mais leve — no fim do dia você sente a diferença.",w:"Linha Roy"},
+{n:"Calce Fácil",o:"Calça sem as mãos e sem amassar o calcanhar.",f:"Calça sem usar a mão. Passou no raio-x, calçou e foi.",w:"Tênis Pace · Bay · Flop · sapatênis Grid",q:"Calce Fácil"},
+{n:"Smart Comfort",kind:"Linha",o:"Linha de conforto da marca. Junta tecnologias como Air, Stretch, Max Memory e Hi-Soft 32.",f:"É a linha de conforto: tudo que a Democrata sabe de conforto está aqui.",w:"Air Spot, Pointer, Madison",q:"Smart Comfort"},
+{n:"Stretch + Max Memory",o:"Couro que cede na medida do pé + palmilha que volta ao lugar e não deforma.",f:"O couro se ajusta ao seu pé e a palmilha não deforma: o conforto dura.",w:"Air Spot",q:"Stretch"},
+{n:"Knit",kind:"Material",o:"Malha de tricô com estampa 3D: ajusta ao pé, calça fácil e deixa o pé respirar.",f:"É tecido que respira e abraça o pé — no calor faz diferença.",w:"Bold, Journey, Move, Beat e Wide em knit",q:"Knit"}
 ];
 const QUIZ=[
-{q:"Cliente fica 10h em pé e quer sapato social. Qual você oferece primeiro?",o:["Metropolitan Prime","Smart Comfort Air Spot","Garage Astro","Brad Ultra Light"],a:1,e:"Air Spot tem bolha de ar no calcanhar + palmilha Max Memory: é o social feito para muitas horas em pé."},
-{q:"Qual tecnologia devolve energia a cada passo?",o:["Ultra Light","Air","PULSE","Light"],a:2,e:"PULSE usa cápsulas de TPU que absorvem e devolvem parte da energia da pisada."},
-{q:"Cliente viaja muito de avião. Qual tecnologia ajuda mais?",o:["Dual Soft","Calce Fácil","Extra Soft","Stretch"],a:1,e:"Calce Fácil calça sem a mão e sem amassar o calcanhar — perfeito no raio-x do aeroporto (Pace)."},
-{q:"Smart Comfort é…",o:["Uma tecnologia de palmilha","Uma linha da Democrata","Um tipo de couro","Um modelo de tênis"],a:1,e:"Smart Comfort é LINHA: junta Stretch + Air + Max Memory."},
-{q:"Extra Soft é tênis e Dual Soft é…",o:["Tênis também","Sandália","Sapato social","Bota"],a:2,e:"Dual Soft é do sapato social: macio por dentro, social por fora."},
-{q:"Knit é…",o:["Tecnologia de amortecimento","Material (malha que respira)","Nome de um tênis","Tipo de solado"],a:1,e:"Knit é material, não tecnologia: uma malha respirável (Joe, Move, Journey, Bold)."},
-{q:"Qual é a ref do Air Spot de cadarço?",o:["244102-001","273101-006","448026-003","700203-001"],a:2,e:"448026-003 é o de cadarço. O 448027-003 é o de elástico lateral."},
-{q:"Qual linha é o tênis retrô-running leve?",o:["Drake Pulse","Brad Ultra Light","Journey Extra-Soft","Pace Calce Fácil"],a:1,e:"Brad Ultra Light: EVA levíssimo com espírito running vintage."},
-{q:"Para casamento/formatura, o mais formal é…",o:["Derby","Loafer","Oxford","Sider"],a:2,e:"Oxford tem cadarço fechado e bico fino — é o mais formal de todos."},
+{q:"Cliente fica 10h em pé e quer sapato social. Qual você oferece primeiro?",o:["Metropolitan Prime","Air Spot","Metropolitan Type","Tênis Brad"],a:1,e:"Air Spot: bolha de ar no calcanhar + palmilha Max Memory. É o social feito para muitas horas em pé."},
+{q:"Qual tecnologia devolve energia a cada passo?",o:["Ultra Light","Air","PULSE","Light"],a:2,e:"PULSE: cápsulas de TPU que absorvem o impacto e devolvem em impulso."},
+{q:"Qual destes MOCASSINS tem PULSE?",o:["Nash","Tom","Flop","Ted"],a:2,e:"O Mocassim Flop tem solado TPU com PULSE. PULSE não é só tênis: tem no Flop e no Clark também."},
+{q:"Hi-Soft 32 é…",o:["Uma linha de botas","Uma tecnologia de maciez na palmilha","Um tipo de couro","A numeração do sapato"],a:1,e:"Hi-Soft 32 é tecnologia: palmilha em PU com maciez. Está no Madison, Pointer, James, Dune, Duke, Mark e Grow."},
+{q:"Cliente viaja muito de avião. Qual tênis você mostra?",o:["Bold Knit","Pace Calce Fácil","Mark Hi-Soft 32","Beat Pulse"],a:1,e:"O Pace calça sem as mãos: perfeito para o raio-x do aeroporto."},
+{q:"Smart Comfort é…",o:["Uma tecnologia de palmilha","Uma linha da Democrata","Um tipo de couro","Um modelo de tênis"],a:1,e:"Smart Comfort é LINHA. Dentro dela: Air Spot, Pointer, Madison."},
+{q:"Extra Soft é tênis e Dual Soft é…",o:["Tênis também","Sandália","Sapato social","Bota"],a:2,e:"Dual Soft é de sapato social: macio por dentro, social por fora."},
+{q:"Qual é o mais leve da Democrata?",o:["Groove Full Light","Drake Pulse","Bill","Luke"],a:0,e:"Full Light é a estrutura ultraleve da marca: o Groove Full Light."},
+{q:"Qual é a ref do Air Spot de cadarço?",o:["244101-001","273101-006","448026-003","700203-001"],a:2,e:"448026-003 é o de cadarço. 448027 é o de elástico. (700203 é o Chinelo Livo.)"},
+{q:"Casamento à noite, o cliente quer o mais nobre. Qual?",o:["Tênis Bill","Metropolitan Treviso","Sapatênis Loop","Mocassim Ted"],a:1,e:"Treviso tem forro e solado em couro: o acabamento mais nobre, perfeito para cerimônia."},
+{q:"Na etiqueta está escrito “Mogno”. Que cor é?",o:["Azul-escuro","Marrom avermelhado","Bege","Cinza"],a:1,e:"Mogno é um marrom avermelhado. Tan é marrom claro alaranjado; Mouro é marrom bem escuro; Navy é azul-marinho."},
 {q:"A forma do Air Spot é…",o:["Pequena","Normal","Grande — avisar o cliente","Não tem forma"],a:2,e:"Forma grande: se ficar folgado, prove um número menor."}
 ];
 const PLANO=[
-["Air + Smart Comfort","Decore a frase do Air Spot e as refs 448026 / 448027."],
-["PULSE × Ultra Light × Full Light","Uma frase de diferença para cada."],
-["Calce Fácil, Extra Soft, Dual Soft, Light","Extra Soft é tênis, Dual Soft é social."],
+["Air + Smart Comfort","Frase do Air. Refs: Air Spot 448026 (cadarço) / 448027 (elástico) e Air Magnum 593101."],
+["PULSE × Ultra Light × Full Light × Hi-Soft 32","Uma frase de diferença para cada. PULSE também está no Flop e no Clark."],
+["Calce Fácil, Extra Soft, Dual Soft, Light","Extra Soft é tênis, Dual Soft é social, Light é a linha Roy."],
 ["Tipos de sapato","Oxford × Derby × Loafer × Monk × Sider × Driver × Sapatênis."],
-["Linhas e modelos-âncora","3 de cada categoria, sem olhar."],
+["Modelos e cores da etiqueta","3 de cada categoria, sem olhar. Decore Tan, Mogno, Tabaco, Mouro, Navy."],
 ["Atendimento","Treine em voz alta o roteiro de 6 passos e as objeções."],
-["Prova final","Quiz até 10/10. Anote o que ainda confunde."]
+["Prova final","Quiz sem errar nenhuma. Anote o que ainda confunde."]
 ];
 const PASSOS=[
 ["Receba e ouça","Não empurre modelo antes de ouvir.","Bom dia! Pode ficar à vontade — me conta, é para qual ocasião?"],
 ["Pergunte 3 coisas","Onde vai usar? Quantas horas em pé por dia? Dirige muito? Viaja?"],
-["Indique por ocasião","Formal → Metropolitan / Air Spot. Viagem → Pace. Anda muito → PULSE ou Ultra Light. Calor → Dock / Tulum."],
+["Indique por ocasião","Formal → Metropolitan / Air Spot. Viagem → Pace. Anda muito → PULSE ou Ultra Light. Calor → Dock / Weekend / Livo."],
 ["Faça provar os dois pés","Um pé é maior que o outro. Air Spot tem forma grande — se folgar, prove um número menor."],
 ["Mostre a tecnologia no pé","Deixe ele sentir, não só ouvir.","Sente essa bolha no calcanhar? Anda até ali e volta."],
 ["Feche com o conjunto","Cinto da mesma cor do sapato.","O cinto marrom fecha o look com esse sapato — quer levar junto?"]
@@ -651,12 +731,12 @@ const DORES=[
 ["“Meu pé dói no fim do dia”","Air Spot","Bolha de ar + palmilha que não deforma."],
 ["“Viajo muito”","Pace Calce Fácil","Calça sem a mão, passa no raio-x sem estresse."],
 ["“Quero um só para tudo”","Metropolitan Bay ou Drake Pulse","Do trabalho ao jantar sem trocar."],
-["“Só uso social, mas quero conforto”","Dual Soft / Light","Social por fora, macio por dentro."],
+["“Só uso social, mas quero conforto”","Pointer ou Dune Hi-Soft 32","Elegante por fora, macio por dentro: a palmilha se sente no primeiro passo."],
 ["“É presente para o pai/marido”","Air Spot","Pergunte numeração e ocasião. O Air Spot é o acerto mais seguro."]
 ];
 const OBJ=[
 ["“Tá caro.”","Couro legítimo dura anos. Divide por dia de uso: sai mais barato que trocar sapato barato duas vezes."],
-["“Couro é quente.”","O knit respira e o couro da Democrata é macio — prova o Joe ou o Brad, você sente."],
+["“Couro é quente.”","O knit respira e o couro da Democrata é macio — prova o Bold Knit ou o Groove perfurado, você sente."],
 ["“Aperta no começo.”","Esse tem Stretch: o couro cede na medida do seu pé. Prova andando na loja."],
 ["“Vou pensar.”","Sem problema. Qual ficou na sua cabeça: o conforto ou o modelo? Me diz que eu deixo separado o número."]
 ];
@@ -667,7 +747,7 @@ const TIPOS=[
 ["Loafer / Mocassim","Social","Sem cadarço, calça rápido.","Esporte fino, jantar, trabalho informal"],
 ["Sapatênis","Casual","Couro com solado de tênis.","Casual arrumado, esporte fino"],
 ["Sider","Casual","Tipo mocassim náutico, solado leve.","Verão, fim de semana"],
-["Driver (Tom)","Casual","Solado flexível que sobe no calcanhar.","Quem dirige muito"],
+["Driver","Casual","Solado flexível que sobe no calcanhar.","Quem dirige muito"],
 ["Slip-on","Tênis","Tênis sem cadarço.","Praticidade, viagem"]
 ];
 
@@ -705,7 +785,7 @@ function renderHome(){
   $('#plan').innerHTML=PLANO.map((d,i)=>`<label class="day${done.includes(i)?' done':''}"><input type="checkbox" data-d="${i}"${done.includes(i)?' checked':''}><span class="check"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><small>Dia ${i+1}</small><span class="day-t">${d[0]}</span><p>${d[1]}</p></span></label>`).join('');
   const n=done.length;
   $('#plan-bar').style.width=(n/7*100)+'%';$('#plan-txt').textContent=`${n} de 7`;$('#st-plan').textContent=`${n}/7`;
-  const best=store.get('best',null);$('#st-best').textContent=best===null?'—':`${best}/10`;
+  const best=store.get('best',null);$('#st-best').textContent=best===null?'—':`${best}/${QUIZ.length}`;
   $('#st-models').textContent=MODELOS.length;$('#st-techs').textContent=TECS.length;
 }
 $('#plan').addEventListener('change',e=>{const i=+e.target.dataset.d;let d=store.get('plano',[]);d=e.target.checked?[...new Set([...d,i])]:d.filter(x=>x!==i);store.set('plano',d);renderHome()});
@@ -729,7 +809,7 @@ function filtrar(){
   const l=MODELOS.filter(m=>(!cat||(cat===LOJA?lj.includes(m.n):m.c===cat))&&norm([m.n,m.c,m.t.join(' '),m.para,m.ref||'',m.k,m.look].join(' ')).includes(q));
   $('#count').textContent=`${l.length} ${l.length===1?'modelo':'modelos'}${raw?` para “${raw}”`:''}${cat===LOJA?' marcados como “tem na loja”':''}`;
   $('#lista').innerHTML=l.map(m=>{const has=lj.includes(m.n);return `<article class="card model${has?' has':''}">
-    <div class="mtop"><div><div class="cat">${m.c}${m.a?' <span class="anc">Âncora</span>':''}</div><h3>${m.n}</h3></div>${m.ref?`<span class="ref">${m.ref}</span>`:''}</div>
+    <div class="mtop"><div><div class="cat">${m.c}${m.a?' <span class="anc">✓ Ref oficial</span>':''}</div><h3>${m.n}</h3></div>${m.ref?`<span class="ref">${m.ref.split(' · ').join('<br>')}</span>`:''}</div>
     <div class="tags">${m.t.map(t=>`<button class="tag" data-t="${t}">${t}</button>`).join('')}</div>
     <p class="for"><b>Para quem:</b> ${m.para} <span class="muted">· Nº 37–44</span></p>
     <div class="look"><div class="look-h">Look que combina</div><p>${m.look}</p>${m.cores?`<div class="sws">${m.cores.map(sw).join('')}</div>`:''}</div>
@@ -755,14 +835,46 @@ $('#pains').innerHTML=DORES.map(d=>`<div class="card pain"><div class="dor">${d[
 $('#objs').innerHTML=OBJ.map(o=>`<details class="obj"><summary>${o[0]}<svg class="ico"><use href="#i-plus"/></svg></summary><blockquote class="quote">“${o[1]}”</blockquote></details>`).join('');
 $('#tipos-g').innerHTML=TIPOS.map(t=>`<div class="card"><div class="eyebrow">${t[1]}</div><h3 style="margin-top:4px">${t[0]}</h3><p>${t[2]}</p><div class="use">→ ${t[3]}</div></div>`).join('');
 
+/* ---------- BALCÃO ---------- */
+const NEEDS=[
+{id:"pe",n:"Fica muito em pé",s:"Social com amortecimento",tec:"Air",m:["Air Spot — cadarço","Air Spot — elástico","Air Magnum"],dica:"Air Spot tem forma grande: se folgar, prove um número menor. Faça ele andar na loja."},
+{id:"anda",n:"Anda muito",s:"Energia de volta",tec:"PULSE",m:["Tênis Drake Pulse","Tênis Draft Pulse","Mocassim Flop Pulse","Clark Pulse"],dica:"PULSE não é tênis de corrida. Mas tem até em mocassim (Flop) e social (Clark)."},
+{id:"leve",n:"O mais leve",s:"Leveza total",tec:"Full Light / Ultra Light",m:["Tênis Groove Full Light","Tênis Joe Ultra Light","Tênis Brad Ultra Light","Collin Ultra Light"],dica:"Coloque o tênis na mão dele: “pega e sente o peso”."},
+{id:"macio",n:"Social macio",s:"Conforto no dia a dia",tec:"Hi-Soft 32",m:["Pointer Hi-Soft 32","Dune Hi-Soft 32","Duke Hi-Soft 32","Madison Hi-Soft 32"],dica:"Peça para ele pisar firme: a maciez da palmilha se sente na hora."},
+{id:"pratico",n:"Sem cadarço",s:"Calça rápido",tec:"Calce Fácil",m:["Tênis Pace Calce Fácil","Air Spot — elástico","Mocassim Flop Pulse","Sapatênis Loop"],dica:"Ótimo para idoso, para quem tem pressa e para aeroporto."},
+{id:"formal",n:"Casamento / formatura",s:"O mais elegante",tec:"Couro legítimo",m:["Metropolitan Treviso","Metropolitan Prime","Air Spot — cadarço","Pointer Hi-Soft 32"],dica:"À noite, preto. Festa longa? Air Spot aguenta a noite inteira."},
+{id:"trabalho",n:"Trabalho social",s:"Para a semana toda",tec:"Versátil",m:["Metropolitan Bay","Duke Hi-Soft 32","Durant","Air Spot — elástico"],dica:"Pergunte se fica em pé: se sim, puxe para o Air."},
+{id:"casual",n:"Casual arrumado",s:"Jeans com estilo",tec:"Couro legítimo",m:["Tênis Bill","Sapatênis Loop","Mocassim Nash","Metropolitan Type"],dica:"Casual de couro deixa o jeans com cara de arrumado."},
+{id:"calor",n:"Calor / verão",s:"Fresco e leve",tec:"Couro + Knit",m:["Sandália Dock","Sandália Weekend","Tênis Bold Knit","Chinelo Livo"],dica:"Knit respira. Sandália de couro com tira firme é conforto e estilo."},
+{id:"frio",n:"Bota / frio",s:"Robusto",tec:"Couro legítimo",m:["Bota Astro (Garage)","Bota Grid","Bota Jeff","Clark Pulse"],dica:"Clark tem versão bota com PULSE (604204)."},
+{id:"presente",n:"Presente",s:"Acerto seguro",tec:"—",m:["Air Spot — elástico","Cintos","Chinelo Livo","Sandália Weekend"],dica:"Pergunte numeração, ocasião e cor que ele usa. Confirme a política de troca da loja."},
+{id:"fem",n:"Feminino",s:"Linha para ela",tec:"Couro legítimo",m:["Democrata feminino"],dica:"Mocassim Cora, Drake Pulse feminino, sandália Esther, sapatilha Olga, bota Loretta."}
+];
+const findM=n=>MODELOS.find(m=>m.n===n);
+let need=null;
+$('#needs').innerHTML=NEEDS.map(x=>`<button class="need" data-n="${x.id}" aria-pressed="false">${x.n}<small>${x.s}</small></button>`).join('');
+$('#needs').onclick=e=>{const b=e.target.closest('[data-n]');if(!b)return;need=need===b.dataset.n?null:b.dataset.n;document.querySelectorAll('.need').forEach(x=>x.setAttribute('aria-pressed',x.dataset.n===need));renderNeed();if(need)setTimeout(()=>$('#needout').scrollIntoView({behavior:'smooth',block:'start'}),60)};
+function renderNeed(){
+  const N=NEEDS.find(x=>x.id===need);if(!N){$('#needout').innerHTML='';return}
+  $('#needout').innerHTML=`<div class="res anchor"><div class="res-h"><h2>${N.n}</h2>${N.tec!=='—'?`<span class="tag">${N.tec}</span>`:''}</div>
+  <div class="prow grid g2">${N.m.map(findM).filter(Boolean).map(m=>`<div class="pr">
+    <div class="pr-top"><div><div class="cat" style="font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">${m.c}</div><h3>${m.n}</h3></div>${m.ref?`<span class="ref">${m.ref.split(' · ')[0]}</span>`:''}</div>
+    ${m.cores?`<div class="sws">${m.cores.map(sw).join('')}</div>`:''}
+    <blockquote class="quote">“${m.fala}”</blockquote>
+    <div class="pr-foot"><span class="muted" style="font-size:13px">${m.t.join(' · ')}</span><button data-m="${m.n}">Ver ficha →</button></div>
+  </div>`).join('')}</div>
+  <div class="tipbox">💡 ${N.dica}</div></div>`;
+}
+$('#needout').onclick=e=>{const b=e.target.closest('[data-m]');if(b)buscar(b.dataset.m)};
+
 /* ---------- ESTILO ---------- */
 const OCAS=[
-{id:"formal",n:"Casamento / formatura",nivel:"formal",tipo:"Oxford ou loafer fino, bico alongado, sola fina.",m:["Metropolitan Prime","Smart Comfort Air Spot — cadarço","Metropolitan — Type, Vega, Oliver, Jeff"],roupa:"Terno marinho, chumbo ou preto + camisa branca ou azul-clara + gravata.",dica:"À noite, preto é a escolha mais segura. Sapato bem engraxado.",f:"Para casamento, o de bico alongado é o mais elegante — e se a festa for longa, o Air Spot aguenta a noite inteira."},
-{id:"trabalho",n:"Trabalho social",nivel:"formal",tipo:"Derby ou loafer — versáteis para a semana inteira.",m:["Metropolitan Bay","Smart Comfort Air Spot — cadarço","Smart Comfort Air Spot — elástico lateral","Hi-Soft 32 — Madison, Taylor, James"],roupa:"Calça social + camisa lisa ou listra fina. Blazer opcional.",dica:"Fica muito em pé? Air Spot. Quer leveza? Peça social com Light ou Dual Soft.",f:"Para o dia a dia no trabalho, o Derby é o mais versátil: vai com terno e com calça social sozinha."},
-{id:"esporte",n:"Esporte fino / jantar",nivel:"medio",tipo:"Loafer, mocassim, monk ou sapatênis de couro.",m:["Dune","Flop","Metropolitan Prime","Denim"],roupa:"Camisa de botão, polo de malha boa ou camisa de linho. Blazer sem gravata.",dica:"Loafer com meia invisível deixa o look moderno.",f:"Esporte fino pede loafer: arrumado sem parecer que vai a casamento."},
-{id:"casual",n:"Casual / fim de semana",nivel:"casual",tipo:"Casual de couro, sapatênis ou tênis limpo.",m:["Garage Astro","Denim","Vibe / Bold / Groove","Drake Pulse"],roupa:"Camiseta lisa, polo ou camisa aberta. Jaqueta se esfriar.",dica:"Tênis branco ou off-white combina com quase tudo no casual.",f:"No fim de semana, um casual de couro deixa o jeans com cara de arrumado sem esforço."},
-{id:"viagem",n:"Viagem / aeroporto",nivel:"casual",tipo:"Slip-on ou Calce Fácil — sem cadarço.",m:["Pace Calce Fácil","Smart Comfort Air Spot — elástico lateral","Joe Ultra Light"],roupa:"Jogger ou jeans, camiseta, moletom ou jaqueta leve.",dica:"Sem cadarço = raio-x rápido.",f:"Para viajar, o Pace: tira e calça sem a mão no raio-x, e o calcanhar não amassa."},
-{id:"calor",n:"Calor / verão",nivel:"casual",tipo:"Sider, sandália, mule ou tênis knit.",m:["Clay","Dock","Tulum","Sandals Verão 27","Joe Ultra Light"],roupa:"Linho, algodão leve, camisa de manga curta, bermuda de alfaiataria.",dica:"Tons claros (caramelo, conhaque) deixam o look leve.",f:"No calor, couro claro e tênis knit respiram — o pé agradece."}
+{id:"formal",n:"Casamento / formatura",nivel:"formal",tipo:"Oxford ou loafer fino, bico alongado, sola fina.",m:["Metropolitan Treviso","Metropolitan Prime","Air Spot — cadarço","Pointer Hi-Soft 32"],roupa:"Terno marinho, chumbo ou preto + camisa branca ou azul-clara + gravata.",dica:"À noite, preto é a escolha mais segura. Sapato bem engraxado.",f:"Para casamento, o de bico alongado é o mais elegante — e se a festa for longa, o Air Spot aguenta a noite inteira."},
+{id:"trabalho",n:"Trabalho social",nivel:"formal",tipo:"Derby ou loafer — versáteis para a semana inteira.",m:["Metropolitan Bay","Air Spot — elástico","Air Magnum","Duke Hi-Soft 32","Dune Hi-Soft 32"],roupa:"Calça social + camisa lisa ou listra fina. Blazer opcional.",dica:"Fica muito em pé? Air Spot ou Air Magnum. Quer maciez? Hi-Soft 32 (Duke, Dune, Pointer).",f:"Para o dia a dia no trabalho, o Derby é o mais versátil: vai com terno e com calça social sozinha."},
+{id:"esporte",n:"Esporte fino / jantar",nivel:"medio",tipo:"Loafer, mocassim, monk ou sapatênis de couro.",m:["Mocassim Nash","Mocassim Flop Pulse","Metropolitan Type","Sapatênis Loop"],roupa:"Camisa de botão, polo de malha boa ou camisa de linho. Blazer sem gravata.",dica:"Loafer com meia invisível deixa o look moderno.",f:"Esporte fino pede loafer: arrumado sem parecer que vai a casamento."},
+{id:"casual",n:"Casual / fim de semana",nivel:"casual",tipo:"Casual de couro, sapatênis ou tênis limpo.",m:["Tênis Bill","Tênis Drake Pulse","Sapatênis Luke","Tênis Groove Full Light"],roupa:"Camiseta lisa, polo ou camisa aberta. Jaqueta se esfriar.",dica:"Tênis branco ou off-white combina com quase tudo no casual.",f:"No fim de semana, um casual de couro deixa o jeans com cara de arrumado sem esforço."},
+{id:"viagem",n:"Viagem / aeroporto",nivel:"casual",tipo:"Slip-on ou Calce Fácil — sem cadarço.",m:["Tênis Pace Calce Fácil","Air Spot — elástico","Tênis Joe Ultra Light","Tênis Clay"],roupa:"Jogger ou jeans, camiseta, moletom ou jaqueta leve.",dica:"Sem cadarço = raio-x rápido.",f:"Para viajar, o Pace: tira e calça sem a mão no raio-x, e o calcanhar não amassa."},
+{id:"calor",n:"Calor / verão",nivel:"casual",tipo:"Sandália, mule, chinelo de couro ou tênis knit.",m:["Sandália Dock","Sandália Weekend","Mule Tulum","Tênis Bold Knit","Chinelo Livo"],roupa:"Linho, algodão leve, camisa de manga curta, bermuda de alfaiataria.",dica:"Tons claros (caramelo, conhaque) deixam o look leve.",f:"No calor, couro claro e tênis knit respiram — o pé agradece."}
 ];
 const CALCAS=[
 {id:"preto",n:"Preta",c:"#1a1a1c",formal:["preto"],casual:["preto","branco"],evite:["caramelo","conhaque"],meia:"Preta."},
@@ -777,12 +889,13 @@ const CALCAS=[
 ];
 const TONS=[
 ["preto","O mais formal de todos.","Noite, casamento, terno.","Preto, chumbo, cinza, marinho."],
-["cafe","Marrom bem escuro: quase tão formal quanto o preto, mais moderno.","Trabalho, evento de dia.","Marinho, cinza, bege, oliva."],
-["marrom","O coringa: vai do trabalho ao fim de semana.","Dia a dia, esporte fino.","Marinho, bege, cinza claro, jeans."],
-["conhaque","Marrom avermelhado que dá personalidade.","Esporte fino, casual arrumado.","Marinho, jeans, bege, branco."],
-["caramelo","Claro e de verão.","Casual, calor, praia.","Branco, jeans claro, bege, linho."],
-["bordo","Ousado e elegante, para quem quer se destacar.","Social com personalidade.","Cinza chumbo, marinho."],
-["branco","O tênis limpo do casual.","Casual, viagem, fim de semana.","Quase tudo no casual."]
+["mouro","Mouro / Café: marrom bem escuro, quase tão formal quanto o preto.","Trabalho, evento de dia.","Marinho, cinza, bege, oliva."],
+["mogno","Mogno: marrom avermelhado, sofisticado.","Social, esporte fino.","Cinza, marinho, bege."],
+["tabaco","Tabaco / Marrom: o coringa do dia a dia.","Trabalho, fim de semana.","Marinho, bege, cinza claro, jeans."],
+["tan","Tan / Conhaque: marrom claro alaranjado, dá personalidade.","Esporte fino, casual arrumado.","Marinho, jeans, bege, branco."],
+["bege","Bege / Areia / Creme: claro e de verão.","Casual, calor.","Branco, jeans claro, linho, marinho."],
+["navy","Navy: azul-marinho no couro. Moderno.","Casual arrumado, esporte fino.","Cinza, bege, branco, jeans claro."],
+["branco","Branco / Off white: o tênis limpo.","Casual, viagem, fim de semana.","Quase tudo no casual."]
 ];
 const REGRAS=[
 ["Cinto = sapato","Mesma cor e mesmo tom. Fosco com fosco, brilho com brilho."],
@@ -860,7 +973,7 @@ function resultado(){
   $('#quizbox').innerHTML=`<div class="card result">
     <div class="ring"><svg viewBox="0 0 150 150"><circle class="bg" cx="75" cy="75" r="62"/><circle class="fg" cx="75" cy="75" r="62" stroke-dasharray="${C}" stroke-dashoffset="${C}"/></svg><b>${acertos}/${QUIZ.length}</b></div>
     <h2>${perf?'Perfeito. Domínio total.':acertos>=7?'Quase lá!':'Bora revisar.'}</h2>
-    <p>${perf?'Você acertou tudo. Repita amanhã para fixar.':'Revise o que errou abaixo e tente de novo até fechar 10/10.'}</p>
+    <p>${perf?'Você acertou tudo. Repita amanhã para fixar.':'Revise o que errou abaixo e tente de novo até acertar todas.'}</p>
     ${erros.length?`<ul class="misses">${erros.map(q=>`<li><b>${q.q}</b><br><span class="muted">Resposta: ${q.o[q.a]} — ${q.e}</span></li>`).join('')}</ul>`:''}
     <div class="actions"><button class="btn btn-primary" id="again">Fazer de novo</button><a class="btn btn-outline" href="#tecnologias">Revisar tecnologias</a></div>
   </div>`;
