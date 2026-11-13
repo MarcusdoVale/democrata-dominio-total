@@ -18,7 +18,7 @@ Depois de aberto uma vez com internet (de preferência no Wi-Fi: ele baixa as fo
 | **Estilo** | *Monte o look*: ocasião + cor da calça → sapato, tom, cinto, meia, roupa e frase pronta |
 | **Tecnologias** | Air, PULSE, Hi-Soft 32, Full Light, Ultra Light… o que é, onde está e como falar |
 | **Venda** | Roteiro de 6 passos, frases por dor, objeções, o que nunca prometer, tipos de sapato |
-| **Quiz** | 12 perguntas com explicação. Meta: acertar todas |
+| **Estudar** | 5 dias para aprender os modelos: lista com foto por grupo e **cartões** (vê a foto, tenta lembrar, confere). Progresso salvo. Dia 5 = prova + quiz de 12 perguntas |
 
 O que você marca (plano, "tem na loja", recorde) fica salvo **no aparelho** em que você marcou.
 

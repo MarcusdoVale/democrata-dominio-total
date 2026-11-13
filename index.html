@@ -340,6 +340,57 @@ details.obj .quote{margin:0 18px 18px}
 .lk-models button{display:inline-flex;align-items:center;gap:8px;padding:4px 12px 4px 4px}
 .lk-models button img{width:34px;height:34px;object-fit:contain;background:#fff;border-radius:99px}
 
+/* Estudar */
+.back{display:inline-block;margin-bottom:12px;font-weight:600;font-size:14px;text-decoration:none}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:16px}
+.day-b{border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 2px;cursor:pointer;text-align:center;color:var(--ink-2);line-height:1.2}
+.day-b b{display:block;font:600 15px/1.1 var(--serif);color:var(--ink)}
+.day-b small{display:block;font-size:11px;margin-top:3px;color:var(--muted)}
+.day-b[aria-selected="true"]{background:var(--ink);border-color:var(--ink)}
+.day-b[aria-selected="true"] b,.day-b[aria-selected="true"] small{color:var(--bg)}
+.day-b.done small{color:var(--ok)}
+.dhead{padding:20px}
+.dhead h2{font-size:26px;margin-top:4px}
+.dhead p{color:var(--ink-2);margin-top:6px;font-size:15px}
+.dhead .progress-row{margin:14px 0 0}
+.dactions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.grp{margin-top:24px}
+.grp h3{font-size:19px}
+.grp .gtip{color:var(--muted);font-size:14px;margin:2px 0 10px}
+.srows{display:grid;gap:8px}
+@media (min-width:760px){.srows{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.srow{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px 12px 8px 8px;cursor:pointer;text-align:left;width:100%;font:inherit;color:inherit}
+.srow:hover{border-color:var(--accent)}
+.srow img{width:72px;height:72px;object-fit:contain;background:#fff;border-radius:10px}
+.srow b{display:block;font-size:15.5px}
+.srow span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.srow i{font-style:normal;font-size:18px;color:var(--ok)}
+.srow i.no{color:var(--muted);opacity:.5}
+.dstep{display:flex;gap:12px;align-items:flex-start}
+.dstep .n{width:30px;height:30px;border-radius:99px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 15px/1 var(--serif);flex:none}
+.dstep p{color:var(--ink-2);font-size:14.5px;margin:2px 0 10px}
+.fcmode .head,.fcmode .days{display:none}
+.fc{max-width:560px;margin:0 auto}
+.fc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:600;color:var(--muted);font-size:14px}
+.fc-top button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-2)}
+.fc-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;margin-top:12px}
+.fc-img{position:relative;background:#fff}
+.fc-img img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain}
+.fc-q{padding:16px 18px 18px;text-align:center}
+.fc-q p{color:var(--muted);font-size:15px}
+.fc-ans{padding:14px 18px 18px;display:grid;gap:10px;animation:in .2s ease}
+.fc-ans h2{font-size:26px}
+.fc-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 18px 18px}
+.fc-btns .btn{justify-content:center;padding:14px}
+.btn-ok{background:var(--ok);color:#fff}
+.btn-again{background:var(--surface-2);color:var(--ink)}
+.fc-end{text-align:center;padding:28px 20px}
+.fc-end h2{font-size:28px}
+.fc-end p{color:var(--muted);margin-top:6px}
+.fc-miss{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.fc-miss span{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border-radius:99px;padding:4px 10px 4px 4px;font-size:13.5px;font-weight:600}
+.fc-miss img{width:28px;height:28px;object-fit:contain;background:#fff;border-radius:99px}
+
 footer{max-width:1080px;margin:0 auto;padding:0 16px calc(100px + env(safe-area-inset-bottom));color:var(--muted);font-size:13px;line-height:1.6}
 @media (min-width:860px){footer{padding:0 24px 40px}}
 footer .line{border-top:1px solid var(--line);padding-top:20px}
@@ -356,6 +407,7 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
   <symbol id="i-quiz" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.4"/><path d="M12 17h.01"/></symbol>
   <symbol id="i-style" viewBox="0 0 24 24"><path d="M8 3 4 6l2 4 2-1v12h8V9l2 1 2-4-4-3"/><path d="M8 3c.5 1.7 2 3 4 3s3.5-1.3 4-3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19V5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5"/><path d="M8 7h8"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
@@ -381,7 +433,7 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
       <a class="tab" href="#estilo" data-nav="estilo"><svg class="ico"><use href="#i-style"/></svg>Estilo</a>
       <a class="tab" href="#tecnologias" data-nav="tecnologias"><svg class="ico"><use href="#i-spark"/></svg>Tecnologias</a>
       <a class="tab" href="#venda" data-nav="venda"><svg class="ico"><use href="#i-chat"/></svg>Venda</a>
-      <a class="tab" href="#quiz" data-nav="quiz"><svg class="ico"><use href="#i-quiz"/></svg>Quiz</a>
+      <a class="tab" href="#estudar" data-nav="estudar"><svg class="ico"><use href="#i-book"/></svg>Estudar</a>
     </nav>
     <button class="theme" id="theme" aria-label="Alternar tema claro/escuro"><svg class="ico"><use href="#i-moon"/></svg></button>
   </div>
@@ -601,10 +653,22 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
   </div>
 </section>
 
+<!-- ESTUDAR -->
+<section data-view="estudar">
+  <div class="head">
+    <div class="eyebrow">Estudar</div>
+    <h1>Aprenda os modelos pela foto</h1>
+    <p>Um dia de cada vez, 20 minutos. Veja a lista, depois treine com os cartões: aparece a foto, você tenta lembrar e toca para conferir.</p>
+  </div>
+  <div class="days" id="days" role="tablist" aria-label="Dias de estudo"></div>
+  <div id="dayview"></div>
+</section>
+
 <!-- QUIZ -->
 <section data-view="quiz">
   <div class="quiz">
     <div class="head">
+      <a href="#estudar" class="back">← Estudar</a>
       <div class="eyebrow">Quiz</div>
       <h1>12 perguntas. Meta: acertar todas.</h1>
       <p>Cada resposta mostra o porquê. As perguntas mudam de ordem a cada rodada.</p>
@@ -628,7 +692,7 @@ footer .line{border-top:1px solid var(--line);padding-top:20px}
   <a href="#estilo" data-nav="estilo"><svg class="ico"><use href="#i-style"/></svg>Estilo</a>
   <a href="#tecnologias" data-nav="tecnologias"><svg class="ico"><use href="#i-spark"/></svg>Tecnologias</a>
   <a href="#venda" data-nav="venda"><svg class="ico"><use href="#i-chat"/></svg>Venda</a>
-  <a href="#quiz" data-nav="quiz"><svg class="ico"><use href="#i-quiz"/></svg>Quiz</a>
+  <a href="#estudar" data-nav="estudar"><svg class="ico"><use href="#i-book"/></svg>Estudar</a>
 </nav>
 
 <script>
@@ -778,7 +842,7 @@ const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const store={get(k,d){try{const v=localStorage.getItem(k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 
 /* ---------- ROTAS ---------- */
-const VIEWS=['inicio','modelos','estilo','tecnologias','venda','quiz'];
+const VIEWS=['inicio','modelos','estilo','tecnologias','venda','estudar','quiz'];
 const ANCHORS=['roteiro','dores','objecoes','nunca','tipos','cuidados'];
 function route(){
   let h=location.hash.slice(1)||'inicio';
@@ -786,10 +850,12 @@ function route(){
   if(ANCHORS.includes(h)){view='venda';anchor=h}
   if(!VIEWS.includes(view))view='inicio';
   document.querySelectorAll('section[data-view]').forEach(s=>s.classList.toggle('on',s.dataset.view===view));
-  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  const navv=view==='quiz'?'estudar':view;
+  document.querySelectorAll('[data-nav]').forEach(a=>{if(a.dataset.nav===navv)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   if(anchor){requestAnimationFrame(()=>document.getElementById(anchor).scrollIntoView({behavior:'smooth'}))}
   else window.scrollTo(0,0);
   if(view==='inicio')renderHome();
+  if(view==='estudar'&&!fc)renderDay();
 }
 window.addEventListener('hashchange',route);
 
@@ -964,6 +1030,90 @@ $('#regras').innerHTML=REGRAS.map((r,i)=>`<div class="card rule"><div class="n">
 $('#sugerir').innerHTML=SUGERIR.map(s=>`<div class="card"><div class="eyebrow">${s[0]}</div><blockquote class="quote" style="margin-top:10px">“${s[1]}”</blockquote></div>`).join('');
 renderLook();
 
+/* ---------- ESTUDAR ---------- */
+const DIAS=[
+{t:"Carros-chefe",meta:"Os que você mais vai vender. Domine estes primeiro.",g:[
+ ["Air — o amortecedor","Para quem fica em pé. Forma grande: avise o cliente.",["Air Spot — cadarço","Air Spot — elástico","Air Magnum"]],
+ ["Social clássico","Do trabalho ao evento.",["Metropolitan Prime","Metropolitan Bay"]],
+ ["Tênis","PULSE = energia · Full/Ultra Light = leveza · Calce Fácil = sem as mãos.",["Tênis Drake Pulse","Tênis Pace Calce Fácil","Tênis Groove Full Light","Tênis Joe Ultra Light"]],
+ ["Mocassim e sandália","Flop tem PULSE! Dock tem tiras em X.",["Mocassim Flop Pulse","Sandália Dock"]]]},
+{t:"Sapato social",meta:"19 modelos em 4 grupos. Decore o detalhe que diferencia cada um.",g:[
+ ["Air — amortecimento","Bolha de ar no calcanhar.",["Air Spot — cadarço","Air Spot — elástico","Air Magnum"]],
+ ["Hi-Soft 32 — maciez","Palmilha macia. James tem sola com lateral branca.",["Pointer Hi-Soft 32","Madison Hi-Soft 32","James Hi-Soft 32","Dune Hi-Soft 32","Duke Hi-Soft 32"]],
+ ["Metropolitan clássicos","Treviso = sola de couro (o mais nobre). Vega = biqueira com relevo. Type = urbano.",["Metropolitan Prime","Metropolitan Treviso","Metropolitan Bay","Metropolitan Vega","Metropolitan Type","Metropolitan Oliver","Metropolitan Clooney"]],
+ ["Outros sociais","Collin = Ultra Light no social. Clark = PULSE no social.",["Collin Ultra Light","Clark Pulse","Durant","Sapato Tulum"]]]},
+{t:"Tênis e sapatênis",meta:"Agrupe pela tecnologia: é assim que o cliente pede.",g:[
+ ["PULSE — energia","Para quem anda muito.",["Tênis Drake Pulse","Tênis Draft Pulse","Tênis Beat Pulse"]],
+ ["Leveza","Groove é o mais leve da marca.",["Tênis Groove Full Light","Tênis Brad Ultra Light","Tênis Joe Ultra Light"]],
+ ["Prático","Sem as mãos ou com elástico.",["Tênis Pace Calce Fácil","Tênis Clay","Tênis Harper","Tênis Wide","Tênis Bold Knit"]],
+ ["Arrumado","Tênis com cara de sapato.",["Tênis Bill","Tênis Mark Hi-Soft 32","Tênis Journey Extra Soft"]],
+ ["Sapatênis","Meio sapato, meio tênis.",["Sapatênis Loop","Sapatênis Luke","Sapatênis Grow Hi-Soft 32","Sapatênis Easy Leave","Sapatênis Mike"]]]},
+{t:"Mocassim, bota e sandália",meta:"E as cores da etiqueta: Tan, Mogno, Tabaco, Mouro, Navy (aba Estilo).",g:[
+ ["Mocassim","Flop tem PULSE. Tom é liso e minimalista.",["Mocassim Flop Pulse","Mocassim Nash","Mocassim Tom","Mocassim Ted"]],
+ ["Bota","Grid tem palmilha em gel. Dust calça com elástico.",["Bota Astro (Garage)","Bota Grid","Bota Jeff","Bota Doha","Bota Dust (Garage)"]],
+ ["Sandália e chinelo","Dock = tiras em X · Weekend = cruzadas · Lazy = paralelas.",["Sandália Dock","Sandália Weekend","Sandália Lazy","Mule Tulum","Chinelo Livo"]],
+ ["Feminino e acessórios","O que vende junto.",["Democrata feminino","Cintos","Cuidado e extras"]]]},
+{t:"Prova final",meta:"Junte tudo. Se errar, volte no dia daquele modelo.",prova:1}
+];
+const diaModelos=d=>[...new Set((DIAS[d].g||[]).flatMap(g=>g[2]))].map(findM).filter(Boolean);
+const sabe=()=>store.get('sabe',[]);
+let dia=store.get('dia',0),fc=null;
+function renderDays(){const sb=sabe(),feitos=store.get('diasFeitos',[]);
+  $('#days').innerHTML=DIAS.map((d,i)=>{const ms=diaModelos(i),k=ms.filter(m=>sb.includes(m.n)).length;return `<button class="day-b${feitos.includes(i)?' done':''}" role="tab" data-d="${i}" aria-selected="${i===dia}"><b>Dia ${i+1}</b><small>${feitos.includes(i)?'✓ feito':d.prova?'prova':k+'/'+ms.length}</small></button>`}).join('')}
+$('#days').onclick=e=>{const b=e.target.closest('[data-d]');if(!b)return;dia=+b.dataset.d;store.set('dia',dia);fc=null;renderDay()};
+const srow=m=>{const r=refsOf(m)[0],k=sabe().includes(m.n);return `<button class="srow" data-m="${m.n}">${r?`<img src="${fotoUrl(r)}" alt="" loading="lazy" crossorigin="anonymous">`:'<span></span>'}<div><b>${m.n}</b><span>${m.t.join(' · ')}</span></div><i class="${k?'':'no'}" title="${k?'Você já sabe':'Ainda não'}">${k?'✓':'○'}</i></button>`};
+function renderDay(){
+  document.querySelector('[data-view=estudar]').classList.remove('fcmode');
+  renderDays();const D=DIAS[dia],done=store.get('diasFeitos',[]).includes(dia);
+  const feitoBtn=`<button class="btn btn-outline" data-act="feito">${done?'✓ Dia feito':'Marcar dia como feito'}</button>`;
+  if(D.prova){$('#dayview').innerHTML=`<div class="card dhead"><div class="eyebrow">Dia ${dia+1}</div><h2>${D.t}</h2><p>${D.meta}</p><div class="dactions">${feitoBtn}</div></div>
+    <div class="block grid g2" style="margin-top:16px">
+      <div class="card dstep"><span class="n">1</span><div><b>Cartões com todos os modelos</b><p>Os ${MODELOS.length} embaralhados. Meta: acertar todos.</p><button class="btn btn-primary" data-act="todos">Treinar todos</button></div></div>
+      <div class="card dstep"><span class="n">2</span><div><b>Quiz</b><p>${QUIZ.length} perguntas até acertar todas.</p><a class="btn btn-primary" href="#quiz">Fazer o quiz</a></div></div>
+      <div class="card dstep"><span class="n">3</span><div><b>Desafio do Balcão</b><p>Toque em cada botão. Antes de ver, diga quais modelos você indicaria.</p><a class="btn btn-outline" href="#inicio">Abrir o Balcão</a></div></div>
+      <div class="card dstep"><span class="n">4</span><div><b>Na loja</b><p>Ande pelas prateleiras. Para cada sapato, ache no site e marque “Tem na loja”.</p><a class="btn btn-outline" href="#modelos">Abrir Modelos</a></div></div>
+    </div>`;return}
+  const ms=diaModelos(dia),sb=sabe(),k=ms.filter(m=>sb.includes(m.n)).length;
+  $('#dayview').innerHTML=`<div class="card dhead"><div class="eyebrow">Dia ${dia+1} · ${ms.length} modelos · 20 min</div><h2>${D.t}</h2><p>${D.meta}</p>
+    <div class="progress-row"><div class="bar"><i style="width:${k/ms.length*100}%"></i></div><span>${k} de ${ms.length} dominados</span></div>
+    <div class="dactions"><button class="btn btn-primary" data-act="cartoes">Treinar com cartões</button>${k>0&&k<ms.length?'<button class="btn btn-outline" data-act="faltam">Só os que faltam</button>':''}${feitoBtn}</div></div>
+    <p class="muted" style="font-size:14px;margin:16px 2px 0"><b>Como estudar:</b> 1) toque em cada modelo e leia a ficha; 2) fale a frase em voz alta 3 vezes; 3) treine com os cartões até dominar todos.</p>
+    ${D.g.map(g=>`<div class="grp"><h3>${g[0]}</h3><p class="gtip">${g[1]}</p><div class="srows">${g[2].map(findM).filter(Boolean).map(srow).join('')}</div></div>`).join('')}`;
+}
+function startFC(list){fc={deck:shuffle(list.filter(m=>refsOf(m).length)),i:0,show:false,ok:[],miss:[]};drawFC();window.scrollTo(0,0)}
+function drawFC(){
+  document.querySelector('[data-view=estudar]').classList.add('fcmode');
+  const {deck,i}=fc;
+  if(i>=deck.length){const all=fc.miss.length===0;
+    $('#dayview').innerHTML=`<div class="fc"><div class="fc-card fc-end"><h2>${all?'Dominou tudo! 🎉':`Sabia ${fc.ok.length} de ${deck.length}`}</h2><p>${all?'Repita amanhã para fixar de vez.':'Treine de novo só os que você ainda não sabe.'}</p>
+      ${fc.miss.length?`<div class="fc-miss">${fc.miss.map(m=>`<span><img src="${fotoUrl(refsOf(m)[0])}" alt="">${m.n}</span>`).join('')}</div>`:''}
+      <div class="dactions" style="justify-content:center">${fc.miss.length?'<button class="btn btn-primary" data-fc="rever">Treinar os que errei</button>':''}<button class="btn btn-outline" data-fc="sair">Voltar ao dia</button></div></div></div>`;renderDays();return}
+  const m=deck[i],rs=refsOf(m);if(!fc.r||fc.rm!==m.n){fc.r=rs[Math.floor(Math.random()*rs.length)];fc.rm=m.n}const r=fc.r;
+  $('#dayview').innerHTML=`<div class="fc"><div class="fc-top"><span>Cartão ${i+1} de ${deck.length}</span><button data-fc="sair">✕ Sair</button></div>
+    <div class="bar"><i style="width:${i/deck.length*100}%"></i></div>
+    <div class="fc-card"><div class="fc-img"><img src="${fotoUrl(r)}" alt="Qual é este modelo?" crossorigin="anonymous"></div>
+    ${fc.show?`<div class="fc-ans"><div style="font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)">${m.c} · ref ${r}</div><h2>${m.n}</h2>
+      <div class="tags">${m.t.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      <p class="for"><b>Para quem:</b> ${m.para}</p><blockquote class="quote">“${m.fala}”</blockquote></div>
+      <div class="fc-btns"><button class="btn btn-again" data-fc="nao">↺ Ainda não</button><button class="btn btn-ok" data-fc="sim">✓ Eu sabia</button></div>`
+    :`<div class="fc-q"><p>Qual é este modelo? Qual a tecnologia? Fale a frase em voz alta.</p><button class="btn btn-primary" data-fc="ver" style="margin-top:12px;width:100%;justify-content:center;padding:14px">Mostrar resposta</button></div>`}</div></div>`;
+}
+$('#dayview').onclick=e=>{
+  const f=e.target.closest('[data-fc]');
+  if(f&&fc){const a=f.dataset.fc,m=fc.deck[fc.i];
+    if(a==='ver'){fc.show=true;return drawFC()}
+    if(a==='sim'||a==='nao'){let s=sabe();if(a==='sim'){fc.ok.push(m);if(!s.includes(m.n))s.push(m.n)}else{fc.miss.push(m);s=s.filter(x=>x!==m.n)}store.set('sabe',s);fc.i++;fc.show=false;return drawFC()}
+    if(a==='rever')return startFC(fc.miss);
+    if(a==='sair'){fc=null;return renderDay()}
+  }
+  const r=e.target.closest('.srow');if(r)return buscar(r.dataset.m);
+  const b=e.target.closest('[data-act]');if(!b)return;const act=b.dataset.act;
+  if(act==='feito'){let x=store.get('diasFeitos',[]);x=x.includes(dia)?x.filter(y=>y!==dia):[...x,dia];store.set('diasFeitos',x);return renderDay()}
+  if(act==='cartoes')return startFC(diaModelos(dia));
+  if(act==='faltam')return startFC(diaModelos(dia).filter(m=>!sabe().includes(m.n)));
+  if(act==='todos')return startFC(MODELOS);
+};
+
 /* ---------- QUIZ ---------- */
 let ordem=[],idx=0,acertos=0,erros=[];
 function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -998,7 +1148,7 @@ function resultado(){
     <h2>${perf?'Perfeito. Domínio total.':acertos>=7?'Quase lá!':'Bora revisar.'}</h2>
     <p>${perf?'Você acertou tudo. Repita amanhã para fixar.':'Revise o que errou abaixo e tente de novo até acertar todas.'}</p>
     ${erros.length?`<ul class="misses">${erros.map(q=>`<li><b>${q.q}</b><br><span class="muted">Resposta: ${q.o[q.a]} — ${q.e}</span></li>`).join('')}</ul>`:''}
-    <div class="actions"><button class="btn btn-primary" id="again">Fazer de novo</button><a class="btn btn-outline" href="#tecnologias">Revisar tecnologias</a></div>
+    <div class="actions"><button class="btn btn-primary" id="again">Fazer de novo</button><a class="btn btn-outline" href="#estudar">Voltar a estudar</a></div>
   </div>`;
   requestAnimationFrame(()=>requestAnimationFrame(()=>{$('.ring .fg').style.strokeDashoffset=C*(1-acertos/QUIZ.length)}));
   $('#again').onclick=novoQuiz;
