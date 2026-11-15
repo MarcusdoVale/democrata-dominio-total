@@ -12,12 +12,12 @@
 - "Meu pé dói no fim do dia" → Air Spot: "bolha de ar + palmilha que não deforma."
 - "Viajo muito" → Pace: "calça sem a mão, passa no raio-x sem estresse."
 - "Quero um só para tudo" → Derby Metropolitan Bay ou Drake Pulse: "do trabalho ao jantar sem trocar."
-- "Só uso social, mas quero conforto" → Dual Soft / Light: "social por fora, macio por dentro."
+- "Só uso social, mas quero conforto" → Pointer ou Taylor Hi-Soft 32: "elegante por fora, macio por dentro."
 - "Presente para o pai/marido" → pergunte a numeração dele e a ocasião; Air Spot é o acerto mais seguro.
 
 ## Objeções — o que responder
 - **"Tá caro."** → "Couro legítimo dura anos. Divide por dia de uso: sai mais barato que trocar sapato barato duas vezes."
-- **"Couro é quente."** → "O knit respira e o couro da Democrata é macio — prova o Joe ou o Brad, você sente."
+- **"Couro é quente."** → "O knit respira e o couro da Democrata é macio — prova o Drake Pulse Knit ou o Brad, você sente."
 - **"Aperta no começo."** → "Esse tem Stretch: o couro cede na medida do seu pé. Prova andando na loja."
 - **"Vou pensar."** → "Sem problema. Qual ficou na sua cabeça: o conforto ou o modelo? Me diz que eu deixo separado o número."
 

@@ -10,9 +10,9 @@ Exercício: escreva com suas palavras por que o Air Spot é o carro-chefe.
 Ler: guias/01, PULSE / Ultra Light / Full Light. Decore a diferença em 1 frase cada.
 Exercício: cliente anda 8h por dia e quer tênis — qual você indica e por quê? E se ele quiser o mais leve de todos?
 
-## Dia 3 — Calce Fácil, Extra Soft, Dual Soft, Light
-Ler: guias/01, o resto. Atenção à confusão Extra Soft (tênis) x Dual Soft (social).
-Exercício: monte 1 frase de venda para cada uma das 4.
+## Dia 3 — Calce Fácil, Knit e Light
+Ler: guias/01, o resto. Calce Fácil = sem as mãos (Pace, Draft, Grid, Flop). Knit é material, não tecnologia.
+Exercício: monte 1 frase de venda para cada uma das 3.
 
 ## Dia 4 — Tipos de sapato
 Ler: guias/02. Oxford x Derby x Loafer x Monk x Sider x Driver x Sapatênis.

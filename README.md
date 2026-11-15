@@ -14,13 +14,13 @@ Depois de aberto uma vez com internet (de preferência no Wi-Fi: ele baixa as fo
 | Aba | Para quê |
 |---|---|
 | **Balcão** | O cliente quer… → 3–4 modelos com ref, cores e frase em um toque. Perguntas certas e venda adicional. Plano de 7 dias e dados da loja |
-| **Modelos** | 55 produtos com **foto oficial** e ref (13/11/2026). Toque nas miniaturas para ver cada cor. Cores da etiqueta, look que combina e frase de venda. Marque o que **tem na loja** e filtre |
-| **Estilo** | *Monte o look*: ocasião + cor da calça → sapato, tom, cinto, meia, roupa e frase pronta |
+| **Modelos** | Os **57 modelos que a loja tem** (131 refs, lista de estoque de 15/11/2026), com **foto oficial** de cada cor. Cada card mostra as refs na loja com a cor da etiqueta, uma **foto do look** com o sapato, e a frase de venda |
+| **Estilo** | *Monte o look*: ocasião + cor da calça → fotos dos looks, sapato, tom, cinto, meia, roupa e frase pronta |
 | **Tecnologias** | Air, PULSE, Hi-Soft 32, Full Light, Ultra Light… o que é, onde está e como falar |
 | **Venda** | Roteiro de 6 passos, frases por dor, objeções, o que nunca prometer, tipos de sapato |
-| **Estudar** | 5 dias para aprender os modelos: lista com foto por grupo e **cartões** (vê a foto, tenta lembrar, confere). Progresso salvo. Dia 5 = prova + quiz de 12 perguntas |
+| **Estudar** | 5 dias para aprender os modelos: lista com foto por grupo e **cartões** (vê a foto, tenta lembrar, confere). Progresso salvo. Dia 5 = prova + quiz de 14 perguntas |
 
-O que você marca (plano, "tem na loja", recorde) fica salvo **no aparelho** em que você marcou.
+O que você marca (plano, dias de estudo, recorde) fica salvo **no aparelho** em que você marcou.
 
 ## Arquivos
 ```
@@ -28,12 +28,13 @@ index.html            o site inteiro (dados, visual e lógica)
 manifest.webmanifest  instalação como app
 sw.js                 modo offline
 icon.svg              ícone do app
+fotos/looks/          fotos de look por modelo (ilustração feita com IA a partir da foto oficial) e COMANDOS.md
 data/colecao.json     a coleção em dados (referência)
 guias/                os mesmos conteúdos em texto, para ler ou imprimir
 ```
 
 ## Atualizar
-- **Modelo novo na loja?** Fotografe a etiqueta (ref, cor, tecnologia) e acrescente na lista `MODELOS` dentro do `index.html` (e em `data/colecao.json`).
+- **Estoque mudou?** Troque a planilha `Lista_Estoque_SKU_Produtos.xlsx` e peça para recalcular. Na mão: cada modelo na lista `MODELOS` do `index.html` tem `sk` = [ref, cor da etiqueta, tom].
 - **Para publicar:** no PC, dentro desta pasta:
   ```bash
   git add -A && git commit -m "Atualiza modelos" && git push

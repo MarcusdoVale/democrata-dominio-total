@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-13",
+  "atualizado_em": "2026-11-15",
   "categorias": [
     {
       "linhas": [
@@ -185,56 +185,42 @@
       "nome": "PULSE",
       "tipo": "Tecnologia",
       "o_que_e": "Cápsulas de TPU que absorvem a energia do impacto e devolvem em impulso. Alivia a pressão nos pés e articulações.",
-      "onde": "Tênis Drake, Draft, Beat · Mocassim Flop · Sapato e bota Clark",
+      "onde": "Tênis Drake (couro e knit), Draft, Beat · Mocassim Flop · Sapato e bota Clark",
       "frase_de_venda": "Ele devolve parte da energia da pisada — no fim do dia o pé cansa menos."
     },
     {
       "nome": "Hi-Soft 32",
       "tipo": "Tecnologia",
       "o_que_e": "Palmilha em PU com a tecnologia Hi-Soft 32: maciez e conforto a cada passo.",
-      "onde": "Madison, Pointer, James, Dune, Duke · Tênis Mark · Sapatênis Grow",
+      "onde": "Pointer, Madison, Taylor, Duke, Dune · Botas James e Taylor · Tênis Mark",
       "frase_de_venda": "É maciez na palmilha: você sente o conforto já no primeiro passo."
     },
     {
       "nome": "Ultra Light",
       "tipo": "Tecnologia",
       "o_que_e": "Sola de EVA + palmilha de PU: leve, macio, flexível e versátil.",
-      "onde": "Tênis Brad, Joe · Sapato social Collin",
+      "onde": "Tênis Brad Ultra Light",
       "frase_de_venda": "Pega na mão: ele quase não pesa. No pé some."
     },
     {
       "nome": "Full Light",
       "tipo": "Tecnologia",
       "o_que_e": "Estrutura ultraleve com sola flexível que acompanha o movimento natural.",
-      "onde": "Tênis Groove Full Light",
+      "onde": "Tênis Groove · Sapato social York",
       "frase_de_venda": "É o mais leve da Democrata: feito para você esquecer que está calçado."
-    },
-    {
-      "nome": "Extra Soft",
-      "tipo": "Tecnologia",
-      "o_que_e": "Palmilha super macia bi-densidade + solado leve. É tênis.",
-      "onde": "Tênis Journey",
-      "frase_de_venda": "Pisa e afunda macio — é o tênis do dia a dia corrido."
-    },
-    {
-      "nome": "Dual Soft",
-      "tipo": "Tecnologia",
-      "o_que_e": "Duas densidades: leve e macio. É sapato social.",
-      "onde": "Sapatos sociais Dual Soft (confira na loja)",
-      "frase_de_venda": "Social por fora, macio por dentro: aguenta o evento inteiro."
     },
     {
       "nome": "Light",
       "tipo": "Tecnologia",
       "o_que_e": "Solados 40% mais leves no sapato de couro.",
-      "onde": "Linha Roy",
+      "onde": "Mocassim social Porto tan (706102-002), segundo o site",
       "frase_de_venda": "40% mais leve — no fim do dia você sente a diferença."
     },
     {
       "nome": "Calce Fácil",
       "tipo": "Tecnologia",
       "o_que_e": "Calça sem as mãos e sem amassar o calcanhar.",
-      "onde": "Tênis Pace · Bay · Flop · sapatênis Grid",
+      "onde": "Tênis Pace e Draft Pulse · Sapatênis Grid · Mocassim Flop",
       "frase_de_venda": "Calça sem usar a mão. Passou no raio-x, calçou e foi."
     },
     {
@@ -255,7 +241,7 @@
       "nome": "Knit",
       "tipo": "Material",
       "o_que_e": "Malha de tricô com estampa 3D: ajusta ao pé, calça fácil e deixa o pé respirar.",
-      "onde": "Bold, Journey, Move, Beat e Wide em knit",
+      "onde": "Tênis Drake Pulse Knit, Draft Pulse cinza (635102), Brad Ultra Light",
       "frase_de_venda": "É tecido que respira e abraça o pé — no calor faz diferença."
     }
   ],
@@ -306,16 +292,18 @@
     {
       "nome": "Air Spot — cadarço",
       "categoria": "Sapato social",
-      "ref": "448026-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Air",
         "Stretch",
         "Max Memory",
         "Smart Comfort"
       ],
-      "cores": [
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "448026-003",
+          "cor_etiqueta": "Preto"
+        }
       ],
       "pra_quem": "Quem fica muitas horas em pé e quer social com amortecimento. Forma grande: avise o cliente.",
       "look": "Calça social cinza ou marinho + camisa clara. Evento, trabalho, terno.",
@@ -324,361 +312,726 @@
     {
       "nome": "Air Spot — elástico",
       "categoria": "Sapato social",
-      "ref": "448027-003 · 448027-004",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Air",
         "Stretch",
         "Max Memory",
         "Smart Comfort"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "448027-003",
+          "cor_etiqueta": "Preto"
+        }
       ],
       "pra_quem": "O Air Spot sem cadarço: calça rápido. Forma grande.",
-      "look": "Calça social ou chino + camisa ou polo. Marinho com o marrom é acerto garantido.",
+      "look": "Calça social ou chino + camisa ou polo.",
       "fala": "O mesmo conforto do Air Spot, sem cadarço. Ideal para quem tem pressa."
     },
     {
       "nome": "Air Magnum",
       "categoria": "Sapato social",
-      "ref": "593101-001 · 593101-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Air"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "593101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "593101-002",
+          "cor_etiqueta": "Tan"
+        },
+        {
+          "ref": "593102-001",
+          "cor_etiqueta": "Preto (sem cadarço)"
+        }
       ],
-      "pra_quem": "Social de visual robusto e moderno, com a tecnologia Air.",
+      "pra_quem": "Social de visual robusto e moderno, com a tecnologia Air. 593101 = cadarço · 593102 = sem cadarço.",
       "look": "Calça de alfaiataria ou chino escuro + camisa. Fica moderno com blazer.",
       "fala": "Tem a bolha de ar no calcanhar, com um visual mais robusto e atual."
     },
     {
-      "nome": "Metropolitan Prime",
+      "nome": "Metropolitan Bay",
       "categoria": "Sapato social",
-      "ref": "244101-001",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "273101-009",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "273101-006",
+          "cor_etiqueta": "Tabaco"
+        }
       ],
-      "pra_quem": "Social clássico de cadarço, em couro legítimo.",
-      "look": "Terno marinho, chumbo ou preto + camisa branca. Casamento, formatura, noite.",
-      "fala": "O clássico da linha Metropolitan: design, conforto e couro legítimo."
-    },
-    {
-      "nome": "Metropolitan Treviso",
-      "categoria": "Sapato social",
-      "ref": "495201-001 · 495201-006",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo",
-        "Sola de couro"
-      ],
-      "cores": [
-        "Preto",
-        "Marrom"
-      ],
-      "pra_quem": "O mais formal: forro e solado em couro.",
-      "look": "Terno escuro + camisa branca + gravata. Casamento e cerimônia.",
-      "fala": "Solado de couro e forro de couro: é o acabamento mais nobre da linha."
-    },
-    {
-      "nome": "Metropolitan Bay",
-      "categoria": "Sapato social",
-      "ref": "273101-006 · 273101-001",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Calce Fácil"
-      ],
-      "cores": [
-        "Tabaco",
-        "Preto",
-        "Navy",
-        "Mogno"
-      ],
-      "pra_quem": "Versátil, do trabalho ao evento. Bico arredondado, forro soft, palmilha macia.",
+      "pra_quem": "Derby versátil, do trabalho ao evento. Bico arredondado, forro macio, sola micro expandido leve.",
       "look": "Chino bege ou marinho com o tabaco; terno cinza com o preto. Vai bem com blazer + jeans escuro.",
       "fala": "Bico arredondado e forro macio: vai do escritório ao evento sem trocar."
     },
     {
-      "nome": "Pointer Hi-Soft 32",
+      "nome": "Metropolitan Noah",
       "categoria": "Sapato social",
-      "ref": "250104-001 · 250104-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
-        "Hi-Soft 32",
-        "Smart Comfort"
+        "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Café"
+      "refs_na_loja": [
+        {
+          "ref": "273301-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "273301-002",
+          "cor_etiqueta": "Tabaco"
+        }
       ],
-      "pra_quem": "Sofisticação com conforto de palmilha Hi-Soft 32.",
-      "look": "Terno ou calça social escura + camisa. Café com marinho fica muito elegante.",
-      "fala": "Elegante por fora e macio por dentro: a palmilha Hi-Soft 32 se sente no primeiro passo."
+      "pra_quem": "O social mais refinado da loja: couro polido, costura fina, cadarço de algodão encerado e palmilha anatômica macia.",
+      "look": "Terno marinho, chumbo ou preto + camisa branca. Casamento, formatura, trabalho.",
+      "fala": "Acabamento polido e costura fina: é o sapato para quando ele precisa estar impecável."
     },
     {
-      "nome": "Madison Hi-Soft 32",
+      "nome": "Metropolitan Treviso",
       "categoria": "Sapato social",
-      "ref": "255106-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
-        "Hi-Soft 32",
-        "Smart Comfort"
+        "Couro legítimo",
+        "Sola de couro"
       ],
-      "cores": [
-        "Tabaco"
+      "refs_na_loja": [
+        {
+          "ref": "495201-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "495201-006",
+          "cor_etiqueta": "Tan"
+        }
       ],
-      "pra_quem": "Smart Comfort de cadarço, detalhes em micropontos e sola de borracha com salto.",
-      "look": "Chino ou calça social + camisa. Tabaco com marinho ou cinza.",
-      "fala": "Da linha Smart Comfort: conforto pensado para o dia inteiro."
+      "pra_quem": "O mais formal: forro em couro. O preto tem solado de couro.",
+      "look": "Terno escuro + camisa branca + gravata. Casamento e cerimônia.",
+      "fala": "Forro de couro e, no preto, sola de couro: é o acabamento mais nobre da linha."
     },
     {
-      "nome": "James Hi-Soft 32",
+      "nome": "Metropolitan Porto",
       "categoria": "Sapato social",
-      "ref": "298101-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
-        "Hi-Soft 32"
+        "Couro legítimo"
       ],
-      "cores": [
-        "Mogno",
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "706101-001",
+          "cor_etiqueta": "Preto (cadarço)"
+        },
+        {
+          "ref": "706102-001",
+          "cor_etiqueta": "Preto (mocassim)"
+        },
+        {
+          "ref": "706102-002",
+          "cor_etiqueta": "Tan (mocassim)"
+        }
       ],
-      "pra_quem": "Social moderno: sola micro expandido com laterais brancas. Também tem versão bota.",
-      "look": "Chino, jeans escuro ou alfaiataria + camisa. Moderno sem ser formal.",
-      "fala": "Sola com lateral branca: social com cara moderna, leve no pé."
-    },
-    {
-      "nome": "Dune Hi-Soft 32",
-      "categoria": "Sapato social",
-      "ref": "298201-001 · 298201-002 · 298203-003",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Hi-Soft 32",
-        "Calce Fácil"
-      ],
-      "cores": [
-        "Preto",
-        "Marrom",
-        "Navy"
-      ],
-      "pra_quem": "Clássico do dia a dia: sola micro expandido leve + Hi-Soft 32.",
-      "look": "Calça social ou chino + camisa. O azul é ótimo com cinza e bege.",
-      "fala": "Design clássico, sola leve e palmilha macia: social para usar todo dia."
-    },
-    {
-      "nome": "Duke Hi-Soft 32",
-      "categoria": "Sapato social",
-      "ref": "650101-001 · 650101-002",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Hi-Soft 32"
-      ],
-      "cores": [
-        "Preto",
-        "Marrom"
-      ],
-      "pra_quem": "Derby de couro, cadarço, solado de borracha estável.",
-      "look": "Calça social ou chino + camisa. Do trabalho à ocasião especial.",
-      "fala": "Derby clássico com a maciez do Hi-Soft 32 — elegante e confortável."
-    },
-    {
-      "nome": "Collin Ultra Light",
-      "categoria": "Sapato social",
-      "ref": "595101-001",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Ultra Light"
-      ],
-      "cores": [
-        "Preto"
-      ],
-      "pra_quem": "Social moderno e leve, fechamento em elástico.",
-      "look": "Calça social preta ou chumbo + camisa. Para quem quer leveza no social.",
-      "fala": "Social com a leveza do Ultra Light — e calça sem cadarço."
-    },
-    {
-      "nome": "Clark Pulse",
-      "categoria": "Sapato social",
-      "ref": "604202-001 · 604201-002",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "PULSE"
-      ],
-      "cores": [
-        "Preto",
-        "Mogno"
-      ],
-      "pra_quem": "Social com solado PULSE. Também tem versão bota (604204).",
-      "look": "Alfaiataria ou chino + camisa. Para quem anda muito de social.",
-      "fala": "Um social com PULSE: devolve energia a cada passo, mesmo de sapato."
+      "pra_quem": "Alfaiataria clássica. 706101 = cadarço com recorte clássico · 706102 = mocassim social com pala transversal. Palmilha EVA macia.",
+      "look": "Terno ou calça social + camisa. O mocassim tan vai com chino e blazer.",
+      "fala": "Linha clássica de alfaiataria, com palmilha que amortece o dia inteiro."
     },
     {
       "nome": "Metropolitan Vega",
       "categoria": "Sapato social",
-      "ref": "055203-001 · 055204-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Tan"
+      "refs_na_loja": [
+        {
+          "ref": "055203-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "055203-002",
+          "cor_etiqueta": "Mahogany"
+        },
+        {
+          "ref": "055201-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "055201-002",
+          "cor_etiqueta": "Mahogany"
+        }
       ],
-      "pra_quem": "Elegância atemporal: biqueira marcante com relevo.",
-      "look": "Terno ou calça social + camisa. O tan com marinho dá personalidade.",
-      "fala": "A biqueira com relevo é o detalhe que diferencia: clássico com assinatura."
-    },
-    {
-      "nome": "Metropolitan Type",
-      "categoria": "Sapato social",
-      "ref": "272102-002 · 272101-004 · 272101-005",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Conhaque",
-        "Navy",
-        "Bege/areia"
-      ],
-      "pra_quem": "Moderno e urbano: recortes no couro, puxador no calcanhar, cadarço.",
-      "look": "Chino ou jeans escuro + camisa ou polo. Esporte fino moderno.",
-      "fala": "Social com pegada urbana: dá para usar com jeans sem ficar formal demais."
+      "pra_quem": "Elegância atemporal. 055203 = biqueira marcante · 055201 = recortes no cabedal. Mahogany é o mogno.",
+      "look": "Terno ou calça social + camisa. O mahogany com marinho ou cinza dá personalidade.",
+      "fala": "Clássico com assinatura: o detalhe no couro é o que diferencia."
     },
     {
       "nome": "Metropolitan Oliver",
       "categoria": "Sapato social",
-      "ref": "273202-001 · 273202-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Mogno"
+      "refs_na_loja": [
+        {
+          "ref": "273202-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "273202-002",
+          "cor_etiqueta": "Mogno"
+        }
       ],
       "pra_quem": "Cadarço, recortes no couro, sola de EVA leve.",
       "look": "Calça social + camisa. Mogno com cinza ou marinho.",
       "fala": "Recortes clássicos e sola de EVA: bonito e leve."
     },
     {
-      "nome": "Metropolitan Clooney",
+      "nome": "Metropolitan Marino",
       "categoria": "Sapato social",
-      "ref": "495101-001 · 495102-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Tan"
+      "refs_na_loja": [
+        {
+          "ref": "604401-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "604401-002",
+          "cor_etiqueta": "Mogno"
+        },
+        {
+          "ref": "604401-004",
+          "cor_etiqueta": "Castanho"
+        },
+        {
+          "ref": "604402-002",
+          "cor_etiqueta": "Mogno (slip-on)"
+        },
+        {
+          "ref": "604402-003",
+          "cor_etiqueta": "Navy (slip-on)"
+        }
       ],
-      "pra_quem": "Forro em couro, palmilha macia, sola de borracha.",
-      "look": "Terno ou calça social + camisa.",
-      "fala": "Forrado em couro: acabamento de sapato de alto padrão."
+      "pra_quem": "Derby com solado tratorado leve e firme (604401) e versão slip-on, sem cadarço (604402).",
+      "look": "Calça social, chino ou jeans escuro + camisa. Do trabalho ao casual.",
+      "fala": "Derby clássico com sola tratorada leve: elegante e firme no chão."
+    },
+    {
+      "nome": "Metropolitan Type",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "272102-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "272102-002",
+          "cor_etiqueta": "Conhaque"
+        },
+        {
+          "ref": "272101-004",
+          "cor_etiqueta": "Navy"
+        }
+      ],
+      "pra_quem": "Moderno e urbano: recortes no couro, puxador no calcanhar, cadarço.",
+      "look": "Chino ou jeans escuro + camisa ou polo. Esporte fino moderno.",
+      "fala": "Social com pegada urbana: dá para usar com jeans sem ficar formal demais."
+    },
+    {
+      "nome": "York Full Light",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Full Light"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "709101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "709101-002",
+          "cor_etiqueta": "Tabaco"
+        }
+      ],
+      "pra_quem": "Derby social com tecnologia de tênis: sola de EVA vazada ultraleve, biqueira com costura dupla e cadarço elástico.",
+      "look": "Calça social ou chino + camisa. Para quem quer social levíssimo.",
+      "fala": "É social com a leveza do Full Light: a sola é de tênis, a cara é de sapato."
+    },
+    {
+      "nome": "Pointer Hi-Soft 32",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32",
+        "Smart Comfort"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "250104-001",
+          "cor_etiqueta": "Preto (cadarço)"
+        },
+        {
+          "ref": "250102-001",
+          "cor_etiqueta": "Preto (elástico)"
+        }
+      ],
+      "pra_quem": "Sofisticação com palmilha Hi-Soft 32. 250104 = cadarço · 250102 = elástico com tira de couro.",
+      "look": "Terno ou calça social escura + camisa.",
+      "fala": "Elegante por fora e macio por dentro: a palmilha Hi-Soft 32 se sente no primeiro passo."
+    },
+    {
+      "nome": "Madison Hi-Soft 32",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32",
+        "Smart Comfort"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "255106-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "255106-002",
+          "cor_etiqueta": "Tabaco"
+        }
+      ],
+      "pra_quem": "Smart Comfort de cadarço, detalhes em micropontos e sola de borracha com salto.",
+      "look": "Chino ou calça social + camisa. Tabaco com marinho ou cinza.",
+      "fala": "Da linha Smart Comfort: conforto pensado para o dia inteiro."
+    },
+    {
+      "nome": "Taylor Hi-Soft 32",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "627101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "627101-002",
+          "cor_etiqueta": "Tan"
+        }
+      ],
+      "pra_quem": "Clássico de cadarço, couro liso minimalista, palmilha Hi-Soft 32 e sola de borracha com salto. Também tem versão bota.",
+      "look": "Calça social ou chino + camisa. Trabalho e evento.",
+      "fala": "Liso, clássico e macio por dentro: o Hi-Soft 32 se sente no primeiro passo."
+    },
+    {
+      "nome": "Duke Hi-Soft 32",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "650102-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "650101-002",
+          "cor_etiqueta": "Tan"
+        }
+      ],
+      "pra_quem": "Derby de couro, cadarço, solado de borracha estável.",
+      "look": "Calça social ou chino + camisa. Do trabalho à ocasião especial.",
+      "fala": "Derby clássico com a maciez do Hi-Soft 32: elegante e confortável."
+    },
+    {
+      "nome": "Dune Hi-Soft 32",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "298201-002",
+          "cor_etiqueta": "Tan"
+        }
+      ],
+      "pra_quem": "Clássico do dia a dia: sola micro expandido leve + Hi-Soft 32.",
+      "look": "Calça social ou chino + camisa. Tan com marinho, cinza ou bege.",
+      "fala": "Design clássico, sola leve e palmilha macia: social para usar todo dia."
+    },
+    {
+      "nome": "Clark Pulse",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "PULSE"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "604202-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "604201-002",
+          "cor_etiqueta": "Mogno"
+        }
+      ],
+      "pra_quem": "Social com solado PULSE. Também tem versão bota (604204).",
+      "look": "Alfaiataria ou chino + camisa. Para quem anda muito de social.",
+      "fala": "Um social com PULSE: devolve energia a cada passo, mesmo de sapato."
+    },
+    {
+      "nome": "Sapato Jeff",
+      "categoria": "Sapato social",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "604101-004",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "604101-005",
+          "cor_etiqueta": "Tan"
+        }
+      ],
+      "pra_quem": "Metropolitan de cadarço com solado tratorado moderno e palmilha macia. Também tem versão bota.",
+      "look": "Jeans escuro ou chino + camisa. Social com atitude.",
+      "fala": "Sola tratorada moderna: segura firme e dá um ar atual ao social."
     },
     {
       "nome": "Durant",
       "categoria": "Sapato social",
-      "ref": "596101-002 · 596102-001 · 596101-009",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Marrom",
-        "Preto",
-        "Navy"
+      "refs_na_loja": [
+        {
+          "ref": "596101-004",
+          "cor_etiqueta": "Café"
+        },
+        {
+          "ref": "596102-002",
+          "cor_etiqueta": "Tan (sem cadarço)"
+        }
       ],
-      "pra_quem": "Couro liso, linhas limpas: vai do casual ao formal.",
+      "pra_quem": "Couro liso, linhas limpas: vai do casual ao formal. 596101 = cadarço · 596102 = sem cadarço.",
       "look": "Chino ou alfaiataria + camisa. Muito versátil.",
       "fala": "Liso e limpo: combina com quase tudo do guarda-roupa."
     },
     {
-      "nome": "Sapato Tulum",
-      "categoria": "Sapato social",
-      "ref": "647101-002 · 647101-005",
-      "ref_oficial_conferida": true,
+      "nome": "Mocassim Flop Pulse",
+      "categoria": "Mocassim",
+      "carro_chefe": true,
+      "tecnologias": [
+        "PULSE",
+        "Calce Fácil"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "610101-002",
+          "cor_etiqueta": "Navy/Tabaco"
+        },
+        {
+          "ref": "610101-003",
+          "cor_etiqueta": "Conhaque/Tabaco"
+        }
+      ],
+      "pra_quem": "Mocassim Easy com solado TPU PULSE e calce fácil.",
+      "look": "Chino bege ou marinho + polo ou linho. Meia invisível.",
+      "fala": "Um mocassim com PULSE: elegante e devolve energia a cada passo."
+    },
+    {
+      "nome": "Mocassim Nash",
+      "categoria": "Mocassim",
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Marrom",
-        "Cinza"
+      "refs_na_loja": [
+        {
+          "ref": "252301-001",
+          "cor_etiqueta": "Preto/Tabaco"
+        },
+        {
+          "ref": "252301-002",
+          "cor_etiqueta": "Conhaque/Tabaco"
+        }
       ],
-      "pra_quem": "Clean e atemporal, linha Easy. Também existe a versão mule.",
+      "pra_quem": "Básico versátil, do casual ao social. Sola micro expandido leve.",
+      "look": "Chino ou alfaiataria + camisa. Esporte fino.",
+      "fala": "Atemporal: vai do casual ao social."
+    },
+    {
+      "nome": "Mocassim Loen",
+      "categoria": "Mocassim",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "703202-001",
+          "cor_etiqueta": "Navy"
+        },
+        {
+          "ref": "703201-002",
+          "cor_etiqueta": "Cinza Rato/Titânio"
+        },
+        {
+          "ref": "703201-003",
+          "cor_etiqueta": "Bege/Creme"
+        }
+      ],
+      "pra_quem": "Penny loafer com sola caixa de sapatênis, couro aveludado e gravata sobre a pala. 703202 = mocassim · 703201 = sapatênis com elástico.",
+      "look": "Chino ou jeans + camisa ou polo. Esporte fino moderno.",
+      "fala": "É o mocassim clássico com sola de sapatênis: arrumado e confortável."
+    },
+    {
+      "nome": "Mocassim Soho",
+      "categoria": "Mocassim",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "710102-001",
+          "cor_etiqueta": "Marinho"
+        },
+        {
+          "ref": "710102-002",
+          "cor_etiqueta": "Café"
+        },
+        {
+          "ref": "710101-002",
+          "cor_etiqueta": "Bege (dockside)"
+        }
+      ],
+      "pra_quem": "Linha Easy, bem leve. 710102 = mocassim com costura gravata · 710101 = dockside náutico com cadarço de couro.",
+      "look": "Bermuda ou chino claro + polo ou linho. Verão e fim de semana.",
+      "fala": "Sola leve e flexível: é o mocassim para o fim de semana inteiro."
+    },
+    {
+      "nome": "Mocassim Tulum",
+      "categoria": "Mocassim",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "647101-002",
+          "cor_etiqueta": "Mogno"
+        },
+        {
+          "ref": "647101-005",
+          "cor_etiqueta": "Cinza Coala"
+        }
+      ],
+      "pra_quem": "Clean e atemporal, linha Easy, sola micro expandido.",
       "look": "Chino claro + camisa de linho ou polo.",
       "fala": "Design básico e atemporal: fácil de combinar."
     },
     {
+      "nome": "Mocassim Ted",
+      "categoria": "Mocassim",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "135201-003",
+          "cor_etiqueta": "Conhaque"
+        }
+      ],
+      "pra_quem": "Couro com efeito entrelaçado e frente costurada à mão. Linha Denim.",
+      "look": "Bermuda ou chino claro + camisa de linho.",
+      "fala": "Casual com charme, ótimo para o fim de semana."
+    },
+    {
+      "nome": "Drive Tom",
+      "categoria": "Mocassim",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "651102-003",
+          "cor_etiqueta": "Tan"
+        }
+      ],
+      "pra_quem": "Driver com tira trançada no cabedal e sola de borracha flexível.",
+      "look": "Chino ou bermuda + polo. Casual elegante.",
+      "fala": "Solado flexível que acompanha o pé no pedal: feito para quem dirige."
+    },
+    {
       "nome": "Tênis Drake Pulse",
       "categoria": "Tênis",
-      "ref": "600103-001 · 600103-003 · 600101-007",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "PULSE"
       ],
-      "cores": [
-        "Preto",
-        "Marrom",
-        "Branco/off white"
+      "refs_na_loja": [
+        {
+          "ref": "600101-003",
+          "cor_etiqueta": "Tan"
+        },
+        {
+          "ref": "600101-004",
+          "cor_etiqueta": "Branco"
+        },
+        {
+          "ref": "600101-008",
+          "cor_etiqueta": "Navy"
+        },
+        {
+          "ref": "600101-009",
+          "cor_etiqueta": "Rato"
+        },
+        {
+          "ref": "600103-002",
+          "cor_etiqueta": "Navy (elástico)"
+        },
+        {
+          "ref": "600103-003",
+          "cor_etiqueta": "Conhaque (elástico)"
+        }
       ],
-      "pra_quem": "Couro + PULSE + solado ETPU: quem anda muito.",
+      "pra_quem": "Couro + PULSE + solado ETPU: quem anda muito. 600101 = cadarço · 600103 = elástico.",
       "look": "Jeans, jogger ou chino + camiseta ou polo.",
       "fala": "Absorve o impacto e devolve energia a cada passo."
     },
     {
+      "nome": "Tênis Drake Pulse Knit",
+      "categoria": "Tênis",
+      "carro_chefe": false,
+      "tecnologias": [
+        "PULSE",
+        "Knit"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "600102-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "600102-002",
+          "cor_etiqueta": "Smoke"
+        },
+        {
+          "ref": "600102-004",
+          "cor_etiqueta": "Azul Nimbus/Chumbo"
+        }
+      ],
+      "pra_quem": "O Drake em knit: leve, respira e fecha com elástico.",
+      "look": "Jogger, jeans ou bermuda + camiseta.",
+      "fala": "PULSE com malha que respira: leve e fresco para andar o dia todo."
+    },
+    {
       "nome": "Tênis Draft Pulse",
       "categoria": "Tênis",
-      "ref": "635101-001 · 635102-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
-        "PULSE"
+        "PULSE",
+        "Calce Fácil"
       ],
-      "cores": [
-        "Preto",
-        "Cinza"
+      "refs_na_loja": [
+        {
+          "ref": "635101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "635101-003",
+          "cor_etiqueta": "Castanho"
+        },
+        {
+          "ref": "635102-002",
+          "cor_etiqueta": "Titânio/Cetim (knit)"
+        }
       ],
-      "pra_quem": "Casual sofisticado em couro: trabalho e lazer.",
+      "pra_quem": "Casual sofisticado com PULSE e calce fácil: trabalho e lazer. 635101 = couro · 635102 = knit.",
       "look": "Chino ou jeans + camisa ou polo. Serve até no trabalho casual.",
       "fala": "PULSE com cara de sapato: vai do trabalho ao fim de semana."
     },
     {
       "nome": "Tênis Beat Pulse",
       "categoria": "Tênis",
-      "ref": "623105-001 · 623102-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "PULSE"
       ],
-      "cores": [
-        "Cinza",
-        "Navy"
+      "refs_na_loja": [
+        {
+          "ref": "623101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "623101-004",
+          "cor_etiqueta": "Branco"
+        },
+        {
+          "ref": "623103-003",
+          "cor_etiqueta": "Branco"
+        },
+        {
+          "ref": "623101-003",
+          "cor_etiqueta": "Off White/Creme"
+        },
+        {
+          "ref": "623105-003",
+          "cor_etiqueta": "Creme/Neve"
+        }
       ],
-      "pra_quem": "Couro leve com detalhes perfurados; também em knit.",
+      "pra_quem": "Couro leve com perfurados e pesponto, PULSE no solado. Muitas opções claras.",
       "look": "Jeans + camiseta ou jaqueta. Urbano.",
       "fala": "Leve e confortável, com a energia do PULSE."
     },
     {
       "nome": "Tênis Groove Full Light",
       "categoria": "Tênis",
-      "ref": "240701-001 · 240701-004 · 240701-006",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Full Light"
       ],
-      "cores": [
-        "Preto",
-        "Branco/off white",
-        "Bege/areia"
+      "refs_na_loja": [
+        {
+          "ref": "240701-001",
+          "cor_etiqueta": "Preto Intenso/Preto"
+        },
+        {
+          "ref": "240701-003",
+          "cor_etiqueta": "Cinza Cloudy"
+        },
+        {
+          "ref": "240701-004",
+          "cor_etiqueta": "Branco"
+        },
+        {
+          "ref": "240701-005",
+          "cor_etiqueta": "Marinho"
+        }
       ],
       "pra_quem": "Couro pelica macio, perfurado: o mais leve da marca.",
       "look": "Qualquer casual: jeans, jogger, bermuda.",
@@ -687,366 +1040,427 @@
     {
       "nome": "Tênis Brad Ultra Light",
       "categoria": "Tênis",
-      "ref": "527101-002 · 527101-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
-        "Ultra Light"
+        "Ultra Light",
+        "Knit"
       ],
-      "cores": [
-        "Marrom",
-        "Bege/areia"
+      "refs_na_loja": [
+        {
+          "ref": "527103-005",
+          "cor_etiqueta": "Azul"
+        }
       ],
-      "pra_quem": "Couro, cadarço, sola de EVA: retrô-running leve.",
-      "look": "Bermuda chino, jeans claro + camiseta.",
-      "fala": "Sola de EVA: leve, macio e flexível."
-    },
-    {
-      "nome": "Tênis Joe Ultra Light",
-      "categoria": "Tênis",
-      "ref": "526101-001 · 526101-006",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Ultra Light"
-      ],
-      "cores": [
-        "Preto",
-        "Branco/off white"
-      ],
-      "pra_quem": "Couro com cadarço de elástico, palmilha PU, sola EVA.",
-      "look": "Bermuda, jeans ou linho + camiseta.",
-      "fala": "Calça fácil com o cadarço elástico e quase não pesa."
+      "pra_quem": "Knit que respira, sola de EVA e palmilha PU: retrô-running levíssimo.",
+      "look": "Bermuda, jeans claro ou jogger + camiseta.",
+      "fala": "Sola de EVA e malha que respira: leve, macio e flexível."
     },
     {
       "nome": "Tênis Pace Calce Fácil",
       "categoria": "Tênis",
-      "ref": "653101-001 · 653101-005",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Calce Fácil"
       ],
-      "cores": [
-        "Preto",
-        "Creme"
+      "refs_na_loja": [
+        {
+          "ref": "653101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "653101-006",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "653101-003",
+          "cor_etiqueta": "Conhaque"
+        },
+        {
+          "ref": "653101-005",
+          "cor_etiqueta": "Creme"
+        }
       ],
       "pra_quem": "Calça sem as mãos, cadarço elástico.",
       "look": "Jogger, moletom ou jeans. O tênis da viagem.",
       "fala": "Calça sem a mão: passou no raio-x, calçou e foi."
     },
     {
-      "nome": "Tênis Bold Knit",
-      "categoria": "Tênis",
-      "ref": "122124-001 · 122126-001",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Knit"
-      ],
-      "cores": [
-        "Preto",
-        "Navy"
-      ],
-      "pra_quem": "Cabedal em knit: respira e ajusta ao pé.",
-      "look": "Bermuda ou jogger + camiseta. Calor.",
-      "fala": "Malha que respira e abraça o pé — no calor faz diferença."
-    },
-    {
-      "nome": "Tênis Wide",
-      "categoria": "Tênis",
-      "ref": "240801-003 · 240801-004",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Cinza",
-        "Branco/off white"
-      ],
-      "pra_quem": "Couro com camurça, elástico, sola micro expandido. Também em knit.",
-      "look": "Jeans + camiseta ou polo.",
-      "fala": "Couro e camurça com fechamento em elástico: prático e bonito."
-    },
-    {
       "nome": "Tênis Mark Hi-Soft 32",
       "categoria": "Tênis",
-      "ref": "662101-001 · 662101-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Hi-Soft 32"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "662101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "662101-002",
+          "cor_etiqueta": "Conhaque"
+        }
       ],
       "pra_quem": "Couro robusto e refinado, com palmilha Hi-Soft 32.",
       "look": "Jeans escuro + camisa ou jaqueta.",
       "fala": "Robusto por fora, macio por dentro."
     },
     {
-      "nome": "Tênis Harper",
-      "categoria": "Tênis",
-      "ref": "240051-001 · 240051-004",
-      "ref_oficial_conferida": true,
+      "nome": "Bill",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Bege/areia"
+      "refs_na_loja": [
+        {
+          "ref": "240903-001",
+          "cor_etiqueta": "Castanho"
+        },
+        {
+          "ref": "240902-005",
+          "cor_etiqueta": "Tan"
+        },
+        {
+          "ref": "240904-001",
+          "cor_etiqueta": "Mogno (slip-on)"
+        },
+        {
+          "ref": "240901-004",
+          "cor_etiqueta": "Cinza Cloudy (tênis)"
+        }
       ],
-      "pra_quem": "Couro com perfurados respiráveis e cadarço de elástico.",
+      "pra_quem": "Couro liso, acabamento refinado: cara de sapato. 240903 = cadarço · 240902 = elástico · 240904 = slip-on · 240901 = tênis.",
+      "look": "Chino ou jeans escuro + camisa. Casual arrumado.",
+      "fala": "Liso e bem acabado: dá para usar arrumado."
+    },
+    {
+      "nome": "Sapatênis Grid Calce Fácil",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Calce Fácil"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "240002-002",
+          "cor_etiqueta": "Smoke"
+        },
+        {
+          "ref": "240002-003",
+          "cor_etiqueta": "Conhaque"
+        },
+        {
+          "ref": "240003-001",
+          "cor_etiqueta": "Preto (slip-on)"
+        }
+      ],
+      "pra_quem": "Calça sem as mãos, design retrô minimalista, palmilha bem macia. 240003 é a versão slip-on (sapatilha).",
+      "look": "Jeans ou chino + camiseta ou polo.",
+      "fala": "Calça sem usar a mão e fica arrumado."
+    },
+    {
+      "nome": "Sapatênis Easy Leave",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "245201-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "245201-002",
+          "cor_etiqueta": "Navy"
+        },
+        {
+          "ref": "245201-003",
+          "cor_etiqueta": "Conhaque"
+        }
+      ],
+      "pra_quem": "Elástico nas laterais, frente costurada à mão. Na etiqueta aparece como sapatilha.",
+      "look": "Chino ou jeans + camisa ou polo.",
+      "fala": "Casual moderno, sem cadarço."
+    },
+    {
+      "nome": "Sapatênis Clash",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "240301-006",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "240301-007",
+          "cor_etiqueta": "Conhaque"
+        }
+      ],
+      "pra_quem": "Couro com costura manual na frente e fechamento em elástico.",
+      "look": "Chino ou jeans + camisa ou polo. Trabalho casual.",
+      "fala": "Costura feita à mão na frente: detalhe artesanal que dá valor."
+    },
+    {
+      "nome": "Sapatênis Harper",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Couro legítimo"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "240051-002",
+          "cor_etiqueta": "Conhaque"
+        },
+        {
+          "ref": "240051-003",
+          "cor_etiqueta": "Navy"
+        }
+      ],
+      "pra_quem": "Couro com perfurados que respiram e cadarço de elástico.",
       "look": "Jeans ou chino + camiseta.",
       "fala": "Calça fácil e respira: o casual prático."
     },
     {
-      "nome": "Tênis Clay",
-      "categoria": "Tênis",
-      "ref": "290302-001 · 290302-002",
-      "ref_oficial_conferida": true,
+      "nome": "Sapatênis Clay",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "290302-002",
+          "cor_etiqueta": "Conhaque"
+        },
+        {
+          "ref": "290302-003",
+          "cor_etiqueta": "Navy"
+        }
       ],
       "pra_quem": "Couro, design básico, fechamento em elástico.",
       "look": "Jeans ou chino + camiseta ou polo.",
       "fala": "Básico e atual: combina com tudo do dia a dia."
     },
     {
-      "nome": "Tênis Bill",
-      "categoria": "Tênis",
-      "ref": "240902-001 · 240903-001",
-      "ref_oficial_conferida": true,
+      "nome": "Sapatênis Step",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "640301-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "640301-003",
+          "cor_etiqueta": "Conhaque"
+        },
+        {
+          "ref": "640301-004",
+          "cor_etiqueta": "Rato"
+        }
       ],
-      "pra_quem": "Couro liso, acabamento refinado: tênis com cara de sapato.",
-      "look": "Chino ou jeans escuro + camisa. Casual arrumado.",
-      "fala": "Liso e bem acabado: um tênis que dá para usar arrumado."
+      "pra_quem": "Couro com microperfurados, elástico e acabamento no calcanhar. Urbano.",
+      "look": "Jeans + camiseta ou camisa.",
+      "fala": "Urbano e prático: calça rápido e tem atitude."
     },
     {
-      "nome": "Tênis Journey Extra Soft",
-      "categoria": "Tênis",
-      "ref": null,
-      "ref_oficial_conferida": false,
-      "tecnologias": [
-        "Extra Soft",
-        "Knit"
-      ],
-      "cores": [],
-      "pra_quem": "Couro + knit, elástico. Sem estoque no site em 13/11 — veja se a loja tem.",
-      "look": "Jeans ou jogger + camiseta.",
-      "fala": "Pisa e afunda macio — é o tênis do dia a dia corrido."
-    },
-    {
-      "nome": "Sapatênis Loop",
+      "nome": "Sapatênis Vibe",
       "categoria": "Sapatênis",
-      "ref": "151202-002 · 151202-001",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Conhaque",
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "625101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "625101-003",
+          "cor_etiqueta": "Creme"
+        }
       ],
-      "pra_quem": "Elástico nas laterais, palmilha PU macia.",
-      "look": "Jeans ou chino + polo ou camisa.",
-      "fala": "Elástico na lateral: calça fácil e fica arrumado."
+      "pra_quem": "Couro com recortes e pesponto, elástico, sola micro expandido leve.",
+      "look": "Jeans ou bermuda + camiseta.",
+      "fala": "Versátil e leve: o casual do dia a dia."
     },
     {
-      "nome": "Sapatênis Luke",
+      "nome": "Sapatênis Dylan",
       "categoria": "Sapatênis",
-      "ref": "136201-006 · 136201-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Tan",
-        "Navy"
+      "refs_na_loja": [
+        {
+          "ref": "640101-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "640101-003",
+          "cor_etiqueta": "Smoke"
+        }
       ],
-      "pra_quem": "Robusto, solado caixa alta durável, cadarço elástico.",
-      "look": "Jeans + camiseta ou camisa xadrez.",
-      "fala": "Solado alto e durável: aguenta o dia a dia pesado."
-    },
-    {
-      "nome": "Sapatênis Grow Hi-Soft 32",
-      "categoria": "Sapatênis",
-      "ref": "203201-001 · 203201-003",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Hi-Soft 32"
-      ],
-      "cores": [
-        "Preto",
-        "Tan"
-      ],
-      "pra_quem": "Colarinho acolchoado, sola micro expandido + Hi-Soft 32.",
-      "look": "Jeans ou chino + polo.",
-      "fala": "Acolchoado e macio: conforto de tênis com cara de sapato."
-    },
-    {
-      "nome": "Sapatênis Easy Leave",
-      "categoria": "Sapatênis",
-      "ref": "245202-001 · 245201-003 · 245201-002",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Preto",
-        "Conhaque",
-        "Navy"
-      ],
-      "pra_quem": "Casual moderno, fechamento em elástico.",
-      "look": "Chino ou jeans + camisa ou polo.",
-      "fala": "Casual moderno, sem cadarço."
-    },
-    {
-      "nome": "Sapatênis Mike",
-      "categoria": "Sapatênis",
-      "ref": "240601-003 · 240601-001",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Conhaque",
-        "Preto"
-      ],
-      "pra_quem": "Sapatênis Denim para o casual do dia a dia.",
+      "pra_quem": "Couro com recortes e pesponto, elástico, sola de borracha aderente.",
       "look": "Jeans + camiseta ou polo.",
-      "fala": "Meio sapato, meio tênis: arrumado sem ficar formal."
+      "fala": "Moderno e firme no chão: sola de borracha que não escorrega."
     },
     {
-      "nome": "Mocassim Flop Pulse",
-      "categoria": "Mocassim",
-      "ref": "610101-001 · 610102-005",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "PULSE",
-        "Calce Fácil"
-      ],
-      "cores": [
-        "Preto",
-        "Bege/areia"
-      ],
-      "pra_quem": "Mocassim Easy com solado TPU PULSE. Também em mule (610103).",
-      "look": "Chino bege ou marinho + polo ou linho. Meia invisível.",
-      "fala": "Um mocassim com PULSE: elegante e devolve energia a cada passo."
-    },
-    {
-      "nome": "Mocassim Nash",
-      "categoria": "Mocassim",
-      "ref": "252301-002 · 252301-001",
-      "ref_oficial_conferida": true,
+      "nome": "Sapatênis Foster",
+      "categoria": "Sapatênis",
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Marrom",
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "640201-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "640201-003",
+          "cor_etiqueta": "Off White"
+        }
       ],
-      "pra_quem": "Básico versátil, do casual ao social. Sola micro expandido leve.",
-      "look": "Chino ou alfaiataria + camisa. Esporte fino.",
-      "fala": "Atemporal: vai do casual ao social."
-    },
-    {
-      "nome": "Mocassim Tom",
-      "categoria": "Mocassim",
-      "ref": "651101-001 · 651101-002",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Preto",
-        "Marrom"
-      ],
-      "pra_quem": "Clean, cabedal liso, minimalista.",
-      "look": "Chino + camisa ou polo. Jantar e esporte fino.",
-      "fala": "Liso e minimalista: elegante sem esforço."
-    },
-    {
-      "nome": "Mocassim Ted",
-      "categoria": "Mocassim",
-      "ref": "135201-003 · 135201-002",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Conhaque",
-        "Navy"
-      ],
-      "pra_quem": "Mocassim Denim casual.",
-      "look": "Bermuda ou chino claro + camisa de linho.",
-      "fala": "Casual com charme, ótimo para o fim de semana."
+      "pra_quem": "Couro com micropontos e tira de couro com o logo; sola de borracha.",
+      "look": "Jeans ou chino + camiseta.",
+      "fala": "Limpo e moderno: o off white combina com quase tudo."
     },
     {
       "nome": "Bota Astro (Garage)",
       "categoria": "Bota",
-      "ref": "301102-002 · 301102-001",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Mouro",
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "301102-001",
+          "cor_etiqueta": "Preto"
+        }
       ],
-      "pra_quem": "Couro hunter, design robusto.",
+      "pra_quem": "Couro hunter, cano médio, design robusto.",
       "look": "Jeans escuro + flanela ou suéter + jaqueta.",
       "fala": "Robusta e versátil, em couro hunter."
     },
     {
       "nome": "Bota Grid",
       "categoria": "Bota",
-      "ref": "240001-001 · 240001-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "240001-001",
+          "cor_etiqueta": "Preto/Tabaco"
+        },
+        {
+          "ref": "240001-003",
+          "cor_etiqueta": "Castanho"
+        }
       ],
-      "pra_quem": "Palmilha em gel de PU, sola TR, cadarço. Existe sapatênis Grid Calce Fácil (240002).",
+      "pra_quem": "Palmilha em gel de PU, sola TR, cadarço.",
       "look": "Jeans + camiseta e jaqueta.",
       "fala": "Atitude de bota urbana com palmilha em gel."
     },
     {
+      "nome": "Bota James Hi-Soft 32",
+      "categoria": "Bota",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "298103-003",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "298103-004",
+          "cor_etiqueta": "Mogno"
+        }
+      ],
+      "pra_quem": "Chelsea: elástico nas laterais e puxador, sola com laterais em contraste, palmilha Hi-Soft 32.",
+      "look": "Chino, jeans escuro ou alfaiataria + camisa.",
+      "fala": "Calça fácil pelo elástico e é macia por dentro: bota moderna sem esforço."
+    },
+    {
+      "nome": "Bota Taylor Hi-Soft 32",
+      "categoria": "Bota",
+      "carro_chefe": false,
+      "tecnologias": [
+        "Hi-Soft 32"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "627102-002",
+          "cor_etiqueta": "Mogno"
+        }
+      ],
+      "pra_quem": "Bota de cadarço com recortes, palmilha Hi-Soft 32 e sola de borracha com salto.",
+      "look": "Calça social ou jeans escuro + camisa.",
+      "fala": "Bota social com a maciez do Hi-Soft 32."
+    },
+    {
       "nome": "Bota Jeff",
       "categoria": "Bota",
-      "ref": "604104-002 · 604104-001",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "604104-001",
+          "cor_etiqueta": "Mogno/Preto"
+        }
       ],
       "pra_quem": "Metropolitan, sola micro expandido tratorada.",
       "look": "Jeans ou chino + suéter.",
       "fala": "Bota com solado moderno, leve no pé."
     },
     {
+      "nome": "Bota Clark Pulse",
+      "categoria": "Bota",
+      "carro_chefe": false,
+      "tecnologias": [
+        "PULSE"
+      ],
+      "refs_na_loja": [
+        {
+          "ref": "604204-001",
+          "cor_etiqueta": "Mogno"
+        }
+      ],
+      "pra_quem": "A bota com solado PULSE e palmilha PU.",
+      "look": "Jeans ou chino + suéter ou jaqueta.",
+      "fala": "Bota com PULSE: devolve energia a cada passo."
+    },
+    {
       "nome": "Bota Doha",
       "categoria": "Bota",
-      "ref": "597103-002 · 597103-001",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Marrom",
-        "Preto"
+      "refs_na_loja": [
+        {
+          "ref": "597103-001",
+          "cor_etiqueta": "Preto"
+        },
+        {
+          "ref": "597103-002",
+          "cor_etiqueta": "Mouro"
+        }
       ],
       "pra_quem": "Construída para durar, palmilha anatômica PU.",
       "look": "Jeans escuro + camisa ou jaqueta de couro.",
@@ -1055,46 +1469,61 @@
     {
       "nome": "Bota Dust (Garage)",
       "categoria": "Bota",
-      "ref": "626103-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Marrom"
+      "refs_na_loja": [
+        {
+          "ref": "626103-003",
+          "cor_etiqueta": "Tabaco"
+        },
+        {
+          "ref": "626102-002",
+          "cor_etiqueta": "Tabaco"
+        }
       ],
-      "pra_quem": "Fechamento em elástico, sola com costura aparente.",
+      "pra_quem": "Couro rústico, sola com costura aparente. 626103 = elástico · 626102 = cadarço elástico.",
       "look": "Jeans + camisa.",
       "fala": "Bota que calça fácil, com elástico."
     },
     {
       "nome": "Sandália Dock",
       "categoria": "Sandália / Chinelo",
-      "ref": "554101-001 · 554101-002 · 554101-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": true,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom",
-        "Bege/areia"
+      "refs_na_loja": [
+        {
+          "ref": "554101-002",
+          "cor_etiqueta": "Conhaque"
+        }
       ],
       "pra_quem": "Tiras em X com fivela: firmeza e visual moderno.",
       "look": "Bermuda ou linho + camiseta ou camisa aberta.",
-      "fala": "Tiras em X que seguram firme o pé — elegante no calor."
+      "fala": "Tiras em X que seguram firme o pé: elegante no calor."
     },
     {
       "nome": "Sandália Weekend",
       "categoria": "Sandália / Chinelo",
-      "ref": "514101-002 · 514101-004",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Café",
-        "Bege/areia"
+      "refs_na_loja": [
+        {
+          "ref": "514101-002",
+          "cor_etiqueta": "Café"
+        },
+        {
+          "ref": "514101-003",
+          "cor_etiqueta": "Smoke"
+        },
+        {
+          "ref": "514101-004",
+          "cor_etiqueta": "Rato"
+        }
       ],
       "pra_quem": "Tiras cruzadas anatômicas em couro.",
       "look": "Bermuda de alfaiataria + camisa de manga curta.",
@@ -1103,76 +1532,49 @@
     {
       "nome": "Sandália Lazy",
       "categoria": "Sandália / Chinelo",
-      "ref": "693104-001 · 693104-002",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Mouro"
+      "refs_na_loja": [
+        {
+          "ref": "693104-002",
+          "cor_etiqueta": "Mouro (papete)"
+        },
+        {
+          "ref": "693101-002",
+          "cor_etiqueta": "Conhaque (chinelo de dedo)"
+        }
       ],
-      "pra_quem": "Tiras paralelas de couro, robusta e refinada.",
+      "pra_quem": "Tiras de couro, robusta e refinada. 693104 = papete de tiras paralelas · 693101 = chinelo de dedo.",
       "look": "Bermuda + camiseta.",
       "fala": "Sofisticada para o descanso."
     },
     {
-      "nome": "Mule Tulum",
-      "categoria": "Sandália / Chinelo",
-      "ref": "647102-002",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [
-        "Bege/areia"
-      ],
-      "pra_quem": "Mule clean, calça rápido.",
-      "look": "Linho claro, bermuda, tons de areia.",
-      "fala": "Mule clean: calça rápido e deixa o look leve."
-    },
-    {
       "nome": "Chinelo Livo",
       "categoria": "Sandália / Chinelo",
-      "ref": "700203-001 · 700203-002 · 700203-003",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom",
-        "Bege/areia"
+      "refs_na_loja": [
+        {
+          "ref": "700203-003",
+          "cor_etiqueta": "Smoke"
+        }
       ],
-      "pra_quem": "Chinelo de couro: lazer e presente.",
+      "pra_quem": "Slide de couro com tiras transpassadas e velcro para ajustar.",
       "look": "Bermuda e camiseta.",
       "fala": "Chinelo de couro: o descanso com qualidade Democrata."
     },
     {
-      "nome": "Democrata feminino",
-      "categoria": "Feminino",
-      "ref": "Cora 630101 · Esther 685102",
-      "ref_oficial_conferida": true,
-      "tecnologias": [
-        "Couro legítimo"
-      ],
-      "cores": [],
-      "pra_quem": "Mocassim Cora, Drake Pulse feminino, sandália Esther, sapatilha Olga, bota Loretta.",
-      "look": "Mocassim com alfaiataria; Drake com jeans; sandália Esther com vestido ou linho.",
-      "fala": "Couro legítimo e a mesma tecnologia, com forma feita para o pé da mulher."
-    },
-    {
       "nome": "Cintos",
       "categoria": "Acessórios",
-      "ref": null,
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Couro legítimo"
       ],
-      "cores": [
-        "Preto",
-        "Marrom"
-      ],
+      "refs_na_loja": [],
       "pra_quem": "Fechar o look e presente.",
       "look": "Sempre da mesma cor e tom do sapato. Fivela discreta no social.",
       "fala": "Preto com preto, marrom com marrom. Dupla face resolve os dois."
@@ -1180,12 +1582,12 @@
     {
       "nome": "Cuidado e extras",
       "categoria": "Acessórios",
-      "ref": "Brilho Expresso PBE02005N",
-      "ref_oficial_conferida": true,
+      "carro_chefe": false,
       "tecnologias": [
         "Venda adicional"
       ],
-      "cores": [],
+      "refs_na_loja": [],
+      "ref": "Brilho Expresso PBE02005N",
       "pra_quem": "Produtos de conservação, meias, palmilhas, carteiras.",
       "look": "Ofereça junto com todo sapato de couro.",
       "fala": "Para o couro durar anos, vale levar o produto de conservação junto."
@@ -1195,7 +1597,8 @@
     "Preto",
     "Café",
     "Mouro",
-    "Mogno",
+    "Mogno / Mahogany",
+    "Castanho",
     "Tabaco",
     "Marrom",
     "Tan",
@@ -1204,8 +1607,16 @@
     "Bege/areia",
     "Creme",
     "Branco/off white",
+    "Smoke",
+    "Rato",
     "Cinza",
-    "Navy",
+    "Navy/marinho",
+    "Azul",
     "Bordô"
-  ]
+  ],
+  "estoque": {
+    "fonte": "Lista_Estoque_SKU_Produtos.xlsx (15/11/2026)",
+    "modelos": 57,
+    "refs": 131
+  }
 }

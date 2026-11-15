@@ -19,37 +19,27 @@ Cápsulas de TPU que absorvem o impacto e devolvem energia.
 ### 3. Ultra Light — quase não pesa
 Sola de EVA + palmilha de PU.
 **Fala:** "Pega na mão: ele quase não pesa. No pé some."
-**Onde:** Brad, Joe, Move.
+**Onde:** tênis Brad (527103).
 
 ### 4. Full Light — o mais leve da marca
 Estrutura ultraleve, sola flexível.
 **Fala:** "É o mais leve da Democrata: feito para você esquecer que está calçado."
-**Onde:** tênis Full Light.
+**Onde:** tênis Groove e sapato social York.
 
 ### 5. Calce Fácil — sem a mão, sem amassar
 Calcanhar reforçado, calça sem a mão.
 **Fala:** "Calça sem usar a mão e sem amassar atrás. Passou no raio-x, calçou e foi."
-**Onde:** Pace, e Smart Comfort com elástico.
+**Onde:** tênis Pace e Draft Pulse, sapatênis Grid, mocassim Flop.
 
-### 6. Extra Soft — tênis macio
-Palmilha bi-densidade + solado leve.
-**Fala:** "Pisa e afunda macio — é o tênis do dia a dia corrido."
-**Onde:** Journey.
-
-### 7. Dual Soft — social macio
-Duas densidades: leve + macio.
-**Fala:** "Social por fora, macio por dentro: aguenta o evento inteiro."
-**Onde:** sapato social de couro.
-
-### 8. Light — social 40% mais leve
+### 6. Light — social 40% mais leve
 Solados 40% mais leves (segundo a marca).
 **Fala:** "40% mais leve que um social comum — no fim do dia você sente a diferença."
-**Onde:** linha Roy (segundo o site oficial).
+**Onde:** mocassim social Porto tan 706102-002 (segundo o site oficial).
 
-### 9. Hi-Soft 32 — maciez na palmilha
+### 7. Hi-Soft 32 — maciez na palmilha
 Palmilha em PU com a tecnologia Hi-Soft 32: maciez e conforto a cada passo.
 **Fala:** "É maciez na palmilha: você sente o conforto já no primeiro passo."
-**Onde:** Madison, Pointer, James, Dune, Duke (social), tênis Mark, sapatênis Grow.
+**Onde:** Pointer, Madison, Taylor, Duke, Dune (social), botas James e Taylor, tênis Mark.
 **Atenção:** é TECNOLOGIA, não nome de linha.
 
 ## As que confundem — não erre
@@ -58,7 +48,7 @@ Palmilha em PU com a tecnologia Hi-Soft 32: maciez e conforto a cada passo.
 |---|---|
 | Smart Comfort = tecnologia? | Não. Smart Comfort é a **linha**. Air, Stretch e Max Memory são as tecnologias dentro dela. |
 | PULSE x Ultra Light | PULSE = energia de volta. Ultra Light = peso leve. |
-| Extra Soft x Dual Soft | Extra Soft = **tênis** (Journey). Dual Soft = **sapato social**. |
+| Full Light só em tênis? | Não. O sapato social **York** também é Full Light. |
 | Knit = tecnologia? | Não. Knit é **material** (malha que respira). O site oficial deixa isso claro. |
 
 ## Stretch e Max Memory — as duas parceiras do Air
